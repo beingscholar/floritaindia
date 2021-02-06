@@ -1,0 +1,46 @@
+.htaccess
+wp-config.php
+#wp-content/*
+#!wp-content/themes/
+#!wp-content/plugins/
+#sitemap.xml
+*.log
+#sitemap.xml
+#sitemap.xml.gz
+wp-content/uploads/db-backup/
+wp-content/uploads/2020/09/log_file*
+
+# ignore all files that start with ~
+~*
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
