@@ -1,0 +1,212 @@
+/*
+Theme Name: bsflorita layout7
+Theme URI: http://wordpress.beingscholar.com
+Author: Beingscholar
+Author URI: http://www.beingscholar.com
+Version: 1.0
+Description: Our default theme lets you create a responsive magazine website with a sleek, modern design.
+License: GNU General Public License v2
+Tags:  one-column, two-columns, right-sidebar,  custom-header, custom-menu, editor-style, featured-images, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: bsflorita_layout2
+Template: bsflorita
+*/
+.header-right-service-cms .icon-image{
+    background: #FFD200 url("images/megnor/offer.png") no-repeat 9px 8px !important;
+    border-top-left-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -khtml-border-top-left-radius: 4px;
+    -moz-border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -khtml-border-bottom-left-radius: 4px;
+    -moz-border-bottom-left-radius: 4px;
+}
+.mega-menu ul li .sub li.mega-hdr a.mega-hdr-a {
+    color:#c70a0a;  
+}
+.header-cart .cart-contents span.cart-qty{background: #FFD200;}
+.header-cart .shopping_cart .item-total,
+.account-contents,
+.topbar-link::after,
+.headercart-block::after,
+.resp-tabs-list li:hover .tab-title,
+.resp-tab-item.resp-tab-active .tab-title{color: #FFD200;}
+
+.header-cart .shopping_cart .cart-icon {background-image: url("images/megnor/icon.svg");}
+.header-cart:hover .cart-icon {background-image: url("images/megnor/icon_hover.svg");}
+
+.service-list .service-content .icon-image, .service-1 .service-content .icon-image {background-image: url("images/megnor/delivery.svg");}
+.service-2 .service-content .icon-image {background-image: url("images/megnor/money-bag.svg");}
+.service-3 .service-content .icon-image {background-image: url("images/megnor/best_online.svg");}
+.service-4 .service-content .icon-image {background-image: url("images/megnor/piggy.svg");}
+
+.read-more a::after,
+.links .icon,
+.gallery-zoom .icon,
+.gallery-redirect .icon,
+.blog-posts-content .block_hover .icon,
+.sidebar-category,
+.woocommerce ul.products li.product .product_type_simple,
+.woocommerce-page ul.products li.product .product_type_simple,
+.woocommerce ul.products li.product .product_type_grouped,
+.woocommerce-page ul.products li.product .product_type_grouped,
+.woocommerce ul.products li.product .product_type_external,
+.woocommerce-page ul.products li.product .product_type_external, 
+.woocommerce ul.products li.product .product_type_variable,
+.woocommerce-page ul.products li.product .product_type_variable,
+.woocommerce .button.yith-wcqv-button,
+.entry-summary .yith-wcwl-wishlistexistsbrowse.show > a,
+.woocommerce a.compare.button,
+.woocommerce .yith-wcwl-add-to-wishlist a.add_to_wishlist, 
+.woocommerce ul.products li.product .yith-wcwl-wishlistexistsbrowse.show a, 
+.woocommerce-page ul.products li.product .yith-wcwl-wishlistexistsbrowse.show a, 
+.woocommerce ul.products li.product .yith-wcwl-wishlistaddedbrowse.show a, 
+.woocommerce-page ul.products li.product .yith-wcwl-wishlistaddedbrowse.show a, 
+.woocommerce ul.products li .container-inner .compare-button a, 
+.woocommerce-page ul.products li .container-inner .compare-button a, 
+.woocommerce-page ul.products li.product .yith-wcqv-button,
+.box-category::before,
+.sk-folding-cube .sk-cube::before{
+    background-color: #c70a0a;
+}
+.category-carousel .owl-controls .owl-buttons .owl-next:hover, .category-carousel .owl-controls .owl-buttons .owl-prev:hover {
+    color: #c70a0a;
+}
+.box-category-heading::after,
+.header-bottom-right::after {
+	    background-image: url("images/megnor/menu_border.png");
+}
+.sidebar-category .dc-mega-icon::before{ background-color:#b30909;}
+
+.page-title .entry-title-main,.entry-meta a,
+.site-content .entry-meta span .fa,
+.read-more a,
+.blog .entry-meta .entry-date,
+.entry-meta .comments-link,
+.blog-posts-content .post-title a,
+.single-portfolio .portfolio-title a,
+#home_featured_carousel .woocommerce-Price-amount.amount,
+.price_label,
+.woocommerce ul.products li.product .price,
+.woocommerce-page ul.products li.product .price,
+.tparrows.custom:hover:before{ 
+    color:#c70a0a;
+}
+.sidebar-category,
+.woo_categories_list .product-categories > li, .header-category ul > li,
+.footer-bottom,
+.fourth-widget::before,
+.footer-menu-links ul li::after{ border-color:#c23a3a;}
+#to_top { background:#FFD200;}
+.owl-theme .owl-buttons div:hover{color: #ebebeb;border-color: #FFD200;}
+.paging-navigation a:hover, .paging-navigation .page-numbers.current,
+.woocommerce-pagination span.current, .woocommerce-pagination a:hover {
+    background: #c70a0a;
+    color: #ffffff;
+    border: 1px solid #c70a0a;
+}
+.contact_wrapper .contact_address::before {
+    background-image: url("images/megnor/map.svg");
+}
+.contact_wrapper .contact_address:hover::before {
+    background-image: url("images/megnor/map_hover.svg");
+}
+.contact_wrapper .phone::before {
+    background-image: url("images/megnor/message.svg");
+}
+.contact_wrapper .phone:hover::before {
+    background-image: url("images/megnor/message_hover.svg");
+}
+.contact_wrapper .email::before {
+    background-image: url("images/megnor/headphones.svg");
+}
+.contact_wrapper .email:hover::before {
+    background-image: url("images/megnor/headphones_hover.svg");
+}
+.owl-theme .owl-buttons div:hover{
+    color: #FFD200;
+}
+.woocommerce span.onsale, .woocommerce-page span.onsale {
+    background: #FFD200;
+    color: #000;
+}
+.one-category .tab-title::before {background: #000000;}
+.staff-page .staff-position span{color: #FFD200;}
+.team-posts-content.posts-content .container .container-inner:hover .staff-content,
+.vc_btn3-style-custom.vc_general.vc_btn3:focus, .vc_btn3-style-custom.vc_general.vc_btn3:hover,
+.pricing_wrapper:hover .pricing_heading,
+.pricing_wrapper .selected .pricing_heading,
+.pricing_wrapper:hover .pricing_top,
+.pricing_wrapper .selected .pricing_top,
+.pricing_wrapper:hover .pricing_button a#pricing-btn,
+.pricing_wrapper .selected .pricing_button a#pricing-btn{
+    background-color: #c70a0a !important;
+}
+.pricing_wrapper:hover .pricing_wrapper_inner,
+.pricing_wrapper:hover .pricing_button a#pricing-btn,
+.pricing_wrapper .selected .pricing_button a#pricing-btn {
+    border-color: #c70a0a;
+}
+.custom-testimonial .testimonial-title a,
+.product-category:hover h2, .product-category:hover mark {color: #c70a0a;}
+
+.blog .entry-meta .entry-date,
+.entry-meta .comments-link a,
+.post-info .read-more a,
+.single .entry-meta .entry-date,
+.site-content .entry-meta a,
+.comments-link .fa,
+.meta-inner .fa {
+    color: #c70a0a;
+}
+.blog .read-more a::after {background: #c70a0a;}
+.quantity input.plus:hover, .quantity input.plus:focus, .quantity input.minus:hover, .quantity input.minus:focus {
+    background-color: #FFD200;
+    border-color: #FFD200;
+    color: #000;
+}
+.primary-sidebar .widget .widget-title::before {
+    border-bottom: 2px solid #FFD200;
+    bottom: 0;
+    content: "";
+    left: 20px;
+    margin: 0 auto;
+    position: absolute;
+    right: auto;
+    width: 50px;
+}
+.cms-per {
+    color: #c70a0a;
+}
+.header-cms-service .service-icon { 
+    background-image: url("images/megnor/shipping.svg");
+}
+.header-cms-service .contact-icon {
+   background-image: url("images/megnor/support.svg"); 
+}
+.entry-main-content .entry-meta .entry-date, .entry-meta .comments-link a, .post-info .read-more a, .single .entry-meta .entry-date, .site-content .entry-meta a, .meta-inner .fa{
+	color: #c70a0a;
+}
+.widget .tnp .tnp-submit, .tnp .tnp-submit {
+    background: #ffffff url("images/megnor/mail.png") no-repeat center;
+}
+.blog .read-more a::after, .related_posts_outer .read-more a::after {
+    background: #c70a0a;
+}
+.site-header .header-search .woocommerce-product-search button[type="submit"], .header-search input[type="submit"] {
+    right: 0px;
+    background-color: #FFD200;
+}
+.two-col-cms .static-wrapper.cms-right-text {
+    text-align: left !important;
+}
+.two-col-cms .static-wrapper.cms-left-text {
+    text-align: right !important;
+}
+.sub-banner9 .static-wrapper.cms-right-text {
+    text-align: left !important;
+}
+.cat-img-block {
+    background-color: #fff;
+    border: 4px solid #f7f7f7;
+}

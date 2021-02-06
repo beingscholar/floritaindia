@@ -1,0 +1,205 @@
+
+---Downloaded files---
+The import files for: firezy_layout8 were successfully downloaded!
+Initial max execution time = 30
+Files info:
+Site URL = http://demo.xxploreautomotive.in
+Data file = /home/xxploreautomotiv/demo.xxploreautomotive.in/wp-content/themes/firezy_layout8/demo-content/demo8/firezy_layout8.wordpress.xml
+Widget file = /home/xxploreautomotiv/demo.xxploreautomotive.in/wp-content/themes/firezy_layout8/demo-content/demo8/firezy_layout8_widgets_settings.wie
+Customizer file = /home/xxploreautomotiv/demo.xxploreautomotive.in/wp-content/themes/firezy_layout8/demo-content/demo8/firezy_layout8_customizer_export.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+------
+New AJAX call!
+[WARNING] Failed to import action-group wc_update_product_lookup_tables
+[WARNING] Failed to import action-group woocommerce-db-updates
+[ERROR] Failed to import "shortcode" (Media)
+
+
+---Importing widgets---
+shop-sidebar : Sidebar does not exist in theme (moving widget to Inactive)
+
+Product Categories - Product categories - Imported to Inactive
+Filter Products by Price - Filter by price - Imported to Inactive
+Filter Products by Attribute - Filter by color - Imported to Inactive
+Filter Products by Attribute - Filter by size - Imported to Inactive
+Product Tag Cloud - Product tags - Imported to Inactive
+Products - On-sale - Imported to Inactive
+
+Main Sidebar : 
+
+Search - No Title - Widget already exists
+Categories - No Title - Widget already exists
+Recent Posts - No Title - Imported
+Recent Comments - No Title - Widget already exists
+Archives - No Title - Widget already exists
+Meta - No Title - Widget already exists
+
+Home Sidebar : 
+
+Products - Products - Imported
+Left Banner - Left Banner - Imported
+Visual Editor - Form The Blog - Imported
+Product Tag Cloud - Popular Tags - Imported
+Left Banner - Left Banner - Imported
+Visual Editor - Testimonial - Imported
+Left Banner - Left Banner2 - Imported
+
+Header Shopping Cart Widget Area : 
+
+Cart - Cart - Imported
+
+Header Search Widget Area : 
+
+Advance Search Widget - No Title - Imported
+
+Product Category Widget Area : 
+
+Product Categories - Product categories - Imported
+
+ Single Product Page Sidebar Area : 
+
+Visual Editor - No Title - Imported
+CMS Block - No Title - Imported
+
+Single Product CMS Tab : 
+
+Visual Editor - No Title - Imported
+
+First Footer Widget Area : 
+
+Static Links - Help - Imported
+
+Second Footer Widget Area : 
+
+Static Links - Policy - Imported
+
+Third Footer Widget Area : 
+
+Static Links - About - Imported
+
+Fourth Footer Widget Area : 
+
+Footer Contact Us - Contact Us - Imported
+
+Fifth Footer Widget Area : 
+
+Newsletter - Subscribe Now - Imported
+
+Footer Bottom Widget Area : 
+
+WooCommerce Accepted Payment Methods - Accepted Payment Methods - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---pt-ocdi/after_import---
+Slider processed
