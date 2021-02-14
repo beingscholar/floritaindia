@@ -1223,7 +1223,7 @@ function tmpmela_second_product_thumbnail() {
 	if(get_option( 'tmpmela_secondaryimage' ) == "yes"){
 		if ( count($attachment_ids) > 0 ) {
 			$secondary_image_id = $attachment_ids['0'];		
-			echo wp_get_attachment_image( $secondary_image_id, 'shop_catalog', '', $attr = array( 'class' => 'secondary-image attachment-shop-catalog' ) );
+			echo wp_get_attachment_image( $secondary_image_id, 'full', '', $attr = array( 'class' => 'secondary-image attachment-shop-catalog' ) );
 		}
 		else{				
 			echo wp_get_attachment_image( $id, 'shop_catalog', '', $attr = array( 'class' => 'secondary-image attachment-shop-catalog' ) );		

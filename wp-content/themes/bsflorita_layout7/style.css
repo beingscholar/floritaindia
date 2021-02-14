@@ -195,7 +195,7 @@ Template: bsflorita
 }
 .site-header .header-search .woocommerce-product-search button[type="submit"], .header-search input[type="submit"] {
     right: 0px;
-    background-color: #FFD200;
+    background-color: #ce0c00;
 }
 .two-col-cms .static-wrapper.cms-right-text {
     text-align: left !important;

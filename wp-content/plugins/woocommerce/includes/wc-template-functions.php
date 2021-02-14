@@ -1355,7 +1355,7 @@ if ( ! function_exists( 'woocommerce_get_product_thumbnail' ) ) {
 	 * @param int    $deprecated2 Deprecated since WooCommerce 2.0 (default: 0).
 	 * @return string
 	 */
-	function woocommerce_get_product_thumbnail( $size = 'woocommerce_thumbnail', $deprecated1 = 0, $deprecated2 = 0 ) {
+	function woocommerce_get_product_thumbnail( $size = 'full', $deprecated1 = 0, $deprecated2 = 0 ) {
 		global $product;
 
 		$image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
