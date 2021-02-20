@@ -19,7 +19,7 @@ function tmpmela_set_default_options()
 	add_option("tmpmela_logo_image_alt",'firezy'); // set logo image alt
     add_option("tmpmela_showsite_description", 'no'); // yes/no, control panel
 	add_option("tmpmela_mob_logo_image", get_stylesheet_directory_uri() . "/images/megnor/mob-logo.png"); // set logo image
-	add_option("tmpmela_mob_logo_image_alt",'firezy'); // set logo image alt		
+	add_option("tmpmela_mob_logo_image_alt",'firezy'); // set logo image alt
 	add_option("tmpmela_contact_email",'support@example.com'); // yes/no, control panel
 	add_option("tmpmela_background_upload",""); // Default, background image
 	add_option("tmpmela_back_repeat","repeat"); // background repeate
@@ -27,40 +27,40 @@ function tmpmela_set_default_options()
 	add_option("tmpmela_back_attachment","scroll"); // background attachment
 	add_option("tmpmela_bkg_color","FFFFFF"); // background color
 	add_option("tmpmela_bodyfont_color","838383"); // body font color
-	add_option("tmpmela_bodyfont",'Poppins'); // Poppins	
-	add_option("tmpmela_bodyfont_other",'Arial'); // Arial	
-	add_option("tmpmela_button_font_family",'Poppins'); // Button Font	
+	add_option("tmpmela_bodyfont",'Poppins'); // Poppins
+	add_option("tmpmela_bodyfont_other",'Arial'); // Arial
+	add_option("tmpmela_button_font_family",'Poppins'); // Button Font
 	add_option("tmpmela_button_color","2457AA"); // button color
-	add_option("tmpmela_button_text_color","FFFFFF"); // button Text color	
+	add_option("tmpmela_button_text_color","FFFFFF"); // button Text color
 	add_option("tmpmela_button_hover_color","FFD200"); // button hover color
 	add_option("tmpmela_button_hover_text_color","000000"); // button hover Text color
-	
-	
-	/*  Header Settings  */	
+
+
+	/*  Header Settings  */
 	add_option("tmpmela_header_background_upload",''); // Header Background image
 	add_option("tmpmela_header_back_repeat","no-repeat"); // Header Background repeate
 	add_option("tmpmela_header_back_position","top+center"); // Header Background position
-	add_option("tmpmela_header_back_attachment","scroll"); // Header Background attachment	
-	add_option("tmpmela_header_top_bkg_color","2457AA"); // Header Top Background color		
-	
-	add_option("tmpmela_header_bottom_bkg_color","1f4c94"); // header bottom background color		
-	
+	add_option("tmpmela_header_back_attachment","scroll"); // Header Background attachment
+	add_option("tmpmela_header_top_bkg_color","2457AA"); // Header Top Background color
+
+	add_option("tmpmela_header_bottom_bkg_color","1f4c94"); // header bottom background color
+
 	add_option("tmpmela_show_header_services","yes"); // show header services & contact
 	add_option("tmpmela_header_topservice_text1","Free"); // Header top service Text1
 	add_option("tmpmela_header_topservice_text1_color","FFFFFF"); // Header top service Text1 Color
 	add_option("tmpmela_header_topservice_text2","Shipping"); // Header top service Text2
 	add_option("tmpmela_header_topservice_text2_color","FFFFFF"); // Header top service Text2 Color
-	
-	add_option("tmpmela_contact_text","Contact"); // Contact Text
-	add_option("tmpmela_contact_number","01 2121  313"); // Contact Number	
-	add_option("tmpmela_show_header_right_services","yes"); // Show Header Right Service CMS
-	
-	add_option("tmpmela_header_right_service_text","New User Zone"); // Header Right Service Text 
-	add_option("tmpmela_header_right_service_text_url","#"); // Header Right Service Text 
-    add_option("tmpmela_header_right_service_text_color","000000"); // Header Right Service Text Color
-	add_option("tmpmela_header_right_service_background_color","FFFFFF"); // Header Right Service Text Background Color	
 
-	
+	add_option("tmpmela_contact_text","Contact"); // Contact Text
+	add_option("tmpmela_contact_number","01 2121  313"); // Contact Number
+	add_option("tmpmela_show_header_right_services","yes"); // Show Header Right Service CMS
+
+	add_option("tmpmela_header_right_service_text","New User Zone"); // Header Right Service Text
+	add_option("tmpmela_header_right_service_text_url","#"); // Header Right Service Text
+    add_option("tmpmela_header_right_service_text_color","000000"); // Header Right Service Text Color
+	add_option("tmpmela_header_right_service_background_color","FFFFFF"); // Header Right Service Text Background Color
+
+
     /*  Navigation Menu Setting  */
 	add_option("tmpmela_navbar_category_title1","Shop By"); // Sidebar Category Title
 	add_option("tmpmela_categoty_title1_text_color","FFFFFF"); // Header Category Title text color
@@ -73,40 +73,40 @@ function tmpmela_set_default_options()
 	add_option("tmpmela_sidebar_category_child_link_hover_color","FFD200"); // Sidebar Category Child link Hover Color
 	add_option("tmpmela_sidebar_category_sub_child_link_color","000000"); // Sidebar Category Sub Child Link Color
 	add_option("tmpmela_sidebar_category_sub_child_link_hover_color","2457aa"); // Sidebar Category Sub Child link Hover Color
-	
+
 	add_option("tmpmela_top_menu_text_color","FFFFFF"); // Top Menu Text color
 	add_option("tmpmela_top_menu_texthover_color","FFD200"); // Top Menu Text hover color
 	add_option("tmpmela_sub_menu_bkg_color","FFFFFF"); // Sub Menu Background color
 	add_option("tmpmela_sub_menu_text_color","000000"); // Sub Menu Text color
 	add_option("tmpmela_sub_menu_texthover_color","1F4C94"); // Sub Menu Text hover color
-	
+
 	/*  Content Settings  */
 	add_option("tmpmela_h1font",'Poppins'); // h1 family google font
 	add_option("tmpmela_h1font_other",'Arial'); // h1 family specified font
-	add_option("tmpmela_h1color",'000000'); // h1 family font color	 
+	add_option("tmpmela_h1color",'000000'); // h1 family font color
 	add_option("tmpmela_h2font",'Poppins'); // h2 family google font
 	add_option("tmpmela_h2font_other",'Arial'); // h2 family specified font
-	add_option("tmpmela_h2color",'000000'); // h2 family font color	
+	add_option("tmpmela_h2color",'000000'); // h2 family font color
 	add_option("tmpmela_h3font",'Poppins'); // h3 family google font
 	add_option("tmpmela_h3font_other",'Arial'); // h3 family specified font
-	add_option("tmpmela_h3color",'000000'); // h3 family font color	
+	add_option("tmpmela_h3color",'000000'); // h3 family font color
 	add_option("tmpmela_h4font",'Poppins'); // h4 family google font
 	add_option("tmpmela_h4font_other",'Arial'); // h4 family specified font
-	add_option("tmpmela_h4color",'000000'); // h4 family font color	
+	add_option("tmpmela_h4color",'000000'); // h4 family font color
 	add_option("tmpmela_h5font",'Poppins'); // h5 family google font
-	add_option("tmpmela_h5font_other",'Arial'); // h5 family specified font 
-	add_option("tmpmela_h5color",'000000'); // h5 family font color	
+	add_option("tmpmela_h5font_other",'Arial'); // h5 family specified font
+	add_option("tmpmela_h5color",'000000'); // h5 family font color
 	add_option("tmpmela_h6font",'Poppins'); // h6 family google font
-	add_option("tmpmela_h6font_other",'Arial'); // h6 family specified font 
-	add_option("tmpmela_h6color",'000000'); // h6 family font color	
+	add_option("tmpmela_h6font_other",'Arial'); // h6 family specified font
+	add_option("tmpmela_h6color",'000000'); // h6 family font color
 	add_option("tmpmela_link_color","000000"); // link color
 	add_option("tmpmela_hoverlink_color","2457aa"); // link hover color
-	
+
 	/*  Sidebar setting for other pages  */
 	add_option("tmpmela_page_sidebar","yes");
-	
-	/*  Footer Settings  */	
-	add_option("tmpmela_footer_bkg_color","2457AA"); // Footer Background color	
+
+	/*  Footer Settings  */
+	add_option("tmpmela_footer_bkg_color","2457AA"); // Footer Background color
 	add_option("tmpmela_footer_background_upload","");//Footer Background image
 	add_option("tmpmela_footer_back_repeat","no-repeat");//Background repeat
 	add_option("tmpmela_footer_back_position","top+center");//Background position
@@ -117,12 +117,12 @@ function tmpmela_set_default_options()
 	add_option("tmpmela_footerfont",'Poppins'); // Footer Google font
 	add_option("tmpmela_footerfont_other",'Arial'); // Footer Specified font
 	add_option("tmpmela_footer_slog",'Templatemela'); // Copyright statement : Theme By templatemela
-	
+
 	/* Product setting */
-	add_option("tmpmela_related_items","12"); 
-	add_option("tmpmela_upsells_items","12"); 
+	add_option("tmpmela_related_items","12");
+	add_option("tmpmela_upsells_items","12");
 	add_option("tmpmela_crosssell_items","12");
-	
+
 	/* Sidebar setting for Single product page  */
 	add_option("tmpmela_secondaryimage","yes");
 	add_option("tmpmela_shop_sidebar","no");
@@ -133,7 +133,7 @@ function tmpmela_product_gallery() {
 add_theme_support( 'wc-product-gallery-zoom' );
 add_theme_support( 'wc-product-gallery-lightbox' );
 add_theme_support( 'wc-product-gallery-slider' );
-}  
+}
 // Load regular editor styles into the new block-based editor.
 	add_theme_support( 'editor-styles' );
 // Load default block styles.
@@ -151,28 +151,28 @@ function tmpmela_get_mob_logo() {
 	           else{echo '<img alt="'.esc_attr(get_option('tmpmela_mob_logo_image_alt')).'" src=" '.get_template_directory_uri(). '/images/megnor/mob-logo.png">';}
 }
 function tmpmela_service_cms() {
-	echo '<div class="service-block">
-	<div class="service-icon"></div>
-	<div class="service-block-inner">
-	<div class="service-text text1">'.stripslashes(get_option('tmpmela_header_topservice_text1')).'</div>
-	<div class="service-text text2">'.stripslashes(get_option('tmpmela_header_topservice_text2')).'</div>
-	</div>
-	</div>';
-	echo '<div class="contact-block">	
+	// echo '<div class="service-block">
+	// <div class="service-icon"></div>
+	// <div class="service-block-inner">
+	// <div class="service-text text1">'.stripslashes(get_option('tmpmela_header_topservice_text1')).'</div>
+	// <div class="service-text text2">'.stripslashes(get_option('tmpmela_header_topservice_text2')).'</div>
+	// </div>
+	// </div>';
+	echo '<div class="contact-block">
 	<div class="contact-icon"></div>
-	<div class="contact-block-inner">	
+	<div class="contact-block-inner">
 	<div class="service-text text1">'.get_option('tmpmela_contact_text').'</div>
 	<div  class="service-text text2">'.get_option('tmpmela_contact_number').'</div>
 	</div>
 	</div>';
 }
 function tmpmela_header_right_service_cms() {
-	echo '<div class="icon-image"></div>	
+	echo '<div class="icon-image"></div>
 	<div class="service-text text"><a href="' . get_option('tmpmela_header_right_service_text_url') . '" title="'.get_option('tmpmela_header_right_service_text').'">'.get_option('tmpmela_header_right_service_text').'</a></div>';
-	
+
 }
 function tmpmela_get_sort_column() {
-	$sort_column=''; 
+	$sort_column='';
 	if(trim(get_option('tmpmela_navigation_type'))=='categories'){
 		if( trim(get_option('tmpmela_navigation_sort_column')) =='id' || trim(get_option('tmpmela_navigation_sort_column'))=='menu_order')
 			$sort_column = 'ID';
@@ -200,20 +200,20 @@ function tmpmela_get_sort_order() {
 	return $sort_order;
 }
 function tmpmela_get_all_categories() {
-	global $wp_query; 
-	if (isset($wp_query->post->ID)) $postid = $wp_query->post->ID; 
+	global $wp_query;
+	if (isset($wp_query->post->ID)) $postid = $wp_query->post->ID;
 	$categories = wp_get_post_categories( $postid );
 	$cats = ', ';
 	foreach($categories as $c){
-		$cat = get_category( $c );	
+		$cat = get_category( $c );
 		$cats .= $cat->name. ',';
 	}
 	$cats=strtolower(rtrim($cats, " ,"));
 	return $cats;
 }
 function tmpmela_get_all_tags() {
-	global $wp_query; 
-	if (isset($wp_query->post->ID)) $postid = $wp_query->post->ID; 
+	global $wp_query;
+	if (isset($wp_query->post->ID)) $postid = $wp_query->post->ID;
 	$alltags = wp_get_post_tags( $postid );
 	$tags = ', ';
 	foreach($alltags as $tag){
@@ -223,7 +223,7 @@ function tmpmela_get_all_tags() {
 	return $tags;
 }
 function tmpmela_extra_head(){
-	$themeinfo = wp_get_theme(get_template_directory() . '/style.css');	
+	$themeinfo = wp_get_theme(get_template_directory() . '/style.css');
 	echo '<meta name="generator" content="'.$themeinfo['Name'].' - '.$themeinfo['Version'].'" />';
 }
 add_action('wp_head','tmpmela_extra_head');
@@ -232,27 +232,27 @@ add_action( "admin_enqueue_scripts", 'tmpmela_admin_styles');
 add_action( "admin_enqueue_scripts", 'tmpmela_admin_metabox_script');
 add_action( "admin_enqueue_scripts", 'tmpmela_admin_metabox_styles');
 function tmpmela_admin_scripts() {
-	//Scripts	
+	//Scripts
 	wp_enqueue_script( 'tmpmela-pscript-admin', get_template_directory_uri() . '/js/megnor/admin/pscript_admin.js');
 	wp_enqueue_script( 'jscolor', get_template_directory_uri() . '/js/megnor/admin/jscolor/jscolor.js');
 	wp_enqueue_script( 'easytabs', get_template_directory_uri() . '/js/megnor/admin/jquery.easytabs.min.js');
 	wp_enqueue_script('media-upload');
 	wp_enqueue_script('thickbox');
 	wp_register_script('tmpmela-my-upload', get_template_directory_uri() . '/js/megnor/admin/custom.js', array('jquery','media-upload','thickbox'));
-	wp_enqueue_script('tmpmela-my-upload');	
+	wp_enqueue_script('tmpmela-my-upload');
 }
 
-function tmpmela_admin_styles() { 
+function tmpmela_admin_styles() {
 	//Styles
 	wp_enqueue_style('tmpmela-admin', get_template_directory_uri() . '/css/megnor/admin/tmpmela_admin.css');
 	wp_enqueue_style('tmpmela-tab', get_template_directory_uri() . '/css/megnor/admin/tab.css');
 	wp_enqueue_style('thickbox');
 }
-function tmpmela_admin_metabox_script() { 
+function tmpmela_admin_metabox_script() {
 	//Scripts
 	wp_enqueue_script( 'tmpmela-metabox-script', get_template_directory_uri() . '/js/megnor/admin/tmpmela_metabox_script.js' );
 }
-function tmpmela_admin_metabox_styles() { 
+function tmpmela_admin_metabox_styles() {
 	//Styles
 	wp_enqueue_style('tmpmela-metabox-style', get_template_directory_uri() . '/css/megnor/admin/tmpmela_metabox_style.css');
 }
@@ -304,12 +304,12 @@ function tmpmela_url_grabber() {
 	return esc_url_raw( $matches[1] );
 }
 function tmpmela_get_widget($location = '') {
-	if ( is_active_sidebar($location) ) { 
-		dynamic_sidebar($location); 
+	if ( is_active_sidebar($location) ) {
+		dynamic_sidebar($location);
 	}
 }
-if (version_compare( $GLOBALS['wp_version'], '3.3', '>=' )) 	
-	get_template_part('templatemela/widgets');		
+if (version_compare( $GLOBALS['wp_version'], '3.3', '>=' ))
+	get_template_part('templatemela/widgets');
 /**
  * Removes the default styles that are packaged with the Recent Comments widget.
  *
@@ -324,63 +324,63 @@ function tmpmela_remove_recent_comments_style() {
 	add_filter( 'show_recent_comments_widget_style', '__return_false' );
 }
 add_action( 'widgets_init', 'tmpmela_remove_recent_comments_style' );
-function tmpmela_get_pagination($range = 4){  
-	// $paged - number of the current page  
-	global $paged, $wp_query, $max_page;  
-	// How much pages do we have?  
-	if ( !$max_page ) {  
-		$max_page = $wp_query->max_num_pages;  
-	}  
-	// We need the pagination only if there are more than 1 page  
-	if($max_page > 1){  
-		if(!$paged){  
-			$paged = 1;  
-		}  
-		// On the first page, don't put the First page link  
-		if($paged != 1){  
-			echo '<a class="first" href=" '. get_pagenum_link(1) .' "> << </a>';  
+function tmpmela_get_pagination($range = 4){
+	// $paged - number of the current page
+	global $paged, $wp_query, $max_page;
+	// How much pages do we have?
+	if ( !$max_page ) {
+		$max_page = $wp_query->max_num_pages;
+	}
+	// We need the pagination only if there are more than 1 page
+	if($max_page > 1){
+		if(!$paged){
+			$paged = 1;
 		}
-		// To the previous page  
+		// On the first page, don't put the First page link
+		if($paged != 1){
+			echo '<a class="first" href=" '. get_pagenum_link(1) .' "> << </a>';
+		}
+		// To the previous page
 		previous_posts_link(' < ');
-		// We need the sliding effect only if there are more pages than is the sliding range  
-		if($max_page > $range){  
-		 // When closer to the beginning  
-			 if($paged < $range){  
-			   for($i = 1; $i <= ($range + 1); $i++){  
-			   	 if($i==$paged){$class = "current number"; }else { $class = "number"; } 
-				 echo "<a class='".$class."' href='" . get_pagenum_link($i). "'>$i</a>";  
-			   }  
-			 }  
-			 // When closer to the end  
-			 elseif($paged >= ($max_page - ceil(($range/2)))){  
-			   for($i = $max_page - $range; $i <= $max_page; $i++){  
-				  if($i==$paged){$class = "current number"; }else { $class = "number"; } 
-				 echo "<a class='".$class."' href='" . get_pagenum_link($i). "'>$i</a>";   
-			   }  
-			 }  
-			 // Somewhere in the middle  
-			 elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))){  
-			   for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++){  
-				  if($i==$paged){$class = "current number"; }else { $class = "number"; } 
-				 echo "<a class='".$class."' href='" . get_pagenum_link($i). "'>$i</a>";  
-			   }  
-			 }  
-		}  
-		// Less pages than the range, no sliding effect needed  
-		else{  
-		 for($i = 1; $i <= $max_page; $i++){  
-		  if($i==$paged){$class = "current number"; }else { $class = "number"; } 
-		   echo "<a class='".$class."' href='" . get_pagenum_link($i). "'>$i</a>";  
-		 }  
-		}  
-		// Next page  
-		next_posts_link(' > ');  
-		// On the last page, don't put the Last page link  
-		if($paged != $max_page){  
-		 echo '<a class="last" href=" '. get_pagenum_link($max_page) .' "> >> </a>';  
-		}  
-	}  
-}  	
+		// We need the sliding effect only if there are more pages than is the sliding range
+		if($max_page > $range){
+		 // When closer to the beginning
+			 if($paged < $range){
+			   for($i = 1; $i <= ($range + 1); $i++){
+			   	 if($i==$paged){$class = "current number"; }else { $class = "number"; }
+				 echo "<a class='".$class."' href='" . get_pagenum_link($i). "'>$i</a>";
+			   }
+			 }
+			 // When closer to the end
+			 elseif($paged >= ($max_page - ceil(($range/2)))){
+			   for($i = $max_page - $range; $i <= $max_page; $i++){
+				  if($i==$paged){$class = "current number"; }else { $class = "number"; }
+				 echo "<a class='".$class."' href='" . get_pagenum_link($i). "'>$i</a>";
+			   }
+			 }
+			 // Somewhere in the middle
+			 elseif($paged >= $range && $paged < ($max_page - ceil(($range/2)))){
+			   for($i = ($paged - ceil($range/2)); $i <= ($paged + ceil(($range/2))); $i++){
+				  if($i==$paged){$class = "current number"; }else { $class = "number"; }
+				 echo "<a class='".$class."' href='" . get_pagenum_link($i). "'>$i</a>";
+			   }
+			 }
+		}
+		// Less pages than the range, no sliding effect needed
+		else{
+		 for($i = 1; $i <= $max_page; $i++){
+		  if($i==$paged){$class = "current number"; }else { $class = "number"; }
+		   echo "<a class='".$class."' href='" . get_pagenum_link($i). "'>$i</a>";
+		 }
+		}
+		// Next page
+		next_posts_link(' > ');
+		// On the last page, don't put the Last page link
+		if($paged != $max_page){
+		 echo '<a class="last" href=" '. get_pagenum_link($max_page) .' "> >> </a>';
+		}
+	}
+}
 function tmpmela_posts_next_link_attributes($html){
 	$html = str_replace('<a','<a class="next-post"',$html);
 	return $html;
@@ -399,21 +399,21 @@ function tmpmela_get_first_post_images($post_ID){
 	$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
 	if (isset($matches[1][0]))
 	$first_img_src = $matches[1][0];
-	if(empty($first_img_src)){ 
+	if(empty($first_img_src)){
 		return 0;
 	}
 	return $first_img_src;
 }
-function tmpmela_excerpt($limit) 
+function tmpmela_excerpt($limit)
 {
-	
+
       $excerpt = explode(' ', tmpmela_strip_images(strip_tags(get_the_content())), $limit);
       if (count($excerpt)>=$limit) {
         array_pop($excerpt);
         $excerpt = implode(" ",$excerpt).'.<div class="read-more"><a class="read-more-link" href="'.esc_url(get_permalink()).'">'.esc_html__( 'Read More' , 'firezy' ) .'</a></div>';
       } else {
         $excerpt = implode(" ",$excerpt);
-      } 
+      }
       $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
       return $excerpt;
 }
@@ -434,20 +434,20 @@ function tmpmela_excerpt_length_limit($limit)
     }
     return $excerpt;
 }
-function tmpmela_portfolio_excerpt($limit) 
+function tmpmela_portfolio_excerpt($limit)
 {
-    $contents = substr(tmpmela_strip_images(strip_tags(get_the_content())),0,$limit);	
+    $contents = substr(tmpmela_strip_images(strip_tags(get_the_content())),0,$limit);
 	$excerpt = $contents; if (strlen($contents) >= $limit){ $excerpt .= '&hellip;'; }
   	return $excerpt;
 }
 if ( ! function_exists( 'tmpmela_go_top' ) ) :
 function tmpmela_go_top(){ ?>
 <div class="backtotop"><a id="to_top" href="#"></a></div>
-<?php } 
+<?php }
 endif;
 add_action('wp_head','tmpmela_custom_css',15);
 if ( ! function_exists( 'tmpmela_strip_images' ) ) :
-function tmpmela_strip_images($content){	
+function tmpmela_strip_images($content){
    $content = preg_replace('/<img[^>]+./','',$content);
    return preg_replace('/<\/?a[^>]*>/','',$content);
 }
@@ -463,28 +463,28 @@ add_filter( 'use_default_gallery_style', '__return_false' );
  */
 function tmpmela_load_fonts() {
     $fonts_url = '';
- 
+
     /* Translators: If there are characters in your language that are not
     * supported by Poppins, translate this to 'off'. Do not translate
     * into your own language.
     */
-   
+
 	$Poppins = _x( 'on', 'Poppins font: on or off', 'firezy' );
-	
-		
+
+
 	  if (  'off' !== $Poppins ) {
-			$font_families = array(); 
+			$font_families = array();
 			 if ( 'off' !== $Poppins ) {
-				$font_families[] = 'Poppins:300,400,500,600,600,800';		
-			}  
-		
+				$font_families[] = 'Poppins:300,400,500,600,600,800';
+			}
+
 		    $query_args = array(
 				'family' => urlencode( implode( '|', $font_families ) ),
 				'subset' => urlencode( 'latin,latin-ext' ),
 			);
-	 
+
 			$fonts_url = esc_url( add_query_arg( $query_args, 'https://fonts.googleapis.com/css' ));
-		} 
+		}
     return esc_url_raw( $fonts_url );
 }
 /*
@@ -509,11 +509,11 @@ function tmpmela_load_styles() {
 	wp_enqueue_style('tmpmela-isotope', get_template_directory_uri() . '/css/isotop-port.css');
 	wp_enqueue_style('tmpmela-custom', get_template_directory_uri() . '/css/megnor/custom.css');
 	wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/megnor/owl.carousel.css');
-	wp_enqueue_style('owl-transitions', get_template_directory_uri() . '/css/megnor/owl.transitions.css');		
+	wp_enqueue_style('owl-transitions', get_template_directory_uri() . '/css/megnor/owl.transitions.css');
 	wp_enqueue_style('shadowbox', get_template_directory_uri() . '/css/megnor/shadowbox.css');
 	wp_enqueue_style('tmpmela-shortcode-style', get_template_directory_uri() . '/css/megnor/shortcode_style.css');
-	wp_enqueue_style('animate', get_template_directory_uri() . '/css/megnor/animate.min.css');	
-	
+	wp_enqueue_style('animate', get_template_directory_uri() . '/css/megnor/animate.min.css');
+
 	//Adds wocommerce style
 	if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) :
 		wp_enqueue_style('tmpmela-woocommerce-css', get_template_directory_uri() . '/css/megnor/woocommerce.css');
@@ -529,22 +529,22 @@ add_action( 'enqueue_block_editor_assets', 'tmpmela_block_editor_styles' );
  * Enqueue Templatemela Scripts
  */
 if ( ! function_exists( 'tmpmela_load_scripts' ) ) :
-function tmpmela_load_scripts() {	
-		
+function tmpmela_load_scripts() {
+
 	wp_enqueue_script( 'tmpmela-custom-script', get_template_directory_uri() . '/js/megnor/jquery.custom.min.js', array(), '', false);
 	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/jquery.isotope.min.js', array(), '', false);
-	wp_enqueue_script( 'tmpmela-megnor', get_template_directory_uri() . '/js/megnor/megnor.min.js', array(), '', false);		
+	wp_enqueue_script( 'tmpmela-megnor', get_template_directory_uri() . '/js/megnor/megnor.min.js', array(), '', false);
 	wp_enqueue_script( 'tmpmela-custom', get_template_directory_uri() . '/js/megnor/custom.js', array(), '', false);
 	wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . '/js/megnor/owl.carousel.min.js', array(), '', false);
 	wp_enqueue_script( 'validate', get_template_directory_uri() . '/js/megnor/jquery.validate.js', array(), '', false);
-	wp_enqueue_script( 'shadowbox', get_template_directory_uri() . '/js/megnor/shadowbox.js', array(), '', false);		
-	wp_enqueue_script( 'megamenu', get_template_directory_uri() . '/js/megnor/jquery.megamenu.js', array(), '', false);	
+	wp_enqueue_script( 'shadowbox', get_template_directory_uri() . '/js/megnor/shadowbox.js', array(), '', false);
+	wp_enqueue_script( 'megamenu', get_template_directory_uri() . '/js/megnor/jquery.megamenu.js', array(), '', false);
 	wp_enqueue_script( 'easyResponsiveTabs', get_template_directory_uri() . '/js/megnor/easyResponsiveTabs.js', array(), '', false);
 	wp_enqueue_script( 'jtree', get_template_directory_uri() . '/js/megnor/jquery.treeview.js', array(), '', false);
-	wp_enqueue_script( 'countUp', get_template_directory_uri() . '/js/megnor/countUp.js', array(), '', false);	
+	wp_enqueue_script( 'countUp', get_template_directory_uri() . '/js/megnor/countUp.js', array(), '', false);
 	wp_enqueue_script( 'countdown', get_template_directory_uri() . '/js/megnor/jquery.countdown.min.js', array(), '', false);
-       
-        
+
+
     ?>
 <!--[if lt IE 9]>
 	<?php wp_enqueue_script( 'tmpmela-html5', get_template_directory_uri() . '/js/html5.js', array(), '', false); ?>
@@ -647,7 +647,7 @@ function tmpmela_tags_links() {
 	// Translators: used between list items, there is a space after the comma.
 	$tag_list = get_the_tag_list( '', esc_html__( ', ', 'firezy' ) );
 	if ( $tag_list ) {
-		echo '<div class="meta-inner"><span class="tags-links"><i class="fa fa-tags"></i>' . $tag_list . '</span></div>';		
+		echo '<div class="meta-inner"><span class="tags-links"><i class="fa fa-tags"></i>' . $tag_list . '</span></div>';
 	}
 }
 endif;
@@ -670,7 +670,7 @@ function tmpmela_comments_link() {
 	echo '<div class="meta-inner"><span class="comments-link"><i class="fa fa-comment"></i>';
 	comments_popup_link( esc_html__( 'Leave a Comment', 'firezy' ), esc_html__( '1 Comment', 'firezy' ), esc_html__( '% Comments', 'firezy' ) );
 	echo '</span></div>';
-	endif; 
+	endif;
 }
 endif;
 if ( ! function_exists( 'tmpmela_entry_date' ) ) :
@@ -703,10 +703,10 @@ function tmpmela_entry_date( $echo = true ) {
 endif;
 if ( ! function_exists( 'tmpmela_post_entry_date' ) ) :
 function tmpmela_post_entry_date( ) {
-	$date = get_the_date();	
+	$date = get_the_date();
 	$month = get_the_date('M');
-	$day = get_the_date('d'); 
-	$year = get_the_date('Y'); 
+	$day = get_the_date('d');
+	$year = get_the_date('Y');
 	$date = '<div class="meta-inner"><span class="entry-date"><i class="fa fa-calendar-o"></i>' . $date . '</span></div>';
 	echo wp_kses_post($date);
 	return $date;
@@ -731,7 +731,7 @@ endif;
 if ( ! function_exists( 'tmpmela_page_layout' ) ) :
 function tmpmela_page_layout() {
 	$page_layout_class = '';
-	global $wp_query;	
+	global $wp_query;
 	if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 	if(is_shop()):
 		$page_id = wc_get_page_id('shop');
@@ -744,7 +744,7 @@ function tmpmela_page_layout() {
 	$tmpmela_page_layout = get_post_meta($page_id, 'tmpmela_page_layout', true);
 	if(empty($tmpmela_page_layout))
 		$tmpmela_page_layout = '';
-		
+
 	if($tmpmela_page_layout == "box"):
 		$page_layout_class = "box-page";
 	elseif($tmpmela_page_layout == "wide"):
@@ -756,7 +756,7 @@ endif;
 if ( ! function_exists( 'tmpmela_sidebar_position' ) ) :
 function tmpmela_sidebar_position() {
   $sidebar_class = '';
-  global $wp_query;  
+  global $wp_query;
   if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
   if(is_shop() || is_archive() || is_single() || is_search()):
     $page_id = wc_get_page_id('shop');
@@ -768,10 +768,10 @@ function tmpmela_sidebar_position() {
     $page_id = $wp_query->get_queried_object_id();
   }
   $tmpmela_sidebar_position = get_post_meta($page_id, 'tmpmela_sidebar_position', true);
-  
+
   if(empty($tmpmela_sidebar_position))
     $tmpmela_sidebar_position = '';
-    
+
   if($tmpmela_sidebar_position == "left"):
     $sidebar_class = "left-sidebar";
   elseif($tmpmela_sidebar_position == "right"):
@@ -1029,7 +1029,7 @@ function tmpmela_shortcode_paging_nav() {
 		$output .= $links;
 		$output .= '</div>';
 	$output .= '</nav>';
-	endif; 
+	endif;
 	}
 	return $output;
 }
@@ -1038,14 +1038,14 @@ endif;
 add_image_size( 'tmpmela-blog-posts-list', 1100, 1100, true );
 add_image_size( 'tmpmela-small-thumb', 50, 50, true );
 //Create HTML list of nav menu items and allow HTML tags.
-class Description_Walker extends Walker_Nav_Menu { 
+class Description_Walker extends Walker_Nav_Menu {
 	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-		$classes = empty ( $item->classes ) ? array () : (array) $item->classes;	 
-		$class_names = join(' ', apply_filters(	'nav_menu_css_class', array_filter( $classes ), $item ) );	 
+		$classes = empty ( $item->classes ) ? array () : (array) $item->classes;
+		$class_names = join(' ', apply_filters(	'nav_menu_css_class', array_filter( $classes ), $item ) );
 		! empty ( $class_names ) and $class_names = ' class="'. esc_attr( $class_names ) . '"';
 		// Build default menu items
 		$output .= "<li id='menu-item-$item->ID' $class_names>";
-		$attributes = '';	 
+		$attributes = '';
 		! empty( $item->attr_title )
 		and $attributes .= ' title="' . esc_attr( $item->attr_title ) .'"';
 		! empty( $item->target )
@@ -1055,13 +1055,13 @@ class Description_Walker extends Walker_Nav_Menu {
 		! empty( $item->url )
 		and $attributes .= ' href="' . esc_attr( $item->url ) .'"';
 		// Build the description (you may need to change the depth to 0, 1, or 2)
-		$description = ( ! empty ( $item->description ) and 1 == $depth ) ? '<span class="nav_desc">'. $item->description . '</span>' : '';		 
-		$title = apply_filters( 'the_title', $item->title, $item->ID );		 
+		$description = ( ! empty ( $item->description ) and 1 == $depth ) ? '<span class="nav_desc">'. $item->description . '</span>' : '';
+		$title = apply_filters( 'the_title', $item->title, $item->ID );
 		$item_output = $args->before . "<a $attributes>" . $args->link_before . $title . '</a> ' . $args->link_after . $description . $args->after;
 		// Since $output is called by reference we don't need to return anything.
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args, $id  );
 	}
-} 
+}
 if ( ! function_exists( 'tmpmela_shop_body_classes' ) ) :
 function tmpmela_shop_body_classes( $classes ) {
 		global $wp,$query_args;
@@ -1069,13 +1069,13 @@ function tmpmela_shop_body_classes( $classes ) {
 		$str = substr(strrchr($current, '?'), 1);
 		$variable = substr($str, 0, strpos($str, "&"));
 			if($variable == 'left'){
-				$classes[] = 'shop-left-sidebar'; 
+				$classes[] = 'shop-left-sidebar';
 			}elseif($variable == 'right'){
-				$classes[] = 'shop-right-sidebar'; 
+				$classes[] = 'shop-right-sidebar';
 			}elseif($variable == 'full'){
-				$classes[] = 'shop-full-width';	
+				$classes[] = 'shop-full-width';
 			}
-            elseif ( !is_active_sidebar( 'sidebar-1' ) )  
+            elseif ( !is_active_sidebar( 'sidebar-1' ) )
             { $classes[] = "shop-full-width";}
 else{
 	$classes[] = 'shop-left-sidebar' ;
@@ -1091,21 +1091,21 @@ function tmpmela_is_blog () {
 }
 /* Related Product settings */
 function tmpmela_related_products_args( $args ) {
-  	$no = get_option("tmpmela_related_items");	
-	$args['posts_per_page'] = $no; 
+  	$no = get_option("tmpmela_related_items");
+	$args['posts_per_page'] = $no;
 	return $args;
 }
 add_filter( 'woocommerce_output_related_products_args', 'tmpmela_related_products_args' );
 /* Upsell Product settings */
 function tmpmela_output_upsells() {
-		$no1 = get_option("tmpmela_upsells_items");	
-	    woocommerce_upsell_display( $no1); 
+		$no1 = get_option("tmpmela_upsells_items");
+	    woocommerce_upsell_display( $no1);
 }
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 add_action( 'woocommerce_after_single_product_summary', 'tmpmela_output_upsells', 15 );
 /* crosssell Product settings */
 function tmpmela_output_crosssell() {
-		$no1 = get_option("tmpmela_crosssell_items");	
+		$no1 = get_option("tmpmela_crosssell_items");
 	   woocommerce_cross_sell_display( $no1);
 }
 remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 10 );
@@ -1143,16 +1143,16 @@ if( ! function_exists( 'tmpmela_add_to_compare_in_menu' ) ){
 }
 endif;
 function tmpmela_product_navigation()
-{		
+{
 		global $post , $previous ,$next;
 		$current_url = get_permalink( $post->ID );
 		$next_text = '';
-		$previous_text = '';		
-		
+		$previous_text = '';
+
 		// Get the previous and next product links
-		$previous_link = get_permalink(get_adjacent_post(false,'',false)); 
+		$previous_link = get_permalink(get_adjacent_post(false,'',false));
 		$next_link = get_permalink(get_adjacent_post(false,'',true));
-		
+
 		// Create the two links provided the product exists
 		if ( $next_link != $current_url ) {
 				$next = "<a href='" . esc_url($next_link) . "'>" . $next_text . "</a>";
@@ -1160,40 +1160,40 @@ function tmpmela_product_navigation()
 			if ( $previous_link != $current_url ) {
 				$previous = "<a href='" .esc_url($previous_link) . "'>" . $previous_text . "</a>";
 		}
-		
+
 		// Create the two links provided the product exists
 			if ( $next_link != $current_url ) {
 				$next_text = get_adjacent_post(false,'',true)->post_title;
 				$next = "<a href='" .esc_url( $next_link ). "'>" . $next_text . "</a>";
-			} 
+			}
 			if ( $previous_link != $current_url ) {
 				$previous_text = get_adjacent_post(false,'',false)->post_title;
 				$previous = "<a href='" . esc_url($previous_link) . "'>" . $previous_text . "</a>";
 			}
-			
+
 		// Create HTML Output
-		$output  = '<div class="tmpmela_product_nav_buttons">'; 
+		$output  = '<div class="tmpmela_product_nav_buttons">';
 		if ( $previous != '' )
 			$output .= '<span class="previous"> ' . $previous . '</span>';
 		if ( $next != '' )
 			$output .= '<span class="next">' . $next .'</span>';
 		$output .= '</div>';
-		
+
 		// Display the final output
 		echo wp_kses_post($output);
 }
 add_action( 'woocommerce_single_product_summary', 'tmpmela_product_navigation', 5 );
 /*	This function is used to convert hex color into rgb or rgba */
 function tmpmela_hex_to_rgba($color, $opacity = false) {
- 
+
 	$default = 'rgb(0,0,0)';
  		//Return default if no color provided
 		if(empty($color))
-          return $default; 
- 		//Sanitize $color if "#" is provided 
+          return $default;
+ 		//Sanitize $color if "#" is provided
         if ($color[0] == '#' ) {
         	$color = substr( $color, 1 );
-        } 
+        }
         //Check if color has 6 or 3 characters and get values
         if (strlen($color) == 6) {
                 $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
@@ -1201,7 +1201,7 @@ function tmpmela_hex_to_rgba($color, $opacity = false) {
                 $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
         } else {
                 return $default;
-        } 
+        }
         //Convert hexadec to rgb
         $rgb =  array_map('hexdec', $hex);
         //Check if opacity is set(rgba or rgb)
@@ -1211,7 +1211,7 @@ function tmpmela_hex_to_rgba($color, $opacity = false) {
         	$output = 'rgba('.implode(",",$rgb).','.$opacity.')';
         } else {
         	$output = 'rgb('.implode(",",$rgb).')';
-        } 
+        }
         //Return rgb(a) color string
         return $output;
 }
@@ -1222,15 +1222,15 @@ function tmpmela_second_product_thumbnail() {
 	$id =	get_post_thumbnail_id( $product->get_id() );
 	if(get_option( 'tmpmela_secondaryimage' ) == "yes"){
 		if ( count($attachment_ids) > 0 ) {
-			$secondary_image_id = $attachment_ids['0'];		
+			$secondary_image_id = $attachment_ids['0'];
 			echo wp_get_attachment_image( $secondary_image_id, 'full', '', $attr = array( 'class' => 'secondary-image attachment-shop-catalog' ) );
 		}
-		else{				
-			echo wp_get_attachment_image( $id, 'shop_catalog', '', $attr = array( 'class' => 'secondary-image attachment-shop-catalog' ) );		
+		else{
+			echo wp_get_attachment_image( $id, 'shop_catalog', '', $attr = array( 'class' => 'secondary-image attachment-shop-catalog' ) );
 		}
 	}
-	else{				
-		echo wp_get_attachment_image( $id, 'shop_catalog', '', $attr = array( 'class' => 'secondary-image attachment-shop-catalog' ) );		
+	else{
+		echo wp_get_attachment_image( $id, 'shop_catalog', '', $attr = array( 'class' => 'secondary-image attachment-shop-catalog' ) );
 	}
 }
 add_action( 'woocommerce_before_shop_loop_item_title', 'tmpmela_second_product_thumbnail');
@@ -1257,7 +1257,7 @@ return  $tmpmela_allowed_html;
 /* Transfer the php data to custom js */
 function tmpmela_load_more(){
 	// Register the script
-	wp_enqueue_script( 'phpvariable', get_template_directory_uri() . '/js/megnor/megnorloadmore.js', array(), '', false);	
+	wp_enqueue_script( 'phpvariable', get_template_directory_uri() . '/js/megnor/megnorloadmore.js', array(), '', false);
 	// Localize the script with new data
 	$translation_array = array(
 		'tmpmela_loadmore' => get_option( 'tmpmela_loadmore' ),
@@ -1284,7 +1284,7 @@ function tmpmela_advanced_search_query($query) {
 						'field' => 'slug',
 						'terms' => array($_GET['product_cat']) )
 				));
-			}   
+			}
 		}
         return $query;
    }
@@ -1304,7 +1304,7 @@ add_action('woocommerce_before_shop_loop_item_title', 'tmpmela_out_of_stock');
 add_action('wp_print_styles', 'tmpmela_dequeue_css_from_plugins', 100);
 function tmpmela_dequeue_css_from_plugins()  {
 wp_dequeue_style('newsletter');
-}	
+}
 /* Show an Counter in Single product page. */
 if ( ! function_exists( 'tmpmela_sale_counter' ) ) {
 	function tmpmela_sale_counter() {
@@ -1364,12 +1364,12 @@ function tmpmela_get_rating_html($rating_html, $rating)
     	$title = 'Not yet rated';
     	$rating = 0;
   	}
-  	$rating_html  = '<div class="star-rating" title="' . $title . '">';
-    $rating_html .= '<span style="width:' . (($rating / 5) * 100) . '%"><strong class="rating">' . $rating . '</strong> ' . esc_attr__('out of 5', 'firezy') . '</span>';
-  	$rating_html .= '</div>';
+  	$rating_html  = '<div class="rating-wrap"><div class="star-rating" title="' . $title . '">';
+    $rating_html .= '<span style="width:' . (($rating / 5) * 100) . '%">' . esc_attr__('out of 5', 'firezy') . '</span>';
+  	$rating_html .= '</div> <strong class="rating">(' . (int)$rating . ')</strong> </div>';
   	return $rating_html;
 	}
-	
+
 /* for move comment field*/
 function tmpmela_move_comment_field_to_bottom( $fields ) {
 $comment_field = $fields['comment'];
@@ -1377,7 +1377,7 @@ unset( $fields['comment'] );
 $fields['comment'] = $comment_field;
 return $fields;
 }
- 
+
 add_filter( 'comment_form_fields', 'tmpmela_move_comment_field_to_bottom' );
 function tmpmela_update_comment_fields( $fields ) {
 $commenter = wp_get_current_commenter();
@@ -1404,7 +1404,7 @@ return $fields;
 add_filter( 'comment_form_default_fields', 'tmpmela_update_comment_fields' );
 
 /* Function to add cms tab in product single page */
-function tmpmela_single_product_cms_tab(){   
+function tmpmela_single_product_cms_tab(){
 		if (is_active_sidebar('single-product-cms-tab')) : ?>
 			<div class="product-cms-tab-block">	<?php
 				dynamic_sidebar('single-product-cms-tab');  ?>
@@ -1420,11 +1420,11 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 11 );
 /* remove type attr*/
 add_action('wp_loaded', 'tmpmela_prefix_output_buffer_start');
-function tmpmela_prefix_output_buffer_start() { 
-    ob_start("tmpmela_prefix_output_callback"); 
+function tmpmela_prefix_output_buffer_start() {
+    ob_start("tmpmela_prefix_output_callback");
 }
 add_action('shutdown', 'tmpmela_prefix_output_buffer_end');
-function tmpmela_prefix_output_buffer_end() { 
+function tmpmela_prefix_output_buffer_end() {
     if (ob_get_length() > 0) { ob_end_clean(); }
 }
 function tmpmela_prefix_output_callback($buffer) {

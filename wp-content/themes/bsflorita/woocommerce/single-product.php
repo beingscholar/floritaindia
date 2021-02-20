@@ -40,12 +40,38 @@ get_header( 'shop' ); ?>
 	<div class="page-title"><div class="page-title-inner"><h1 class="entry-title-main"><?php  the_title();?></h1>
 		<?php tmpmela_breadcrumbs(); ?>
 		</div>
-	</div>	
+	</div>
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php wc_get_template_part( 'content', 'single-product' ); ?>
 		<?php if (is_active_sidebar('single-product-side-widget-area')) : ?>
 			<div class="singleproduct-sidebar">
 	        	<div class="single-product-side-widget-area">
+              <div class="logo-box">
+                <img alt="Florita India" src="http://florita.xxploreautomotive.in/wp-content/uploads/2021/02/logo-FLORITA.png">
+            </div>
+              <ul class="delivery-product">
+                <li>
+                  <img alt="need help" src="https://www.musclestation.com.au/wp-content/uploads/2021/01/need-help-menu.png">
+                  <div class="std">
+                    <h3>Need help?</h3>
+                    <span>Call <strong><a href="tel:0414209565">0414209565</a></strong> <br>or <a href="/contact/">Email Us</a></span>
+                  </div>
+                </li>
+                <li>
+                  <img alt="same day dispatch" src="https://www.musclestation.com.au/wp-content/uploads/2021/01/same-day-dispatch.png">
+                  <div class="std">
+                    <h3>SAME DAY DISPATCH ORDER BEFORE 3PM AEST Guarantee</h3>
+                    <!-- <span>Found a better price? We'll beat it! <a href="/best-price-guarantee.html">More Info</a></span> -->
+                  </div>
+                </li>
+                <li>
+                  <img alt="" src="https://www.musclestation.com.au/wp-content/uploads/2020/11/muscle-station-100-.png">
+                  <div class="std">
+                    <h3>RETAIL PRICE MATCH GUARANTEED</h3>
+                    <!-- <span>Guaranteed</span> -->
+                  </div>
+                </li>
+              </ul>
 	                <?php dynamic_sidebar('single-product-side-widget-area'); ?>
 	            </div>
 			</div>
@@ -60,14 +86,14 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_after_main_content' );
 		?>
 	<?php if (get_option('tmpmela_shop_sidebar') == 'yes') : ?>
-	<?php	
+	<?php
 		/**
 		 * woocommerce_sidebar hook
 		 *
 		 * @hooked woocommerce_get_sidebar - 10
 		 */
 		do_action( 'woocommerce_sidebar' );
-	?>	
+	?>
 	<?php endif; ?>
 	</div>
 <?php get_footer( 'shop' ); ?>
