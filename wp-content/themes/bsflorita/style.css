@@ -1190,25 +1190,35 @@ textarea {
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
-/* .header-cms-service .contact-block:hover .contact-icon {
+.header-cms-service .contact-block:hover .contact-icon {
   background-image: url("images/megnor/support_hover.svg");
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -ms-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
-} */
+}
 .header-cms-service .service-text.text1 {
-  font-size: 12px;
+  font-size: 14px;
   text-align: left;
   line-height: 20px;
   font-weight: 400;
+  color: #ed1c24;
 }
 .header-cms-service .service-text.text2 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   text-align: left;
+  color: #ed1c24;
+}
+
+.header-cms-service .service-text.text2 a {
+  color: #ed1c24;
+}
+
+.header-cms-service .service-text.text2 a:hover {
+  text-decoration: underline;
 }
 .header-right-service-cms .service-text.text {
   font-size: 16px;
@@ -2463,8 +2473,11 @@ li.hiden_menu:nth-last-child(-n + 2) .sub-container {
 .mega-menu ul li .sub {
   z-index: 999;
   /* box-shadow: 0 0 1px rgba(0, 0, 0, 0.1); */
-  border: 1px solid #eee;
+  border: 1px solid #ed1c24;
   border-top: none;
+}
+.header-bottom {
+  background-color: #ed1c24 !important;
 }
 .yith_magnifier_zoom_wrap {
   z-index: 9 !important;

@@ -162,7 +162,7 @@ function tmpmela_service_cms() {
 	<div class="contact-icon"></div>
 	<div class="contact-block-inner">
 	<div class="service-text text1">'.get_option('tmpmela_contact_text').'</div>
-	<div  class="service-text text2">'.get_option('tmpmela_contact_number').'</div>
+	<div  class="service-text text2"><a href="tel: '.get_option('tmpmela_contact_number').'">'.get_option('tmpmela_contact_number').'</a></div>
 	</div>
 	</div>';
 }

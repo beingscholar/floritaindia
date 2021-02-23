@@ -107,15 +107,15 @@
 							</div>
 							<?php endif; ?>
 					<!--End Search-->
-
+<?php if (get_option('tmpmela_show_header_services') == 'yes') : ?>
+						<div class="header-cms-service"><?php tmpmela_service_cms(); ?></div>
+					 <?php endif; ?>
 					</div>
 
 
 					<!--Start Header Right CMS Area-->
 						<div class="header-top-right">
-            <?php if (get_option('tmpmela_show_header_services') == 'yes') : ?>
-						<div class="header-cms-service"><?php tmpmela_service_cms(); ?></div>
-					 <?php endif; ?>
+
            <ul class="header-social">
              <li class="fb">
                <a href="javascript:void(0)" target="_blank"><i title="Facebook" class="fa fa-facebook"></i></a>
