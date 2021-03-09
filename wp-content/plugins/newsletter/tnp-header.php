@@ -108,7 +108,7 @@ $warning |= empty($status_options['mail']);
         <li>
             <a href="#"><i class="fas fa-newspaper"></i> <?php _e('Newsletters', 'newsletter') ?> <i class="fas fa-chevron-down"></i></a>
             <ul>
-                <li><a href="?page=newsletter_emails_theme"><i class="fas fa-plus"></i> <?php _e('Create newsletter', 'newsletter') ?>
+                <li><a href="?page=newsletter_emails_composer"><i class="fas fa-plus"></i> <?php _e('Create newsletter', 'newsletter') ?>
                         <small><?php _e('Start your new campaign', 'newsletter') ?></small></a></li>
                 <li><a href="?page=newsletter_emails_index"><i class="fas fa-newspaper"></i> <?php _e('Newsletters', 'newsletter') ?>
                         <small><?php _e('The classic "write & send" newsletters', 'newsletter') ?></small></a></li>

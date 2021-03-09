@@ -2476,9 +2476,7 @@ li.hiden_menu:nth-last-child(-n + 2) .sub-container {
   border: 1px solid #ed1c24;
   border-top: none;
 }
-.header-bottom {
-  background-color: #ed1c24 !important;
-}
+
 .yith_magnifier_zoom_wrap {
   z-index: 9 !important;
 }
@@ -3796,20 +3794,20 @@ a.post-thumbnail:hover {
 .primary-sidebar .widget.woocommerce.widget_product_search button,
 .site-footer .widget.woocommerce.widget_product_search button,
 .site-header .header-search .woocommerce-product-search button[type="submit"] {
-  background-image: url("images/megnor/search_white.svg");
+  /* background-image: url("images/megnor/search_white.svg"); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 17px;
   border: 0;
   color: #ffffff;
   float: left;
-  font-size: 0;
+  /* font-size: 0; */
   height: 40px;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   position: absolute;
   right: auto;
-  width: 40px;
+  width: auto;
   border-radius: 0px;
 }
 .site-footer .widget.woocommerce.widget_product_search button,
@@ -7347,11 +7345,11 @@ input::-webkit-inner-spin-button {
   background-color: rgba(0, 0, 0, 0);
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  background-size: 35px;
+  background-size: 28px;
   box-sizing: border-box;
   font-size: 14px;
-  height: 36px;
-  width: 40px;
+  height: 28px;
+  width: 35px;
   position: relative;
   content: "";
   display: inline-block;
@@ -7368,14 +7366,14 @@ input::-webkit-inner-spin-button {
 }
 .header-cart .cart-contents span.cart-qty {
   position: absolute;
-  left: 25px;
+  left: 23px;
   height: 17px;
   width: 17px;
   background: #ffd200;
   border-radius: 50%;
   text-align: center;
   line-height: 20px;
-  top: 0px;
+  top: -4px;
   font-size: 11px;
 }
 .header-cart .cart-contents .cart-label,
@@ -7384,6 +7382,7 @@ input::-webkit-inner-spin-button {
   line-height: 18px;
   color: #fff;
   letter-spacing: 0.5px;
+  display: none;
 }
 .cart-contents {
   display: block;
@@ -7406,6 +7405,7 @@ input::-webkit-inner-spin-button {
 .header-cart .shopping_cart .item-total,
 .account-contents {
   color: #ffd200;
+  display: none;
 }
 .box-category::after {
   content: "\f0d7";
@@ -7417,7 +7417,7 @@ input::-webkit-inner-spin-button {
 }
 .topbar-link::after,
 .headercart-block::after {
-  content: "\f0d7";
+  /* content: "\f0d7"; */
   font-family: fontawesome;
   position: absolute;
   top: 29px;

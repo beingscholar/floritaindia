@@ -107,16 +107,70 @@
 							</div>
 							<?php endif; ?>
 					<!--End Search-->
-<?php if (get_option('tmpmela_show_header_services') == 'yes') : ?>
+					<?php if (get_option('tmpmela_show_header_services') == 'yes') : ?>
 						<div class="header-cms-service"><?php tmpmela_service_cms(); ?></div>
-					 <?php endif; ?>
+						<?php endif; ?>
 					</div>
 
 
 					<!--Start Header Right CMS Area-->
 						<div class="header-top-right">
+							<!--Cart -->
+						<?php
+						// Woo commerce Header Cart
+						if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) && is_active_sidebar('header-widget') ) : ?>
+						<div class="header-cart headercart-block">
+							<div class="cart togg">
+										<?php global $woocommerce;
+										ob_start();?>
+										<div class="shopping_cart tog" title="<?php esc_attr_e('View your shopping cart', 'firezy'); ?>">
+											<div class="cart-icon"></div>
+											<div class="cart-price">
+												<a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'firezy'); ?>">
+													<span class="cart-qty"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'firezy'), $woocommerce->cart->cart_contents_count);?></span>
+													<div class="cart-label"><?php echo esc_html_e('My Cart','firezy'); ?></div>
+													<div class="item-total"><?php echo translate($woocommerce->cart->get_cart_total()); ?> </div>
+												</a>
+											</div>
+										</div>
+										<?php global $woocommerce; ?>
+										<?php tmpmela_get_widget('header-widget'); ?>
+							</div>
+							<a class="nav-link" href="/wishlist">
+								<img src="https://bajajdigital-cdn-endpoint.azureedge.net/images/wishlist.svg" alt="">
+							</a>
+						</div>
+						<?php endif; ?>
+						<a data-toggle="modal" data-target="#signIn" class="nav-link dropdown pr0" href="#">
+							<img class="mr10" src="https://bajajdigital-cdn-endpoint.azureedge.net/images/user.svg" alt="">
+						</a>
+						<!-- <a data-toggle="modal" data-target="#signUp" class="nav-link dropdown pr0 pl0" href="#">&nbsp;Signup</a> -->
+						<!-- <a data-toggle="modal" data-target="#signIn" class="nav-link dropdown pr0 pl0" href="#" id="hplsignin">Login&nbsp;/</a> -->
+						<div class="topbar-link">
+							<div class="topbar-link-toggle"></div>
+							<div class="account-block">
+								<span class="account-label">									
+									<?php
+									if ( is_user_logged_in() ) {
+										$myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
+										if ( $myaccount_page_id ) {
+											$logout_url = wp_logout_url( get_permalink( $myaccount_page_id ) );
+											if ( get_option( 'woocommerce_force_ssl_checkout' ) == 'yes' ) {
+												if (is_ssl()) {		
+													$logout_url = str_replace( 'http:', 'https:', $logout_url );
+												}
+											}
+										}
+									?>
+										<a href="<?php echo esc_url($logout_url); ?>" ><?php echo esc_html_e('Sign Out','firezy'); ?></a>
+									<?php } else { ?>
+										<a href="<?php echo  get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php echo esc_html_e('Login / Signup','firezy'); ?></a>
+									<?php } ?>
+								</span>
+							</div>
+						</div>
 
-           <ul class="header-social">
+           <!-- <ul class="header-social">
              <li class="fb">
                <a href="javascript:void(0)" target="_blank"><i title="Facebook" class="fa fa-facebook"></i></a>
              </li>
@@ -129,7 +183,7 @@
              <li class="lk">
                <a href="javascript:void(0)" target="_blank"><i title="LinkedIn" class="fa fa-linkedin"></i></a>
              </li>
-           </ul>
+           </ul> -->
 
 							 <?php if (get_option('tmpmela_show_header_right_services') == 'yes') : ?>
 							<div class="header-right-service-cms">
@@ -208,10 +262,16 @@
                                     <?php } ?>
                                 </div>
                             <?php endif; ?>
-							<?php if ( has_nav_menu('header-menu') ): ?>
+										<?php if ( has_nav_menu('header-menu') ): ?>
 										<!-- Topbar link -->
 										<div class="topbar-link">
 											<div class="topbar-link-toggle"></div>
+											<?php //echo do_shortcode( '[yith_woocompare_counter]' ); ?>
+											<a class="compareLink" href="/compare-products">
+												<img class="w20" src="https://bajajdigital-cdn-endpoint.azureedge.net/images/compare.svg" alt="">
+												Compare Products
+											</a>
+											<?php /* 
 											<div class="account-block">
 												<span class="account-label">
 													<?php
@@ -224,7 +284,9 @@
 													</span>
 
 													<span class="account-contents">
-														<?php echo esc_html_e('My Account','firezy'); ?></span></div>
+														<?php echo esc_html_e('My Account','firezy'); ?></span>
+											</div> 
+														
 												<div class="topbar-link-wrapper">
 													<div class="header-menu-links">
 
@@ -263,13 +325,14 @@
 
 													</div>
 												</div>
+												*/ ?>
 										</div>
 										<?php endif; ?>
 
 										<!--Cart -->
 											<?php
 											// Woo commerce Header Cart
-											if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) && is_active_sidebar('header-widget') ) : ?>
+											/* if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) && is_active_sidebar('header-widget') ) : ?>
 
 											<div class="header-cart headercart-block">
 											<div class="cart togg">
@@ -289,7 +352,7 @@
 														<?php tmpmela_get_widget('header-widget'); ?>
 											</div>
 										</div>
-												<?php endif; ?>
+										<?php endif; */ ?>
 
 
 									</div>

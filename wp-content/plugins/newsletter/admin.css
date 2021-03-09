@@ -25,6 +25,38 @@
     margin-left: -15px;
 }*/
 
+.container {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 .row:before,
 .row:after {
     display: table;
@@ -386,6 +418,18 @@
     width: auto;
 }
 
+#tnp-body td .tnp-tabs {
+    
+}
+
+#tnp-body td .tnp-tabs .ui-widget-header {
+    background-color: #ddd;
+}
+
+#tnp-body td .tnp-tabs .ui-tabs-anchor {
+    color: #000;
+}
+
 table.clicks td {
     border: 1px solid #666;
     padding: 2px;
@@ -723,7 +767,6 @@ p.description {
 }
 
 .tnp-theme-preview .tnp-theme-html {
-    height: 250px;
     width: auto;
 }
 
@@ -2284,17 +2327,6 @@ span.tnp-email-status-sent {
     color: #fff;
     white-space: nowrap;
 }
-
-
-/* Composer/themes choice panel */
-
-.tnp-themes-new {
-    border-bottom: 2px solid #243342;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-}
-
-
 
 /* Schedule buttons styles */
 

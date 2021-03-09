@@ -53,7 +53,8 @@ $emails                = $pagination_controller->get_items();
         <form method="post" action="">
             <?php $controls->init(); ?>
 
-            <a href="<?php echo $this->get_admin_page_url('theme'); ?>" class="button-primary"><?php _e('New newsletter', 'newsletter') ?></a>
+            <a href="<?php echo $this->get_admin_page_url('composer'); ?>" class="button-primary"><?php _e('New newsletter', 'newsletter') ?></a>
+
 	        <?php $controls->button_confirm('delete_selected', __('Delete selected newsletters', 'newsletter')); ?>
 
             <?php $pagination_controller->display_paginator(); ?>

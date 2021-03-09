@@ -6375,6 +6375,6 @@ a.active,
 .header-bottom-right::after {
   background-image: none;
   background-color: #fff;
-  opacity: 0.3;
+  opacity: 0;
   border-radius: 50px;
 }

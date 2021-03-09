@@ -299,9 +299,6 @@ function tnp_resize_2x($media_id, $size) {
 	return $media;
 }
 
-//TODO creare funzione che quando fa il resize fa anche il resize
-// al doppio della risoluzione e salva url del file in TNP_Media->url2x o urls ??
-
 /**
  * Get media for "posts" composer block
  *

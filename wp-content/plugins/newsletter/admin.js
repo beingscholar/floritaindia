@@ -142,7 +142,6 @@ window.onload = function () {
  * https://seballot.github.io/spectrum/
  */
 function tnp_controls_init() {
-    console.log('Controls init');
     jQuery(".tnpf-color").spectrum({
         type: 'color',
         allowEmpty: true,

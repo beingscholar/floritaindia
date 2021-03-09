@@ -2,27 +2,38 @@
 $size = array('width' => 240, 'height' => 160, "crop" => true);
 ?>
 <style>
-    .post-date {
-        padding: 10px 0 0 15px;
-        font-size: 13px;
-        font-family: <?php echo $font_family ?>;
-        font-weight: normal;
-        color: #aaaaaa;
-    }
     .post-title {
-        padding: 15px 0 0 0;
         font-family: <?php echo $title_font_family ?>;
-        color: <?php echo $options['title_font_color'] ?>;
         font-size: <?php echo $title_font_size ?>px;
         font-weight: <?php echo $title_font_weight ?>;
+        color: <?php echo $title_font_color ?>;
         line-height: 1.3em;
+        padding: 15px 0 0 0;
     }
+
     .post-excerpt {
-        padding: 5px 0 0 0;
-        font-family: <?php echo $font_family ?>;
-        color: <?php echo $options['font_color'] ?>;
-        font-size: <?php echo $font_size ?>px;
+        font-family: <?php echo $text_font_family ?>;
+        font-size: <?php echo $text_font_size ?>px;
+        font-weight: <?php echo $text_font_weight ?>;
+        color: <?php echo $text_font_color ?>;
         line-height: 1.4em;
+        padding: 5px 0 0 0;
+    }
+
+    .post-date {
+        font-family: <?php echo $text_font_family ?>;
+        color: <?php echo $text_font_color ?>;
+        font-size: <?php echo round($text_font_size * 0.8) ?>px;
+        font-weight: normal;
+        padding: 10px 0 0 15px;
+    }
+
+    .post-author {
+        font-family: <?php echo $text_font_family ?>;
+        color: <?php echo $text_font_color ?>;
+        font-size: <?php echo round($text_font_size * 0.8) ?>px;
+        font-weight: normal;
+        padding: 0 0 5px 0;
     }
 </style>
 
@@ -33,9 +44,18 @@ $size = array('width' => 240, 'height' => 160, "crop" => true);
         <?php
         $media = null;
         if ($show_image) {
-            $media = tnp_composer_block_posts_get_media($row[0], $size, $alternative_2);
+            $media = tnp_composer_block_posts_get_media($row[0], $size, $image_placeholder_url);
             $media->link = tnp_post_permalink($row[0]);
         }
+
+	    $author = '';
+	    if ($show_author) {
+		    $author_object = get_user_by('id', $post->post_author);
+		    if ($author_object) {
+			    $author = $author_object->display_name;
+		    }
+	    }
+
         $options['button_url'] = tnp_post_permalink($row[0]);
         ?>
         <tr>
@@ -65,13 +85,22 @@ $size = array('width' => 240, 'height' => 160, "crop" => true);
                                             ?>
                                     </td>
                                 </tr>
-                                <?php if (!empty($options['show_date'])) { ?>
+                                <?php if ($show_date) { ?>
                                     <tr>
                                         <td  align="center" inline-class="post-date">
                                             <?php echo tnp_post_date($row[0]) ?>
                                         </td>
                                     </tr>
                                 <?php } ?>
+
+	                            <?php if ($show_author) { ?>
+                                    <tr>
+                                        <td align="center" inline-class="post-author">
+				                            <?php echo $author ?>
+                                        </td>
+                                    </tr>
+	                            <?php } ?>
+
                                 <tr>
                                     <td align="center"
                                         inline-class="post-excerpt"
@@ -84,12 +113,15 @@ $size = array('width' => 240, 'height' => 160, "crop" => true);
                                             ?>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td align="center">
-                                        <br>
-                                        <?php echo TNP_Composer::button($options) ?>
-                                    </td>
-                                </tr>
+	                            <?php if ($show_read_more_button) { ?>
+                                    <tr>
+                                        <td align="center">
+	                                        <?php $button_options['button_url'] = $options['button_url']; ?>
+	                                        <?php echo TNP_Composer::button( $button_options ) ?>
+                                            <br><br>
+                                        </td>
+                                    </tr>
+	                            <?php } ?>
                             </table>
                         </td>
                     </tr>
@@ -101,7 +133,7 @@ $size = array('width' => 240, 'height' => 160, "crop" => true);
                 }
                 $media = null;
                 if ($show_image) {
-                    $media = tnp_composer_block_posts_get_media($row[1], $size, $alternative_2);
+                    $media = tnp_composer_block_posts_get_media($row[1], $size, $image_placeholder_url);
                     $media->link = tnp_post_permalink($row[1]);
                 }
                 $options['button_url'] = tnp_post_permalink($row[1]);
@@ -131,13 +163,22 @@ $size = array('width' => 240, 'height' => 160, "crop" => true);
                                             ?>
                                     </td>
                                 </tr>
-                                <?php if (!empty($options['show_date'])) { ?>
+                                <?php if ($show_date) { ?>
                                     <tr>
                                         <td  align="center" inline-class="post-date">
                                             <?php echo tnp_post_date($row[1]) ?>
                                         </td>
                                     </tr>
                                 <?php } ?>
+
+	                            <?php if ($show_author) { ?>
+                                    <tr>
+                                        <td align="center" inline-class="post-author">
+				                            <?php echo $author ?>
+                                        </td>
+                                    </tr>
+	                            <?php } ?>
+
                                 <tr>
                                     <td align="center"
                                         inline-class="post-excerpt"
@@ -150,12 +191,15 @@ $size = array('width' => 240, 'height' => 160, "crop" => true);
                                             ?>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td align="center">
-                                        <br>
-                                        <?php echo TNP_Composer::button($options) ?>
-                                    </td>
-                                </tr>
+	                            <?php if ($show_read_more_button) { ?>
+                                    <tr>
+                                        <td align="center">
+	                                        <?php $button_options['button_url'] = $options['button_url']; ?>
+	                                        <?php echo TNP_Composer::button( $button_options ) ?>
+                                            <br><br>
+                                        </td>
+                                    </tr>
+	                            <?php } ?>
                             </table>
                         </td>
                     </tr>

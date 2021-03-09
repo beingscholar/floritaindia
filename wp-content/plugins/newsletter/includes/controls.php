@@ -10,10 +10,12 @@ class NewsletterControls {
     var $action = false;
     var $button_data = '';
     var $errors = '';
+
     /**
      * @var string
      */
     var $messages = '';
+
     /**
      * @var array
      */
@@ -299,7 +301,7 @@ class NewsletterControls {
                         // GMT 0 and then we subtract the GMT offset (the example date and time on GMT+2 happens
                         // "before").
 
-                        $time = gmmktime((int)$_REQUEST[$name . '_hour'], 0, 0, (int)$_REQUEST[$name . '_month'], (int)$_REQUEST[$name . '_day'], (int)$_REQUEST[$name . '_year']);
+                        $time = gmmktime((int) $_REQUEST[$name . '_hour'], 0, 0, (int) $_REQUEST[$name . '_month'], (int) $_REQUEST[$name . '_day'], (int) $_REQUEST[$name . '_year']);
                         $time -= get_option('gmt_offset') * 3600;
                         $this->data[$name] = $time;
                     }
@@ -427,7 +429,7 @@ class NewsletterControls {
         }
         $this->warnings[] = 'You are configuring the language <strong>' . $newsletter->get_language_label($current_language) . '</strong>. Switch to "all languages" to see all options.';
     }
-    
+
     function switch_to_all_languages_notice() {
         echo '<div class="tnp-control-all-languages-notice">';
         _e('Switch the administration side to "all languages" to set these options', 'newsletter');
@@ -697,9 +699,9 @@ class NewsletterControls {
 
         foreach ($options as $key => $data) {
             echo '<option value="' . esc_attr($key) . '"';
-	        if ( is_array( $value ) && in_array( $key, $value ) || ( ! is_null( $value ) && $value == $key ) ) {
-		        echo ' selected';
-	        }
+            if (is_array($value) && in_array($key, $value) || (!is_null($value) && $value == $key )) {
+                echo ' selected';
+            }
             echo '>' . esc_html($data) . '</option>';
         }
 
@@ -816,11 +818,12 @@ class NewsletterControls {
         echo '<input name="options[', esc_attr($name), ']" id="options-', esc_attr($name), '" type="hidden" value="', esc_attr($value), '">';
     }
 
-    function button($action, $label, $function = null) {
+	function button( $action, $label, $function = null, $id = '' ) {
+		$id = ! empty( $id ) ? " id=\"$id\" " : '';
         if ($function != null) {
-            echo '<input class="button-secondary" type="button" value="' . esc_attr($label) . '" onclick="this.form.act.value=\'' . esc_attr($action) . '\';' . esc_html($function) . '"/>';
+            echo '<input ' . $id . ' class="button-secondary" type="button" value="' . esc_attr($label) . '" onclick="this.form.act.value=\'' . esc_attr($action) . '\';' . esc_html($function) . '"/>';
         } else {
-            echo '<input class="button-secondary" type="submit" value="' . esc_attr($label) . '" onclick="this.form.act.value=\'' . esc_attr($action) . '\';return true;"/>';
+            echo '<input ' . $id . ' class="button-secondary" type="submit" value="' . esc_attr($label) . '" onclick="this.form.act.value=\'' . esc_attr($action) . '\';return true;"/>';
         }
     }
 
@@ -879,10 +882,10 @@ class NewsletterControls {
         echo '>';
         echo '<i class="fas fa-copy"></i>';
         if (is_null($label)) {
-        echo ' ', esc_html(__('Duplicate', 'newsletter'));
+            echo ' ', esc_html(__('Duplicate', 'newsletter'));
         } else {
             if (!empty($label)) {
-                echo ' ' , $label;
+                echo ' ', $label;
             }
         }
         echo '</button>';
@@ -898,10 +901,10 @@ class NewsletterControls {
         echo '>';
         echo '<i class="fas fa-vial"></i>';
         if (is_null($label)) {
-        echo ' ', esc_html(__('Run a test', 'newsletter'));
+            echo ' ', esc_html(__('Run a test', 'newsletter'));
         } else {
             if (!empty($label)) {
-                echo ' ' , $label;
+                echo ' ', $label;
             }
         }
         echo '</button>';
@@ -921,10 +924,10 @@ class NewsletterControls {
         echo '>';
         echo '<i class="fas fa-times"></i>';
         if (is_null($label)) {
-            echo ' ' , esc_html(__('Delete', 'newsletter'));
+            echo ' ', esc_html(__('Delete', 'newsletter'));
         } else {
             if (!empty($label)) {
-                echo ' ' , $label;
+                echo ' ', $label;
             }
         }
         echo '</button>';
@@ -1211,7 +1214,7 @@ class NewsletterControls {
         $lists = $this->get_list_options($empty_label);
         $this->select($name, $lists);
     }
-    
+
     function public_lists_select($name = 'list', $empty_label = null) {
         $lists = $this->get_public_list_options($empty_label);
         $this->select($name, $lists);
@@ -1233,7 +1236,7 @@ class NewsletterControls {
         }
         return $lists;
     }
-    
+
     function get_public_list_options($empty_label = null) {
         $objs = Newsletter::instance()->get_lists_public();
         $lists = array();
@@ -1244,7 +1247,7 @@ class NewsletterControls {
             $lists['' . $list->id] = '(' . $list->id . ') ' . esc_html($list->name);
         }
         return $lists;
-    }    
+    }
 
     function date($name) {
         $this->hidden($name);
@@ -1285,7 +1288,7 @@ class NewsletterControls {
 
     /**
      * Creates a set of fields to collect a date and sends back the triplet year, month and day.
-     * 
+     *
      * @param string $name
      */
     function date2($name) {
@@ -1326,13 +1329,13 @@ class NewsletterControls {
         }
         echo '</select>';
     }
-    
+
     /**
      * Date and time (hour) selector. Timestamp stored.
      */
     function datetime($name) {
         echo '<input type="hidden" name="tnp_fields[' . esc_attr($name) . ']" value="datetime">';
-        $value = (int)$this->get_value($name);
+        $value = (int) $this->get_value($name);
         if (empty($value)) {
             $value = time();
         }
@@ -1417,6 +1420,8 @@ tnp_controls_init();
             jQuery.cookie("' . $cookie_name . '", ui.newTab.index(),{expires: 1});
         }
       });
+      jQuery(".tnp-tabs").tabs({});
+
     });
     function newsletter_media(name) {
         var tnp_uploader = wp.media({
@@ -1526,23 +1531,34 @@ tnp_controls_init();
      * @param array $attrs
      */
     function css_font($name = 'font', $attrs = array()) {
-        $default = ['color' => true, 'weight' => true];
+	    $default = [
+		    'color'       => true,
+		    'weight'      => true,
+		    'hide_size'   => false,
+		    'hide_weight' => false,
+		    'hide_color'  => false,
+	    ];
         $attrs = array_merge($default, $attrs);
-        $this->css_font_family($name . '_family');
-        $this->css_font_size($name . '_size');
-        if ($attrs['weight']) {
-            $this->css_font_weight($name . '_weight');
+        $this->css_font_family($name . '_family', !empty($attrs['family_default']));
+        if (!$attrs['hide_size']) {
+            $this->css_font_size($name . '_size', !empty($attrs['size_default']));
         }
-        if ($attrs['color']) {
+        if ($attrs['weight'] && !$attrs['hide_weight']) {
+            $this->css_font_weight($name . '_weight', !empty($attrs['weight_default']));
+        }
+        if ($attrs['color'] && !$attrs['hide_color']) {
             $this->color($name . '_color');
         }
     }
 
-    function css_font_size($name = 'font_size') {
+    function css_font_size($name = 'font_size', $show_empty_option = false) {
         $value = $this->get_value($name);
 
         echo '<select class="tnpf-font-size" id="options-', esc_attr($name), '" name="options[', esc_attr($name), ']">';
-        for ($i = 8; $i < 50; $i++) {
+	    if ( $show_empty_option ) {
+		    echo "<option value=''>-</option>";
+	    }
+        for ($i = 8; $i <= 50; $i++) {
             echo '<option value="' . $i . '"';
             if ($value == $i) {
                 echo ' selected';
@@ -1552,12 +1568,15 @@ tnp_controls_init();
         echo '</select>';
     }
 
-    function css_font_weight($name = 'font_weight') {
+    function css_font_weight($name = 'font_weight', $show_empty_option = false) {
         $value = $this->get_value($name);
 
         $fonts = array('normal' => 'Normal', 'bold' => 'Bold');
 
         echo '<select class="tnpf-font-weight" id="options-' . esc_attr($name) . '" name="options[' . esc_attr($name) . ']">';
+	    if ( $show_empty_option ) {
+		    echo "<option value=''>-</option>";
+	    }
         foreach ($fonts as $key => $font) {
             echo '<option value="', esc_attr($key), '"';
             if ($value == $key) {
@@ -1568,18 +1587,23 @@ tnp_controls_init();
         echo '</select>';
     }
 
-    function css_font_family($name = 'font_family') {
+    function css_font_family($name = 'font_family', $show_empty_option = false) {
         $value = $this->get_value($name);
 
-        $fonts = array('Helvetica, Arial, sans-serif'=>'Helvetica, Arial',
-            'Arial Black, Gadget, sans-serif'=>'Arial Black, Gadget',
-            'Garamond, serif'=>'Garamond',
-            'Courier, monospace'=>'Courier',
-            'Comic Sans MS, cursive'=>'Comic Sans MS',
-            'Impact, Charcoal, sans-serif'=>'Impact, Charcoal',
-            'Tahoma, Geneva, sans-serif'=>'Tahoma, Geneva',
-            'Times New Roman, Times, serif'=>'Times New Roman',
-            'Verdana, Geneva, sans-serif'=>'Verdana, Geneva');
+        $fonts = [];
+        if ($show_empty_option) {
+            $fonts[''] = 'Default';
+        }
+
+        $fonts = array_merge($fonts, ['Helvetica, Arial, sans-serif' => 'Helvetica, Arial',
+            'Arial Black, Gadget, sans-serif' => 'Arial Black, Gadget',
+            'Garamond, serif' => 'Garamond',
+            'Courier, monospace' => 'Courier',
+            'Comic Sans MS, cursive' => 'Comic Sans MS',
+            'Impact, Charcoal, sans-serif' => 'Impact, Charcoal',
+            'Tahoma, Geneva, sans-serif' => 'Tahoma, Geneva',
+            'Times New Roman, Times, serif' => 'Times New Roman',
+            'Verdana, Geneva, sans-serif' => 'Verdana, Geneva']);
 
         echo '<select class="tnpf-font-family" id="options-', esc_attr($name), '" name="options[', esc_attr($name), ']">';
         foreach ($fonts as $font=>$label) {
@@ -1744,13 +1768,12 @@ tnp_controls_init();
 
     static function delta_time($delta = 0) {
         $seconds = $delta % 60;
-        $minutes = floor(($delta/60) % 60);
-        $hours =  floor(($delta/(60*60)) % 24);
-        $days = floor($delta / (24*60*60));
+        $minutes = floor(($delta / 60) % 60);
+        $hours = floor(($delta / (60 * 60)) % 24);
+        $days = floor($delta / (24 * 60 * 60));
 
 
         return $days . ' day(s), ' . $hours . ' hour(s), ' . $minutes . ' minute(s)';
-
     }
 
     /**
@@ -1772,10 +1795,11 @@ tnp_controls_init();
             $url = 'https://www.thenewsletterplugin.com' . $url;
         }
         echo '<a href="', $url, '" target="_blank" style="text-decoration: none" title="' . esc_attr(__('Read more', 'newsletter')) . '"><i class="fas fa-question-circle"></i>';
-        if ($text) echo '&nbsp;', $text;
+        if ($text)
+            echo '&nbsp;', $text;
         echo '</a>';
     }
-    
+
     static function field_label($label, $help_url = false) {
         echo $label;
         if ($help_url) {
@@ -1894,9 +1918,25 @@ tnp_controls_init();
         global $tnpc_show_subject;
         $tnpc_show_subject = $show_subject;
 
-        wp_enqueue_style('tnpc-style', plugins_url('newsletter') . '/emails/tnp-composer/_css/newsletter-builder-v2.css', array(), time());
+	    echo "<link href='" . plugins_url( 'newsletter' ) . "/emails/tnp-composer/_css/newsletter-builder-v2.css?ver=" . NEWSLETTER_VERSION . "' rel='stylesheet' type='text/css'>";
+
+        wp_enqueue_style('tnp-modal-style', plugins_url('newsletter') . '/emails/tnp-composer/_css/tnp-modal.css', array(), NEWSLETTER_VERSION);
+        wp_enqueue_style('tnp-toast-style', plugins_url('newsletter') . '/emails/tnp-composer/_css/tnp-toast.css', array(), NEWSLETTER_VERSION);
         $controls = $this;
         include NEWSLETTER_DIR . '/emails/tnp-composer/index-v2.php';
+    }
+
+    function subject($name) {
+        $value = $this->get_value($name);
+        echo '<div style="position: relative"><input size="80" id="options-', esc_attr($name), '" style="font-size: 14px; font-family: monospace;" name="options[' . esc_attr($name) . ']" type="text" placeholder="" value="';
+        echo esc_attr($value);
+        echo '">';
+        echo '&nbsp;<i class="far fa-lightbulb" onclick="tnp_suggest_subject()"></i>';
+
+//        echo '<img src="', NEWSLETTER_URL, '/images/subject/android.png" style="position: absolute; left: 330px; top: 22px; display: block">';
+//        echo '<img src="', NEWSLETTER_URL, '/images/subject/iphone.png" style="position: absolute; left: 380px; top: 22px; display: block">';
+//        echo '<img src="', NEWSLETTER_URL, '/images/subject/gmail.png" style="position: absolute; left: 400px; top: 22px; display: block">';
+        echo '</div>';
     }
 
 }

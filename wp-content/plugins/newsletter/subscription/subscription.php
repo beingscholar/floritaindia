@@ -1032,7 +1032,7 @@ class NewsletterSubscription extends NewsletterModule {
 
         $options = $this->get_options('', $language);
         $message = [];
-        $message['html'] = $options[$type . '_message'];
+	    $message['html'] = do_shortcode( $options[ $type . '_message' ] );
         $message['text'] = $this->get_text_message($type);
         if ($user->status == Newsletter::STATUS_NOT_CONFIRMED) {
             $message['html'] = $this->add_microdata($message['html']);

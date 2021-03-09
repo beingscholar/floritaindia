@@ -1,8 +1,8 @@
 === Newsletter ===
 Tags: email, email marketing, newsletter, newsletter subscribers, welcome email, signup forms, contact, lead generation, popup, marketing automation
 Requires at least: 3.4.0
-Tested up to: 5.6
-Stable tag: 7.0.3
+Tested up to: 5.6.2
+Stable tag: 7.0.5
 Requires PHP: 5.6
 Contributors: satollo,webagile,michael-travan
 License: GPLv2 or later
@@ -118,13 +118,27 @@ Thank you, The Newsletter Team
 
 == Changelog ==
 
+= 7.0.5 =
+
+* Fix to the hero block button
+
+= 7.0.4 =
+
+* Redesigned drag and drop composer
+* NEW! Save drag and drop composed newsletters as templates to reuse easily
+* Redesigned dashboard
+* Several bug and fixes
+
 = 7.0.3 =
 
+* Option to choose between unsubscription and profile link in the footer block
+* Direct image src URL for image block
 * New media selector for blocks
 * Minor fixes
 * Updated codemirror
 * Updated default theme
 * Fixed tag filter on posts block (when tags have parathesis or like)
+* Fixed composer visualization of bullet points
 
 = 7.0.2 =
 
@@ -138,7 +152,7 @@ Thank you, The Newsletter Team
 
 * Added multiple newsletter selection for deletion
 * Added text part on welcome and activation email
-* Added the attribute "show_form" to "newsletter" shortcode 
+* Added the attribute "show_form" to "newsletter" shortcode
 * Added filter on subscriber saving (from external systems) with wrong list field values
 * Added index.html on log folder
 
@@ -175,6 +189,11 @@ Thank you, The Newsletter Team
 * Added Telegram and VK icon on social block component
 
 = 6.9.5 =
+* Added new posts block layout
+* Improved the mobile version of hero block
+* Added title and text global fonts
+
+= NEXT =
 
 * Added pagination on newsletters page table
 * Changed label text for empty language in edit user page
