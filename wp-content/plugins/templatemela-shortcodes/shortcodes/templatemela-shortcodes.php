@@ -382,11 +382,11 @@ function shortcode_cms_woo_category_slider($atts, $content = null, $code) {
 			$output .= '<a href="'.$link_url.'" target="'.$target.'"><img src="'.$image.'" alt="'.get_the_title().'"/></a>';
 
 		 endif;
-		 if(empty($image)):
+		 /* if(empty($image)):
 			$output .= '<div class="category-banner-image one-category no-image">';
-		 endif;
+		 endif; */
 			
-			$output .= '<div class="image-category-block">';
+			/* $output .= '<div class="image-category-block">';
 			
 			if($term){
 				$term_category_id = $term->term_id;
@@ -401,7 +401,7 @@ function shortcode_cms_woo_category_slider($atts, $content = null, $code) {
             }
          
             $output .= '</div>';
-            $output .= '</div>';
+            $output .= '</div>'; */
        
         $output .= '<div class="category-container '.$type.'">';
    
