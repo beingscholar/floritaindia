@@ -87,3 +87,11 @@ span.customSelect.changed {
 .customSelectOpen .customSelectInner {
     background: url('../../images/megnor/up_arrow.png') no-repeat center right;
 }
+
+/* new custom css code */
+.woocommerce div.product div.images, .woocommerce-page div.product div.images {
+    width: 60%;
+}
+.woocommerce div.product div.summary, .woocommerce-page div.product div.summary {
+    width: 40%;
+}
