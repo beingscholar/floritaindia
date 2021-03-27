@@ -1050,7 +1050,7 @@ textarea {
 .header-cart,
 .topbar-link {
   position: relative;
-  padding: 13px 20px;
+  /* padding: 13px 20px; */
   box-sizing: border-box;
   display: inline-block;
   vertical-align: top;
@@ -1144,16 +1144,16 @@ textarea {
 .header-bottom-left,
 .header-bottom-center,
 .header-bottom-right {
-  display: inline-block;
+  /* display: inline-block; */
   vertical-align: middle;
 }
 .header-bottom-left {
   position: relative;
-  float: left;
+  /* float: left; */
 }
 .header-bottom-right {
   position: relative;
-  float: right;
+  /* float: right; */
 }
 
 .header-cms-service .service-icon {
