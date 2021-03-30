@@ -124,7 +124,7 @@
 										<?php global $woocommerce;
 										ob_start();?>
 										<div class="shopping_cart tog" title="<?php esc_attr_e('View your shopping cart', 'firezy'); ?>">
-											<div class="cart-icon"></div>
+											<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 											<div class="cart-price">
 												<a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'firezy'); ?>">
 													<span class="cart-qty"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'firezy'), $woocommerce->cart->cart_contents_count);?></span>
@@ -137,26 +137,26 @@
 										<?php tmpmela_get_widget('header-widget'); ?>
 							</div>
 							<a class="nav-link" href="/wishlist">
-								<img src="https://bajajdigital-cdn-endpoint.azureedge.net/images/wishlist.svg" alt="">
+								<i class="fa fa-bookmark-o" aria-hidden="true"></i>
 							</a>
 						</div>
 						<?php endif; ?>
 						<a data-toggle="modal" data-target="#signIn" class="nav-link dropdown pr0" href="#">
-							<img class="mr10" src="https://bajajdigital-cdn-endpoint.azureedge.net/images/user.svg" alt="">
+            <i class="fa fa-user-circle-o mr10" aria-hidden="true"></i>
 						</a>
 						<!-- <a data-toggle="modal" data-target="#signUp" class="nav-link dropdown pr0 pl0" href="#">&nbsp;Signup</a> -->
 						<!-- <a data-toggle="modal" data-target="#signIn" class="nav-link dropdown pr0 pl0" href="#" id="hplsignin">Login&nbsp;/</a> -->
 						<div class="topbar-link">
 							<div class="topbar-link-toggle"></div>
 							<div class="account-block">
-								<span class="account-label">									
+								<span class="account-label">
 									<?php
 									if ( is_user_logged_in() ) {
 										$myaccount_page_id = get_option( 'woocommerce_myaccount_page_id' );
 										if ( $myaccount_page_id ) {
 											$logout_url = wp_logout_url( get_permalink( $myaccount_page_id ) );
 											if ( get_option( 'woocommerce_force_ssl_checkout' ) == 'yes' ) {
-												if (is_ssl()) {		
+												if (is_ssl()) {
 													$logout_url = str_replace( 'http:', 'https:', $logout_url );
 												}
 											}
@@ -271,7 +271,7 @@
 												<img class="w20" src="https://bajajdigital-cdn-endpoint.azureedge.net/images/compare.svg" alt="">
 												Compare Products
 											</a>
-											<?php /* 
+											<?php /*
 											<div class="account-block">
 												<span class="account-label">
 													<?php
@@ -285,8 +285,8 @@
 
 													<span class="account-contents">
 														<?php echo esc_html_e('My Account','firezy'); ?></span>
-											</div> 
-														
+											</div>
+
 												<div class="topbar-link-wrapper">
 													<div class="header-menu-links">
 

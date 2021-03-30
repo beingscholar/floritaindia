@@ -16,33 +16,65 @@
 <!-- .main_inner -->
 </div>
 <!-- #main -->
+
+
 <?php tmpmela_footer_before(); ?>
-<footer id="colophon" class="site-footer" >	
-	
+<footer id="colophon" class="site-footer" >
+<div class="theme-container">
+  <div class="top-footer">
+  <ul>
+    <li>
+      <p>
+<span>Call Us</span>
+      1860 208 5678
+</p>
+    </li>
+
+    <li>
+      <p>
+<span>Mail Us</span>
+      info@Floritaindia.Com
+</p>
+    </li>
+
+
+</ul>
+<p>
+<span>
+Looking For Bulk Purchase?
+</span>
+      <a href="javascript:void(0)">
+Tell us your requirement
+</a>
+</p>
+</div>
+</div>
+
+
 		 <?php tmpmela_footer_inside(); ?>
 		<?php get_sidebar('footer'); ?>
-		 <div class="footer-bottom">	
+		 <div class="footer-bottom">
 		 	 <div class="theme-container">
-					<?php if ( has_nav_menu('footer-menu') ) { ?>    
+					<?php if ( has_nav_menu('footer-menu') ) { ?>
 					<div class="footer-menu-links">
 					<?php
 								$tmpmela_footer_menu=array(
 								'menu' => esc_html__('TM Footer Navigation','firezy'),
 								'depth'=> 1,
 								'echo' => false,
-								'menu_class'      => 'footer-menu', 
-								'container'       => '', 
-								'container_class' => '', 
+								'menu_class'      => 'footer-menu',
+								'container'       => '',
+								'container_class' => '',
 								'theme_location' => 'footer-menu'
 								);
-								echo wp_nav_menu($tmpmela_footer_menu);				    
+								echo wp_nav_menu($tmpmela_footer_menu);
 								?>
-					</div><!-- #footer-menu-links -->	
-					<?php } ?> 
+					</div><!-- #footer-menu-links -->
+					<?php } ?>
 				   	<div class="site-info">  <?php echo esc_html__( 'Copyright', 'firezy' ); ?> &copy; <?php echo esc_attr(date('Y')); ?> <?php echo esc_attr(stripslashes(get_option('tmpmela_footer_slog')));?>
 							<?php do_action( 'tmpmela_credits' ); ?>
 					</div>
-					
+
 				<?php if ( is_active_sidebar( 'footer-bottom-widget-area' ) ) : ?>
 					<?php dynamic_sidebar( 'footer-bottom-widget-area' ); ?>
 				<?php endif; ?>
