@@ -6733,8 +6733,8 @@ body
 .header-search .search-form .search-field {
   width: auto;
   min-width: 500px;
-  height: 50px;
-  border-radius: 50px;
+  height: 40px;
+  border-radius: 4px;
   background: #fff;
   border: 1px solid #eee;
   padding: 0 20px;
@@ -6744,10 +6744,10 @@ body
 
 .site-header .header-search .woocommerce-product-search button[type="submit"],
 .header-search input[type="submit"] {
-  border-radius: 50px;
+  border-radius: 0 4px 4px 0;
   top: 50%;
   transform: translateY(-50%);
-  right: 5px;
+  right: 0;
 }
 
 .home-product-categories {
@@ -6799,31 +6799,36 @@ body
 
 .top-footer {
   background-color: rgb(38, 38, 38);
-  padding: 30px 0;
+  padding: 25px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
+.top-footer .theme-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.top-footer > p {
+.top-footer .theme-container > p {
   display: flex;
   margin: 0;
   align-items: center;
 }
 
-.top-footer > p span {
-  font-size: 12px;
+.top-footer .theme-container > p span {
+  font-size: 16px;
   line-height: 1;
 }
 
-.top-footer > p a {
-  border: 1px solid #fff;
-  line-height: 1;
-  padding: 11px 20px;
-  border-radius: 4px;
-  margin-left: 15px;
+.top-footer .theme-container > p a {
+  border: 0px solid #fff;
+    line-height: 1;
+    padding: 15px 25px;
+    border-radius: 4px;
+    margin-left: 15px;
+    background: #ed1d24;
+    color: #fff;
+    font-weight: 500;
 }
 
 .footer-top {
@@ -6981,4 +6986,14 @@ body
   border-radius: 4px;
   height: 340px;
   width: 100%;
+}
+
+.servicecmsblock .vc_column_container {
+  padding-left: 15px;
+    padding-right: 15px;
+}
+
+.servicecmsblock .service-list.service-2::after, .servicecmsblock .service-list.service-3::after, .servicecmsblock .service-list.service-4::after {
+      left: -16px;
+    right: auto;
 }

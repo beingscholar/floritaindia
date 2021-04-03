@@ -20,8 +20,9 @@
 
 <?php tmpmela_footer_before(); ?>
 <footer id="colophon" class="site-footer" >
-<div class="theme-container">
+
   <div class="top-footer">
+    <div class="theme-container">
   <ul>
     <li>
       <p>
