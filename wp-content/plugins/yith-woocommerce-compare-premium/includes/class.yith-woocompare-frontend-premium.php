@@ -205,9 +205,9 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 			add_filter( 'yith_woocompare_get_different_fields_value', array( $this, 'add_different_class' ), 99, 1 );
 
 			add_action( 'yith_woocompare_popup_head', array( $this, 'add_styles_themes_and_custom') );
-	        
+
 	        add_filter( 'yith_woocompare_add_product_action_json', array( $this, 'premium_add_product_action_json'), 10, 1 );
-	        
+
 	        // remove scripts from popup footer
 	        add_action( 'yith_woocompare_popup_footer', array( $this, 'dequeue_footer_scripts' ), 10, 1 );
 
@@ -455,7 +455,7 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 
 	    /**
 	     * Add premium args to localize script
-	     * 
+	     *
 	     * @author Francesco Licandro
 	     * @since 2.1.0
 	     * @param array $args
@@ -655,7 +655,7 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 						    elseif( ! empty( $attributes ) && isset( $attributes[$sfield] ) ) {
 
                                 $current_attribute = $attributes[$sfield];
-                                
+
 							    if( ! empty( $current_attribute['options'] ) ) {
 								    $product->fields[$field] = implode( ', ', $current_attribute['options'] );
 							    }
@@ -724,7 +724,7 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 
 		    $button_target = apply_filters('yith_woocompare_compare_button_target','_self');
 
-		    printf( '<a href="%s" class="compare %s" data-product_id="%s" rel="nofollow" target="%s">%s</a>', esc_attr( $link ), esc_attr( $class ), esc_attr( $product_id ), esc_attr( $button_target ), esc_html( $button_text ) );
+		    printf( '<div class="product-hover-actions"><a href="%s" class="compare %s" data-product_id="%s" rel="nofollow" target="%s">%s</a>', esc_attr( $link ), esc_attr( $class ), esc_attr( $product_id ), esc_attr( $button_target ), esc_html( $button_text ) );
 	    }
 
 	    /**
@@ -833,7 +833,7 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 			    }
 			    $cat[$category->term_id] = $category->name;
 		    }
-		    
+
 		    return apply_filters( 'yith_woocompare_get_product_categories', $cat, $categories, $product_id );
 	    }
 
@@ -980,7 +980,7 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 		    if( ! has_action( 'wp_footer', array( $this, 'add_scripts' ) ) ) {
 			    add_action( 'wp_footer', array( $this, 'add_scripts' ) );
 		    }
-		    
+
 		    // get args
 		    $args = $this->_vars( $products );
 		    $args['fixed'] = ! empty( $products );
@@ -1133,7 +1133,7 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
             }else{
                 $toShow = false;
             }
-            
+
 	        if( ! $toShow ) {
 		        return;
 	        }
@@ -1361,10 +1361,10 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 				    'bundled_item' => $bundled_item
 		    ), false, WC_PB()->woo_bundles_plugin_path() . '/templates/' );
 	    }
-	    
+
 	    /**
 	     * Get excluded categories from plugin option
-	     * 
+	     *
 	     * @since 2.1.0
 	     * @author Francesco Licandro
 	     * @return array
@@ -1375,10 +1375,10 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 		    // remove empty values and return
 		    return array_filter( $excluded_cat );
 	    }
-	    
+
 	    /**
 	     * Premium add product json args
-	     * 
+	     *
 	     * @author Francesco Licandro
 	     * @since 2.1.0
 	     * @param array $json
@@ -1386,13 +1386,13 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 	     */
 	    public function premium_add_product_action_json( $json ){
 		    $json['only_one'] = ( get_option( 'yith_woocompare_open_after_second', 'no' ) == 'yes' && count( $this->products_list ) <= 1 );
-		    
-		    return $json;		  
+
+		    return $json;
 	    }
-	    
+
 	    /**
 	     * Add clear all button on compare table
-	     * 
+	     *
 	     * @since 2.1.0
 	     * @author Francesco Licandro
 		 * @param array $products The products on compare table.
@@ -1412,10 +1412,10 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 
 		    echo apply_filters( 'yith_woocompare_table_clear_all', $html ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
 		}
-	    
+
 	    /**
 	     * Dequeue footer scripts from compare popup
-	     * 
+	     *
 	     * @since 2.2.0
 	     * @author Francesco Licandro
 	     * @access public
