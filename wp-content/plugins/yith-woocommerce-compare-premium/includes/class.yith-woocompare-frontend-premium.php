@@ -724,7 +724,7 @@ if( ! class_exists( 'YITH_Woocompare_Frontend_Premium' ) ) {
 
 		    $button_target = apply_filters('yith_woocompare_compare_button_target','_self');
 
-		    printf( '<div class="product-hover-actions"><a href="%s" class="compare %s" data-product_id="%s" rel="nofollow" target="%s">%s</a>', esc_attr( $link ), esc_attr( $class ), esc_attr( $product_id ), esc_attr( $button_target ), esc_html( $button_text ) );
+		    printf( '<a href="%s" class="compare-button %s" data-product_id="%s" rel="nofollow" target="%s">%s</a>', esc_attr( $link ), esc_attr( $class ), esc_attr( $product_id ), esc_attr( $button_target ), esc_html( $button_text ) );
 	    }
 
 	    /**

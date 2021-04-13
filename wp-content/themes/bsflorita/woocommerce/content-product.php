@@ -53,5 +53,4 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		</div>
 		</div>
 		</div>
-</div>
 </li>
