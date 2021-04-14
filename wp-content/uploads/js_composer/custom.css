@@ -7219,6 +7219,7 @@ text-transform: uppercase;
 .blog-carousel .owl-controls .owl-buttons .owl-prev,
 .blog-carousel .owl-controls .owl-buttons .owl-next {
   top: -55px;
+  color: #e31e31;
 }
 
 .subscribe-newsletter {
