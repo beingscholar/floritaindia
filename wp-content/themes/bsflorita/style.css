@@ -7666,7 +7666,7 @@ input::-webkit-inner-spin-button {
 .post-description {
   letter-spacing: 1.2px;
   line-height: 26px;
-  color: #858585;
+  color: #000;
   margin: 20px 0px;
 }
 .blog-posts-content .grid.cols-2 .item,
