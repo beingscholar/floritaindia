@@ -6155,6 +6155,23 @@ a.pswp__share--download:hover {
   font-weight: 300;
 }
 
+
+.top-footer ul li i {
+  font-size: 40px;
+  margin-right: 10px;
+    color: #e31e31;
+}
+
+.site-footer .widget ul li a,
+.widgets-footercontact .contact_title, .widgets-footercontact .contact_address, .widgets-footercontact .phone,
+.footer-widget .widget.widget_newsletterwidget p{
+      color: #888;
+}
+
+.site-footer .widget ul li a:hover {
+  color: #fff;
+}
+
 .fourth-widget::before {
   display: none;
 }
@@ -6719,8 +6736,12 @@ transition:  all ease-in-out .3s;
   display: flex;
   flex-direction: column;
   min-height: 200px;
-  border: 1px solid #eee;
+  border: 1px solid #5a5a5a;
   border-radius: 4px;
+}
+.service-location .wrap:hover {
+  border-color: #e31e31;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .service-location .wrap h3 {
   margin: 0 0 10px;
@@ -6746,7 +6767,7 @@ transition:  all ease-in-out .3s;
 }
 
 .service-location .wrap p a:not(:hover) {
-  color: #838383;
+  color: #000;
 }
 
 body .gform_wrapper ul li#field_1_1 {
@@ -6828,7 +6849,7 @@ body
 .home-product-categories {
   display: flex;
   align-items: center;
-  margin: 0 0 35px !important;
+  margin: 0 0 15px !important;
   padding: 0 10px;
   height: 50px;
   list-style: none;
@@ -6906,13 +6927,13 @@ text-transform: uppercase;
 }
 
 .wpsisac-slick-slider.wpsisac-image-fit .wpsisac-img-wrap {
-  height: calc(100vh - (94.5px + 42px + 51px));
+  height: calc(100vh - (94.5px + 42px + 58px));
 }
 
 .top-footer {
-  background-color: rgb(38, 38, 38);
+  background-color: #101010;
   padding: 25px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px dotted #e31e31;
 }
 
 .top-footer .theme-container {
@@ -6971,15 +6992,23 @@ text-transform: uppercase;
 .top-footer ul li p {
   margin: 0;
   line-height: 1;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 12px;
+  /* font-weight: 600; */
+}
+
+.top-footer ul li p:hover {
+  color: #e31e31;
+}
+
+.top-footer ul li p:hover span {
+  color: #fff;
 }
 
 .top-footer ul li p span {
   display: block;
-  font-size: 12px;
-  margin-bottom: 6px;
-  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 10px;
+  /* font-weight: 300; */
 }
 
 .custom-testimonial-inner:before {
@@ -7189,7 +7218,7 @@ text-transform: uppercase;
 
 .blog-carousel .owl-controls .owl-buttons .owl-prev,
 .blog-carousel .owl-controls .owl-buttons .owl-next {
-  top: -70px;
+  top: -55px;
 }
 
 .subscribe-newsletter {
@@ -7244,6 +7273,7 @@ text-transform: uppercase;
 
 .subscribe-newsletter input {
   display: block;
+  font-family: "Poppins", sans-serif !important;
       padding: 0.857em 1.214em;
       color: #818181;
       border-width: 1px;
@@ -7332,7 +7362,7 @@ text-transform: uppercase;
   margin-bottom: 10px;
 align-items: center;
 justify-content: space-between;
-border-bottom: 4px double #eee;
+border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .primary-heading h3 {
@@ -7342,7 +7372,8 @@ border-bottom: 4px double #eee;
   font-weight: 500;
 }
 
-.primary-heading a {
+.primary-heading a,
+.primary-red-btn {
   line-height: 1;
 background: #e31e31;
 color: #fff;
@@ -7361,8 +7392,73 @@ align-items: center;
 transition: all ease-in-out .3s;
 }
 
-.primary-heading a:hover {
+.primary-heading a:hover,
+.primary-red-btn:hover {
   color: #fff;
   text-decoration: underline;
   transition: all ease-in-out .3s;
+}
+
+#mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-megamenu > ul.mega-sub-menu {
+max-width: 600px !important;
+}
+
+.servicecmsblock .service-list {
+    padding: 0 5px;
+}
+
+.compare-button {
+  position: relative;
+  font-size: 0 !important;
+  padding: 0 !important;
+  height: 35px;
+  width: 35px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+}
+
+.compare-button:before {
+  content: "\f24d";
+  font-size: 15px;
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 10px;
+  font-size: 16px;
+  margin: 0;
+}
+
+.product-block-hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagecategorytab .category-container.slider, .imagecategorytab .category-container.grid {
+  overflow: visible;
+}
+
+.products.owl-theme .owl-buttons div.owl-prev {
+  left: -18px;
+}
+
+.products.owl-theme .owl-buttons div.owl-next {
+  right: -18px;
+}
+
+.owl-theme .owl-buttons div:hover {
+  color: #E31E31;
+    border-color: #E31E31;
+}
+
+.owl-theme .owl-buttons div {
+  box-shadow: rgba(0, 0, 0, 0.02) 0 0 3px;
+}
+.site-footer {
+    background-color: #101010 !important;
+}
+
+.gform_footer.top_label {
+  display: none !important;
 }

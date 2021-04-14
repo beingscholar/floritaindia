@@ -25,16 +25,20 @@
     <div class="theme-container">
   <ul>
     <li>
+      <i class="fa fa-phone"></i>
       <p>
-<span>Call Us</span>
-      1860 208 5678
+<span>CALL 7 DAYS: 8 AM TO 9 PM
+
+</span>
+      1800 3010 2273, 1800 103 3300 (Toll free)
 </p>
     </li>
 
     <li>
+      <i class="fa fa-envelope"></i>
       <p>
-<span>Mail Us</span>
-      info@Floritaindia.Com
+<span>EMAIL</span>
+      info@floritaindia.com
 </p>
     </li>
 
