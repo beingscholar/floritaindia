@@ -155,7 +155,7 @@ $output .= $linktextvariable;
 wp_reset_postdata();
 $output .=	'</div></div>';
 else:
-	$output .= '<div class="no-result">'.esc_html__('No results found...', 'bsflorita').'</div>';
+	$output .= '<div class="no-result">'.esc_html__('No results found...', 'firezy').'</div>';
 endif;
 return $output;
 }
@@ -1026,13 +1026,13 @@ add_shortcode('cms_woo_categories', 'shortcode_cms_woo_category_slider');
 				$output .= '<div class="block_hover">';
 				$output .= '<div class="links">';
 				$output .= '<a href="'.$image.'" title="Click to view Full Image" class="icon mustang-gallery"><i class="fa fa-plus"></i></a>';
-				$output .= '<a href="'.get_permalink().'" title="'.esc_html__('Click to view read more', 'bsflorita').'" class="icon"><i class="fa fa-link"></i></a>';							
+				$output .= '<a href="'.get_permalink().'" title="'.esc_html__('Click to view read more', 'firezy').'" class="icon"><i class="fa fa-link"></i></a>';							
 				$output .= '</div>';
 				$output .= '</div>';
 				$output .= '</div>';
 				$output .= '<div class="portfolio-title"><a href="'.get_permalink().'">'.get_the_title().'</a></div>';
 				$output .= '<div class="portfolio-description">'.tmpmela_portfolio_excerpt($excerpt_length	).'</div>';	
-				$output .= '<div class="read-more"><a href="'.get_permalink().'" title="'.get_the_title().'">'.esc_html__('Read more', 'bsflorita').'</a></div>';				
+				$output .= '<div class="read-more"><a href="'.get_permalink().'" title="'.get_the_title().'">'.esc_html__('Read more', 'firezy').'</a></div>';				
 				$output .= '</div>';
 				$output .= '</div>';
 				$i++;
@@ -1041,7 +1041,7 @@ add_shortcode('cms_woo_categories', 'shortcode_cms_woo_category_slider');
 			wp_reset_query();
 			$output .= '</div>';
 		else:
-			$output .= '<div class="no-result">'.esc_html__(''.esc_html__('No results found...', 'bsflorita').'', 'bsflorita').'</div>';
+			$output .= '<div class="no-result">'.esc_html__(''.esc_html__('No results found...', 'firezy').'', 'firezy').'</div>';
 		endif;
 		return $output;
 	}
@@ -1133,7 +1133,7 @@ add_shortcode('cms_woo_categories', 'shortcode_cms_woo_category_slider');
 			$output .= '<div class="block_hover">';
 			$output .= '<div class="links">';
 			$output .= '<a href="'.$image.'" title="Click to view Full Image" class="icon mustang-gallery"><i class="fa fa-plus"></i></a>';
-			$output .= '<a href="'.get_permalink().'"  title="'.esc_html__('Click to view read more', 'bsflorita').'" class="icon"><i class="fa fa-link"></i></a>';
+			$output .= '<a href="'.get_permalink().'"  title="'.esc_html__('Click to view read more', 'firezy').'" class="icon"><i class="fa fa-link"></i></a>';
 			$output .= '</div></div>';
 			$output .= '</div>';
 			$output .= '<a class="portfolio-title" href="'.get_permalink().'">'.get_the_title().'</a>';
@@ -1230,7 +1230,7 @@ add_shortcode('cms_woo_categories', 'shortcode_cms_woo_category_slider');
 		$output .= do_shortcode($content).'</div>';
 		if($type == "grid") {  
 			$output .=	'<div class="tmpmela-message"><i class="fa fa-frown-o"></i>'.$no_more.'</div>';
-			$output .=	'<div class="loadgridlist-wrapper"><button class="woocount loadgridlist">'.esc_html__('View More Products', 'bsflorita').'</button></div>';		
+			$output .=	'<div class="loadgridlist-wrapper"><button class="woocount loadgridlist">'.esc_html__('View More Products', 'firezy').'</button></div>';		
 		}
 
 		$output .='</div>';
@@ -1579,7 +1579,7 @@ add_shortcode('cms_woo_categories', 'shortcode_cms_woo_category_slider');
 			wp_reset_postdata();
 			$output .=	'</div></div>';
 		else:
-			$output .= '<div class="no-result">'.esc_html__('No results found...', 'bsflorita').'</div>';
+			$output .= '<div class="no-result">'.esc_html__('No results found...', 'firezy').'</div>';
 		endif;
 		return $output;
 	}
@@ -1653,7 +1653,7 @@ add_shortcode('cms_woo_categories', 'shortcode_cms_woo_category_slider');
 				$output .= '<div class="testimonial-wrapper">';
 				$output .=  '<div class="testimonial-content">';
 				$output .= '<div class="testimonial-top"><blockquote><q>'.tmpmela_excerpt_length_limit($excerpt_length).'</q></blockquote></div>';
-				$output .= '<div class="read-more"><a title="'.get_the_title().'" href="'.get_permalink().'" >'.esc_html__('read more', 'bsflorita').'</a></div>';
+				$output .= '<div class="read-more"><a title="'.get_the_title().'" href="'.get_permalink().'" >'.esc_html__('read more', 'firezy').'</a></div>';
 				$output .= '</div></div>';
 
 			$output .= '</div>';
@@ -1666,7 +1666,7 @@ add_shortcode('cms_woo_categories', 'shortcode_cms_woo_category_slider');
 			$output .= '</div>';
 			$output .= '</div>';
 		else:
-			$output .= '<div class="no-result">'.esc_html__('No results found...', 'bsflorita').'</div>';
+			$output .= '<div class="no-result">'.esc_html__('No results found...', 'firezy').'</div>';
 		endif;
 		wp_reset_query();
 		return $output;
@@ -1926,7 +1926,7 @@ function tmpmela_wp_get_attachment_link( $id = 0, $size = 'thumbnail', $permalin
 	$id = intval( $id );
 	$_post = get_post( $id );
 	if ( empty( $_post ) || ( 'attachment' != $_post->post_type ) || ! $url = wp_get_attachment_url( $_post->ID ) )
-		return __( 'Missing Attachment', 'bsflorita' );
+		return __( 'Missing Attachment', 'firezy' );
 
 	if ( $permalink )
 // $url = get_attachment_link( $_post->ID ); // we want the "large" version!!

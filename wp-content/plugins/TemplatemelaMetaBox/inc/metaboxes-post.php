@@ -5,7 +5,7 @@
 $prefix = 'tmpmela_posts_';
 $TM_META_BOXES[] = array(
 	'id'		=> 'tmpmela_short_description',
-	'title' 	=> esc_html__('TM - Short Description', 'bsflorita'),
+	'title' 	=> esc_html__('TM - Short Description', 'firezy'),
 	'pages' 	=> array( 'post' ),
 	'context' 	=> 'side',
 	'priority' 	=> 'low',
@@ -13,7 +13,7 @@ $TM_META_BOXES[] = array(
 	'fields' 	=> array(
 		// Show short description on post page
 		array(
-			'name'    		=> esc_html__('', 'bsflorita'),
+			'name'    		=> esc_html__('', 'firezy'),
 			'id'      		=> "{$prefix}short_description",
 			'type'    		=> 'textarea',
 			'std'			=> '',
@@ -23,7 +23,7 @@ $TM_META_BOXES[] = array(
 $prefix = 'tmpmela_posts_';
 $TM_META_BOXES[] = array(
 	'id'		=> 'tmpmela_posts_options',
-	'title' 	=> esc_html__('TM - Post Options', 'bsflorita'),
+	'title' 	=> esc_html__('TM - Post Options', 'firezy'),
 	'pages' 	=> array( 'post' ),
 	'context' 	=> 'side',
 	'priority' 	=> 'low',
@@ -31,14 +31,14 @@ $TM_META_BOXES[] = array(
 	'fields' 	=> array(
 		// Show related posts on post page
 		array(
-			'name'    		=> esc_html__('Show Related Posts on single post:', 'bsflorita'),
+			'name'    		=> esc_html__('Show Related Posts on single post:', 'firezy'),
 			'id'      		=> "{$prefix}show_related_posts",
 			'type'    		=> 'checkbox',
 			'std'			=> 1,
 		),		
 		// Show Author Info on post page
 		array(
-			'name'    		=> esc_html__('Show Author Info on single post:', 'bsflorita'),
+			'name'    		=> esc_html__('Show Author Info on single post:', 'firezy'),
 			'id'      		=> "{$prefix}show_author_info",
 			'type'    		=> 'checkbox',
 			'std'			=> 1,
@@ -48,7 +48,7 @@ $TM_META_BOXES[] = array(
 $prefix = 'tmpmela_blog_list_';
 $TM_META_BOXES[] = array(
 	'id'		=> 'tmpmela_blog_list_columns',
-	'title' 	=> esc_html__('TM - List Options', 'bsflorita'),
+	'title' 	=> esc_html__('TM - List Options', 'firezy'),
 	'pages' 	=> array( 'page' ),
 	'context' 	=> 'side',
 	'priority' 	=> 'low',
@@ -56,7 +56,7 @@ $TM_META_BOXES[] = array(
 	'fields' 	=> array(	
 		// Show number of posts per page
 		array(
-			'name'			=> esc_html__('Number of posts per page:', 'bsflorita'),
+			'name'			=> esc_html__('Number of posts per page:', 'firezy'),
 			'id'    		=> "{$prefix}posts_per_page",
 			'type'  		=> 'text',
 			'std'   		=> '5',
@@ -69,7 +69,7 @@ $TM_META_BOXES[] = array(
 $prefix = 'tmpmela_blog_box_';
 $TM_META_BOXES[] = array(
 	'id'		=> 'tmpmela_blog_box_columns',
-	'title' 	=> esc_html__('TM - Box Options', 'bsflorita'),
+	'title' 	=> esc_html__('TM - Box Options', 'firezy'),
 	'pages' 	=> array( 'page' ),
 	'context' 	=> 'side',
 	'priority' 	=> 'low',
@@ -77,7 +77,7 @@ $TM_META_BOXES[] = array(
 	'fields' 	=> array(	
 		// Show grid or masorny 
 		array(
-			'name'    		=> esc_html__('Display Options:', 'bsflorita'),
+			'name'    		=> esc_html__('Display Options:', 'firezy'),
 			'id'      		=> "{$prefix}display",
 			'type'    		=> 'radio',
 			'std'			=> 'grid',
@@ -88,7 +88,7 @@ $TM_META_BOXES[] = array(
 		),
 		// Show posts per column
 		array(
-			'name'    		=> esc_html__('Columns Options:', 'bsflorita'),
+			'name'    		=> esc_html__('Columns Options:', 'firezy'),
 			'id'      		=> "{$prefix}columns",
 			'type'    		=> 'radio',
 			'std'			=> 'two',
@@ -100,7 +100,7 @@ $TM_META_BOXES[] = array(
 		),
 		// Show number of posts per page
 		array(
-			'name'			=> esc_html__('Number of posts per page:', 'bsflorita'),
+			'name'			=> esc_html__('Number of posts per page:', 'firezy'),
 			'id'    		=> "{$prefix}posts_per_page",
 			'type'  		=> 'text',
 			'std'   		=> '5',
@@ -113,7 +113,7 @@ $TM_META_BOXES[] = array(
 $prefix = 'tmpmela_blog_filter_';
 $TM_META_BOXES[] = array(
 	'id'		=> 'tmpmela_blog_filter_columns',
-	'title' 	=> esc_html__('TM - Filter Options', 'bsflorita'),
+	'title' 	=> esc_html__('TM - Filter Options', 'firezy'),
 	'pages' 	=> array( 'page' ),
 	'context' 	=> 'side',
 	'priority' 	=> 'low',
@@ -121,7 +121,7 @@ $TM_META_BOXES[] = array(
 	'fields' 	=> array(	
 		// Show posts per column
 		array(
-			'name'    		=> esc_html__('Columns Options:', 'bsflorita'),
+			'name'    		=> esc_html__('Columns Options:', 'firezy'),
 			'id'      		=> "{$prefix}columns",
 			'type'    		=> 'radio',
 			'std'			=> 'two',

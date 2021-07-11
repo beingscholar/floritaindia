@@ -14,7 +14,7 @@ if ( !class_exists( 'RWMB_File_Input_Field' ) )
 			wp_enqueue_media();
 			wp_enqueue_script( 'rwmb-file-input', RWMB_JS_URL . 'file-input.js', array( 'jquery' ), RWMB_VER, true );
 			wp_localize_script( 'rwmb-file-input', 'rwmbFileInput', array(
-				'frameTitle' => esc_html__( 'Select File', 'bsflorita' ),
+				'frameTitle' => esc_html__( 'Select File', 'firezy' ),
 			) );
 		}
 
@@ -37,9 +37,9 @@ if ( !class_exists( 'RWMB_File_Input_Field' ) )
 				$meta,
 				$field['placeholder'],
 				$field['size'],
-				esc_html__( 'Select', 'bsflorita' ),
+				esc_html__( 'Select', 'firezy' ),
 				$meta ? '' : 'hidden',
-				esc_html__( 'Remove', 'bsflorita' )
+				esc_html__( 'Remove', 'firezy' )
 			);
 		}
 

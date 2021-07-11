@@ -32,7 +32,7 @@ if ( ! class_exists( 'RWMB_Button_Field' ) )
 		 */
 		static function normalize_field( $field )
 		{
-			$field['std'] = $field['std'] ? $field['std'] : esc_html__( 'Click me', 'bsflorita' );
+			$field['std'] = $field['std'] ? $field['std'] : esc_html__( 'Click me', 'firezy' );
 			return $field;
 		}
 	}

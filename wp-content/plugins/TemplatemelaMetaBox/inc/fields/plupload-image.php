@@ -82,7 +82,7 @@ if ( ! class_exists( 'RWMB_Plupload_Image_Field' ) )
 			parent::admin_enqueue_scripts();
 			wp_enqueue_style( 'rwmb-plupload-image', RWMB_CSS_URL . 'plupload-image.css', array( 'wp-admin' ), RWMB_VER );
 			wp_enqueue_script( 'rwmb-plupload-image', RWMB_JS_URL . 'plupload-image.js', array( 'jquery-ui-sortable', 'wp-ajax-response', 'plupload-all' ), RWMB_VER, true );
-			wp_localize_script( 'rwmb-plupload-image', 'bsflorita', array( 'url' => RWMB_URL ) );
+			wp_localize_script( 'rwmb-plupload-image', 'firezy', array( 'url' => RWMB_URL ) );
 		}
 
 		/**
@@ -99,9 +99,9 @@ if ( ! class_exists( 'RWMB_Plupload_Image_Field' ) )
 				$meta = ( array ) $meta;
 
 			// Filter to change the drag & drop box background string
-			$i18n_drop   = apply_filters( 'rwmb_plupload_image_drop_string', _x( 'Drop images here', 'image upload', 'bsflorita' ), $field );
-			$i18n_or     = apply_filters( 'rwmb_plupload_image_or_string', _x( 'or', 'image upload', 'bsflorita' ), $field );
-			$i18n_select = apply_filters( 'rwmb_plupload_image_select_string', _x( 'Select Files', 'image upload', 'bsflorita' ), $field );
+			$i18n_drop   = apply_filters( 'rwmb_plupload_image_drop_string', _x( 'Drop images here', 'image upload', 'firezy' ), $field );
+			$i18n_or     = apply_filters( 'rwmb_plupload_image_or_string', _x( 'or', 'image upload', 'firezy' ), $field );
+			$i18n_select = apply_filters( 'rwmb_plupload_image_select_string', _x( 'Select Files', 'image upload', 'firezy' ), $field );
 
 			// Uploaded images
 
@@ -176,7 +176,7 @@ if ( ! class_exists( 'RWMB_Plupload_Image_Field' ) )
 				'urlstream_upload'		=> true,
 				'filters'				=> array(
 					array(
-						'title'      => _x( 'Allowed Image Files', 'image upload', 'bsflorita' ),
+						'title'      => _x( 'Allowed Image Files', 'image upload', 'firezy' ),
 						'extensions' => 'jpg,jpeg,gif,png',
 					),
 				),

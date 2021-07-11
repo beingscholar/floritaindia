@@ -1,12 +1,12 @@
 
 ---Downloaded files---
-The import files for: bsflorita were successfully downloaded!
+The import files for: firezy were successfully downloaded!
 Initial max execution time = 30
 Files info:
 Site URL = http://demo.xxploreautomotive.in
-Data file = /home/xxploreautomotiv/demo.xxploreautomotive.in/wp-content/themes/bsflorita/demo-content/default/bsflorita.wordpress.xml
-Widget file = /home/xxploreautomotiv/demo.xxploreautomotive.in/wp-content/themes/bsflorita/demo-content/default/bsflorita_widgets_settings.wie
-Customizer file = /home/xxploreautomotiv/demo.xxploreautomotive.in/wp-content/themes/bsflorita/demo-content/default/bsflorita_customizer_export.dat
+Data file = /home/xxploreautomotiv/demo.xxploreautomotive.in/wp-content/themes/firezy/demo-content/default/firezy.wordpress.xml
+Widget file = /home/xxploreautomotiv/demo.xxploreautomotive.in/wp-content/themes/firezy/demo-content/default/firezy_widgets_settings.wie
+Customizer file = /home/xxploreautomotiv/demo.xxploreautomotive.in/wp-content/themes/firezy/demo-content/default/firezy_customizer_export.dat
 Redux files:
 not defined!
 

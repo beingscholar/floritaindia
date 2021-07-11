@@ -135,9 +135,9 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 
 		{
 
-			$i18n_title = apply_filters( 'rwmb_image_upload_string', _x( 'Upload Images', 'image upload', 'bsflorita' ), $field );
+			$i18n_title = apply_filters( 'rwmb_image_upload_string', _x( 'Upload Images', 'image upload', 'firezy' ), $field );
 
-			$i18n_more  = apply_filters( 'rwmb_image_add_string', _x( '+ Add new image', 'image upload', 'bsflorita' ), $field );
+			$i18n_more  = apply_filters( 'rwmb_image_add_string', _x( '+ Add new image', 'image upload', 'firezy' ), $field );
 
 
 
@@ -267,9 +267,9 @@ if ( ! class_exists( 'RWMB_Image_Field' ) )
 
 		{
 
-			$i18n_delete = apply_filters( 'rwmb_image_delete_string', _x( 'Delete', 'image upload', 'bsflorita' ) );
+			$i18n_delete = apply_filters( 'rwmb_image_delete_string', _x( 'Delete', 'image upload', 'firezy' ) );
 
-			$i18n_edit   = apply_filters( 'rwmb_image_edit_string', _x( 'Edit', 'image upload', 'bsflorita' ) );
+			$i18n_edit   = apply_filters( 'rwmb_image_edit_string', _x( 'Edit', 'image upload', 'firezy' ) );
 
 			$li = '
 
