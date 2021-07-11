@@ -37,21 +37,21 @@ class TemplateMela_Ephemera_Widget extends WP_Widget {
 	 * @return TemplateMela_Ephemera_Widget
 	 */
 	public function __construct() {
-		parent::__construct( 'widget_templatemela_ephemera', esc_html__( 'TemplateMela Ephemera', 'firezy' ), array(
+		parent::__construct( 'widget_templatemela_ephemera', esc_html__( 'TemplateMela Ephemera', 'bsflorita' ), array(
 			'classname'   => 'widget_templatemela_ephemera',
-			'description' => esc_html__( 'Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts', 'firezy' ),
+			'description' => esc_html__( 'Use this widget to list your recent Aside, Quote, Video, Audio, Image, Gallery, and Link posts', 'bsflorita' ),
 		) );
 		/*
 		 * @todo http://core.trac.wordpress.org/ticket/23257: Add plural versions of Post Format strings
 		 */
 		$this->format_strings = array(
-			'aside'   => esc_html__( 'Asides',    'firezy' ),
-			'image'   => esc_html__( 'Images',    'firezy' ),
-			'video'   => esc_html__( 'Videos',    'firezy' ),
-			'audio'   => esc_html__( 'Audio',     'firezy' ),
-			'quote'   => esc_html__( 'Quotes',    'firezy' ),
-			'link'    => esc_html__( 'Links',     'firezy' ),
-			'gallery' => esc_html__( 'Galleries', 'firezy' ),
+			'aside'   => esc_html__( 'Asides',    'bsflorita' ),
+			'image'   => esc_html__( 'Images',    'bsflorita' ),
+			'video'   => esc_html__( 'Videos',    'bsflorita' ),
+			'audio'   => esc_html__( 'Audio',     'bsflorita' ),
+			'quote'   => esc_html__( 'Quotes',    'bsflorita' ),
+			'link'    => esc_html__( 'Links',     'bsflorita' ),
+			'gallery' => esc_html__( 'Galleries', 'bsflorita' ),
 		);
 	}
 	/**
@@ -99,7 +99,7 @@ class TemplateMela_Ephemera_Widget extends WP_Widget {
 						<?php
 							if ( has_post_format( 'gallery' ) ) :
 								if ( post_password_required() ) :
-									the_content(wp_kses( __( 'Read More <span class="meta-nav">&rarr;</span>', 'firezy' ),tmpmela_allowed_html()) );
+									the_content(wp_kses( __( 'Read More <span class="meta-nav">&rarr;</span>', 'bsflorita' ),tmpmela_allowed_html()) );
 								else :
 									$images = array();
 									$galleries = get_post_galleries( get_the_ID(), false );
@@ -129,7 +129,7 @@ class TemplateMela_Ephemera_Widget extends WP_Widget {
 						<?php endif; ?>
 						<p class="wp-caption-text">
 							<?php
-								printf( _n( 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photo</a>.', 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photos</a>.', $total_images, 'firezy' ),
+								printf( _n( 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photo</a>.', 'This gallery contains <a href="%1$s" rel="bookmark">%2$s photos</a>.', $total_images, 'bsflorita' ),
 									esc_url( get_permalink() ),
 									number_format_i18n( $total_images )
 								);
@@ -138,7 +138,7 @@ class TemplateMela_Ephemera_Widget extends WP_Widget {
 						<?php
 								endif;
 							else :
-								the_content(wp_kses( __( 'Read More <span class="meta-nav">&rarr;</span>', 'firezy' ),tmpmela_allowed_html()) );
+								the_content(wp_kses( __( 'Read More <span class="meta-nav">&rarr;</span>', 'bsflorita' ),tmpmela_allowed_html()) );
 							endif;
 						?>
 					</div><!-- .entry-content -->
@@ -157,7 +157,7 @@ class TemplateMela_Ephemera_Widget extends WP_Widget {
 								);
 								if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
 							?>
-							<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'firezy' ), esc_html__( '1 Comment', 'firezy' ), esc_html__( '% Comments', 'firezy' ) ); ?></span>
+							<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'bsflorita' ), esc_html__( '1 Comment', 'bsflorita' ), esc_html__( '% Comments', 'bsflorita' ) ); ?></span>
 							<?php endif; ?>
 						</div><!-- .entry-meta -->
 					</header><!-- .entry-header -->
@@ -165,7 +165,7 @@ class TemplateMela_Ephemera_Widget extends WP_Widget {
 				</li>
 				<?php endwhile; ?>
 			</ol>
-			<a class="post-format-archive-link" href="<?php echo esc_url( get_post_format_link( $format ) ); ?>"><?php printf(wp_kses( __( 'More %s <span class="meta-nav">&rarr;</span>', 'firezy' ),tmpmela_allowed_html()), $this->format_strings[ $format ] ); ?></a>
+			<a class="post-format-archive-link" href="<?php echo esc_url( get_post_format_link( $format ) ); ?>"><?php printf(wp_kses( __( 'More %s <span class="meta-nav">&rarr;</span>', 'bsflorita' ),tmpmela_allowed_html()), $this->format_strings[ $format ] ); ?></a>
 			<?php
 			 echo wp_kses_post($args['after_widget']);
 			// Reset the post globals as this query will have stomped on it.
@@ -205,11 +205,11 @@ class TemplateMela_Ephemera_Widget extends WP_Widget {
 		$number = empty( $instance['number'] ) ? 2 : absint( $instance['number'] );
 		$format = isset( $instance['format'] ) && in_array( $instance['format'], $this->formats ) ? $instance['format'] : 'aside';
 		?>
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'firezy' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'bsflorita' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>"></p>
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'firezy' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'bsflorita' ); ?></label>
 			<input id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" size="3"></p>
-			<p><label for="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"><?php esc_html_e( 'Post format to show:', 'firezy' ); ?></label>
+			<p><label for="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>"><?php esc_html_e( 'Post format to show:', 'bsflorita' ); ?></label>
 			<select id="<?php echo esc_attr( $this->get_field_id( 'format' ) ); ?>" class="widefat" name="<?php echo esc_attr( $this->get_field_name( 'format' ) ); ?>">
 				<?php foreach ( $this->formats as $slug ) : ?>
 				<option value="<?php echo esc_attr( $slug ); ?>"<?php selected( $format, $slug ); ?>><?php echo esc_attr(get_post_format_string( $slug )); ?></option>

@@ -13,11 +13,11 @@ get_header(); ?>
 <?php else : ?>
 <div id="primary" class="main-content-inner-full">
 <?php endif; ?>
-<div class="page-title"><div class="page-title-inner"><h1 class="entry-title-main"><?php esc_html_e( 'Not Found', 'firezy' ); ?></h1><?php tmpmela_breadcrumbs(); ?></div></div>
+<div class="page-title"><div class="page-title-inner"><h1 class="entry-title-main"><?php esc_html_e( 'Not Found', 'bsflorita' ); ?></h1><?php tmpmela_breadcrumbs(); ?></div></div>
   <div id="content" class="site-content" role="main">
     <div class="page-content">
       <p class="woocommerce-info">
-        <?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'firezy' ); ?>
+        <?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'bsflorita' ); ?>
       </p>
       <?php get_search_form(); ?>
     </div><!-- .page-content -->

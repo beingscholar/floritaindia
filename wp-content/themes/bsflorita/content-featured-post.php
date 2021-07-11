@@ -21,7 +21,7 @@
   </a>
   <header class="entry-header">
     <?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && tmpmela_categorized_blog() ) : ?>
-    <div class="entry-meta"> <span class="cat-links"><?php echo esc_attr(get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'firezy' ) )); ?></span> </div>
+    <div class="entry-meta"> <span class="cat-links"><?php echo esc_attr(get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'bsflorita' ) )); ?></span> </div>
     <!-- .entry-meta -->
     <?php endif; ?>
     <?php the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h3>' ); ?>

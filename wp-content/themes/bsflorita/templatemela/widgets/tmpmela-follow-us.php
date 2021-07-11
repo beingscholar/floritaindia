@@ -36,31 +36,31 @@ class FollowMeWidget extends WP_Widget
 	<ul class="toggle-block">
 	<li>
 	<?php if(!empty($linkURL1)) :  ?>
-		<a href="<?php echo esc_url($linkURL1); ?>" title="<?php echo esc_html('Facebook', 'firezy');?>" class="facebook icon"><i class="fa fa-facebook"></i></a>
+		<a href="<?php echo esc_url($linkURL1); ?>" title="<?php echo esc_html('Facebook', 'bsflorita');?>" class="facebook icon"><i class="fa fa-facebook"></i></a>
 	<?php endif; ?>
 	<?php if(!empty($linkURL2)) :  ?>
-		<a href="<?php echo esc_url($linkURL2); ?>" title="<?php echo esc_html('Twitter', 'firezy');?>" class="twitter icon"><i class="fa fa-twitter"></i></a>
+		<a href="<?php echo esc_url($linkURL2); ?>" title="<?php echo esc_html('Twitter', 'bsflorita');?>" class="twitter icon"><i class="fa fa-twitter"></i></a>
 	<?php endif; ?>	
 	<?php if(!empty($linkURL3)) :  ?>
-		<a href="<?php echo esc_url($linkURL3); ?>" title="<?php echo esc_html('Linkedin', 'firezy');?>" class="linkedin icon"><i class="fa fa-linkedin"></i></a>
+		<a href="<?php echo esc_url($linkURL3); ?>" title="<?php echo esc_html('Linkedin', 'bsflorita');?>" class="linkedin icon"><i class="fa fa-linkedin"></i></a>
 	<?php endif; ?>
 	<?php if(!empty($linkURL4)) :  ?>
-		<a href="<?php echo esc_url($linkURL4); ?>" title="<?php echo esc_html('RSS', 'firezy');?>" class="rss icon"><i class="fa fa-rss"></i></a>
+		<a href="<?php echo esc_url($linkURL4); ?>" title="<?php echo esc_html('RSS', 'bsflorita');?>" class="rss icon"><i class="fa fa-rss"></i></a>
 	<?php endif; ?>
 	<?php if(!empty($linkURL5)) :  ?>
-		<a href="<?php echo esc_url($linkURL5); ?>" title="<?php echo esc_html('Youtube', 'firezy');?>" class="youtube icon"><i class="fa fa-youtube"></i></a>
+		<a href="<?php echo esc_url($linkURL5); ?>" title="<?php echo esc_html('Youtube', 'bsflorita');?>" class="youtube icon"><i class="fa fa-youtube"></i></a>
 	<?php endif; ?>	
 	<?php if(!empty($linkURL6)) :  ?>
-		<a href="<?php echo esc_url($linkURL6); ?>" title="<?php echo esc_html('Pinterest', 'firezy');?>" class="pinterest icon"><i class="fa fa-pinterest"></i></a>
+		<a href="<?php echo esc_url($linkURL6); ?>" title="<?php echo esc_html('Pinterest', 'bsflorita');?>" class="pinterest icon"><i class="fa fa-pinterest"></i></a>
 	<?php endif; ?>
 	<?php if(!empty($linkURL7)) :  ?>
-		<a href="<?php echo esc_url($linkURL7); ?>" title="<?php echo esc_html('Google Plus', 'firezy');?> " class="google-plus icon"><i class="fa fa-google-plus"></i></a>
+		<a href="<?php echo esc_url($linkURL7); ?>" title="<?php echo esc_html('Google Plus', 'bsflorita');?> " class="google-plus icon"><i class="fa fa-google-plus"></i></a>
 	<?php endif; ?>
 	<?php if(!empty($linkURL8)) :  ?>
-		<a href="<?php echo esc_url($linkURL8); ?>" title="<?php echo esc_html('Skype', 'firezy');?>" class="skype icon"><i class="fa fa-skype"></i></a>
+		<a href="<?php echo esc_url($linkURL8); ?>" title="<?php echo esc_html('Skype', 'bsflorita');?>" class="skype icon"><i class="fa fa-skype"></i></a>
 	<?php endif; ?>
 	<?php if(!empty($linkURL9)) :  ?>
-		<a href="<?php echo esc_url($linkURL9); ?>" title="<?php echo esc_attr('Instagram', 'firezy');?>" class="instagram icon"><i class="fa fa-instagram"></i></a>
+		<a href="<?php echo esc_url($linkURL9); ?>" title="<?php echo esc_attr('Instagram', 'bsflorita');?>" class="instagram icon"><i class="fa fa-instagram"></i></a>
 	<?php endif; ?>	
 	</li>
 	</ul>
@@ -104,7 +104,7 @@ class FollowMeWidget extends WP_Widget
 		$linkURL7 = esc_attr($instance['linkURL7']);
 		$linkURL8 = esc_attr($instance['linkURL8']);
 		$linkURL9 = esc_attr($instance['linkURL9']);?>
-<p><label for="<?php echo esc_attr($this->get_field_id('title'));?>"><?php esc_html_e('Title:', 'firezy'); ?></label><input class="widefat" id="<?php echo esc_attr($this->get_field_id('title'));?>" name="<?php echo esc_attr($this->get_field_name('title'));?>" type="text" value="<?php echo esc_attr($title);?>" /></p>
+<p><label for="<?php echo esc_attr($this->get_field_id('title'));?>"><?php esc_html_e('Title:', 'bsflorita'); ?></label><input class="widefat" id="<?php echo esc_attr($this->get_field_id('title'));?>" name="<?php echo esc_attr($this->get_field_name('title'));?>" type="text" value="<?php echo esc_attr($title);?>" /></p>
 <p style="text-align:center">
   <label for="<?php echo esc_attr($this->get_field_id('linkURL1'));?>"><strong>Facebook</strong></label>
 <p>

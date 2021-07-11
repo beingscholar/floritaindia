@@ -5,7 +5,7 @@
 $prefix = 'tmpmela_staff_list_';
 $TM_META_BOXES[] = array(
 	'id'		=> 'tmpmela_staff_list_columns',
-	'title' 	=> esc_html__('TM - List Options', 'firezy'),
+	'title' 	=> esc_html__('TM - List Options', 'bsflorita'),
 	'pages' 	=> array( 'page' ),
 	'context' 	=> 'normal',
 	'priority' 	=> 'high',
@@ -13,7 +13,7 @@ $TM_META_BOXES[] = array(
 	'fields' 	=> array(	
 		// Show number of posts per page
 		array(
-			'name'			=> esc_html__('Number of posts per page:', 'firezy'),
+			'name'			=> esc_html__('Number of posts per page:', 'bsflorita'),
 			'id'    		=> "{$prefix}posts_per_page",
 			'type'  		=> 'text',
 			'std'   		=> '5',
@@ -26,7 +26,7 @@ $TM_META_BOXES[] = array(
 $prefix = 'tmpmela_staff_box_';
 $TM_META_BOXES[] = array(
 	'id'		=> 'tmpmela_staff_box_columns',
-	'title' 	=> esc_html__('TM - Box Options', 'firezy'),
+	'title' 	=> esc_html__('TM - Box Options', 'bsflorita'),
 	'pages' 	=> array( 'page' ),
 	'context' 	=> 'normal',
 	'priority' 	=> 'high',
@@ -34,7 +34,7 @@ $TM_META_BOXES[] = array(
 	'fields' 	=> array(	
 		// Show posts per column
 		array(
-			'name'    		=> esc_html__('Columns Options:', 'firezy'),
+			'name'    		=> esc_html__('Columns Options:', 'bsflorita'),
 			'id'      		=> "{$prefix}columns",
 			'type'    		=> 'radio',
 			'std'			=> 'two',
@@ -46,7 +46,7 @@ $TM_META_BOXES[] = array(
 		),
 		// Show number of posts per page
 		array(
-			'name'			=> esc_html__('Number of posts per page:', 'firezy'),
+			'name'			=> esc_html__('Number of posts per page:', 'bsflorita'),
 			'id'    		=> "{$prefix}posts_per_page",
 			'type'  		=> 'text',
 			'std'   		=> '5',

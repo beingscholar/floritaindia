@@ -15,10 +15,10 @@ function tmpmela_setup() {
 	*
 	* Translations can be added to the /languages/ directory.
 	* If you're building a theme based on tm, use a find and
-	* replace to change 'firezy' to the name of your theme in all
+	* replace to change 'bsflorita' to the name of your theme in all
 	* template files.
 	*/
-	load_theme_textdomain( 'firezy', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'bsflorita', get_template_directory() . '/languages' );
 	/*
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
@@ -44,9 +44,9 @@ function tmpmela_setup() {
 	}
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		 'primary'   => esc_html__( 'TM Header Navigation', 'firezy' ),
-		 'header-menu'   => esc_html__( 'TM Header Top Links', 'firezy' ),
-		 'footer-menu'   => esc_html__( 'TM Footer Navigation', 'firezy' ),
+		 'primary'   => esc_html__( 'TM Header Navigation', 'bsflorita' ),
+		 'header-menu'   => esc_html__( 'TM Header Top Links', 'bsflorita' ),
+		 'footer-menu'   => esc_html__( 'TM Footer Navigation', 'bsflorita' ),
 	) );
 	/*
 	 * This theme uses a custom image size for featured images, displayed on
@@ -91,9 +91,9 @@ function tmpmela_has_featured_posts() {
 ********************************************************/
 function tmpmela_widgets_init() {
 	register_sidebar( array(
-		'name' => esc_html__( 'Main Sidebar', 'firezy' ),
+		'name' => esc_html__( 'Main Sidebar', 'bsflorita' ),
 		'id' => 'sidebar-1',
-		'description' => esc_html__( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'firezy' ),
+		'description' => esc_html__( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'bsflorita' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
@@ -110,12 +110,12 @@ function tmpmela_fonts_url() {
 	 * supported by Source Sans Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'firezy' );
+	$source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'bsflorita' );
 	/* Translators: If there are characters in your language that are not
 	 * supported by Bitter, translate this to 'off'. Do not translate into your
 	 * own language.
 	 */
-	$bitter = _x( 'on', 'Bitter font: on or off', 'firezy' );
+	$bitter = _x( 'on', 'Bitter font: on or off', 'bsflorita' );
 	if ( 'off' !== $source_sans_pro || 'off' !== $bitter ) {
 		$font_families = array();
 		if ( 'off' !== $source_sans_pro )
@@ -247,7 +247,7 @@ function tmpmela_list_authors() {
     <div class="contributor-summary">
       <h2 class="contributor-name"><?php echo esc_attr(get_the_author_meta( 'display_name', $contributor_id )); ?></h2>
       <p class="contributor-bio"> <?php echo esc_attr(get_the_author_meta( 'description', $contributor_id )); ?> </p>
-      <a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $contributor_id ) ); ?>"> <?php printf( _n( '%d Article', '%d Articles', $post_count, 'firezy' ), $post_count ); ?> </a> </div>
+      <a class="contributor-posts-link" href="<?php echo esc_url( get_author_posts_url( $contributor_id ) ); ?>"> <?php printf( _n( '%d Article', '%d Articles', $post_count, 'bsflorita' ), $post_count ); ?> </a> </div>
     <!-- .contributor-summary -->
   </div><!-- .contributor-info -->
 </div><!-- .contributor -->
@@ -336,7 +336,7 @@ function tmpmela_wp_title( $title, $sep ) {
 	}
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( esc_html__( 'Page %s', 'firezy' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( esc_html__( 'Page %s', 'bsflorita' ), max( $paged, $page ) );
 	}
 	return $title;
 }
@@ -402,7 +402,7 @@ $args=array(
 );
 $my_query = new wp_query( $args );
 if( $my_query->have_posts() ) {   ?>
-<div class="related_posts_outer"><div class="shortcode-title center"><h1 class="normal-title"><?php echo esc_attr_e( 'Related Posts', 'firezy' ) ?></h1></div>
+<div class="related_posts_outer"><div class="shortcode-title center"><h1 class="normal-title"><?php echo esc_attr_e( 'Related Posts', 'bsflorita' ) ?></h1></div>
 <div class="related_posts blog-list">
 <?php while( $my_query->have_posts() ) {
 $my_query->the_post();?>
@@ -451,11 +451,11 @@ if ( ! function_exists( 'sampledata_import_files' ) ) :
 function sampledata_import_files() {
 return array(
  array(
-    'import_file_name'            => 'firezy',
-    'local_import_file'           => trailingslashit( get_stylesheet_directory() ) . 'demo-content/default/firezy.wordpress.xml',
-    'local_import_customizer_file'=> trailingslashit( get_stylesheet_directory() ) . 'demo-content/default/firezy_customizer_export.dat',
-	'local_import_widget_file'    => trailingslashit( get_stylesheet_directory() ) . 'demo-content/default/firezy_widgets_settings.wie',
-    'import_notice'               => esc_html__( 'Please waiting for a few minutes, do not close the window or refresh the page until the data is imported.', 'firezy' ),
+    'import_file_name'            => 'bsflorita',
+    'local_import_file'           => trailingslashit( get_stylesheet_directory() ) . 'demo-content/default/bsflorita.wordpress.xml',
+    'local_import_customizer_file'=> trailingslashit( get_stylesheet_directory() ) . 'demo-content/default/bsflorita_customizer_export.dat',
+	'local_import_widget_file'    => trailingslashit( get_stylesheet_directory() ) . 'demo-content/default/bsflorita_widgets_settings.wie',
+    'import_notice'               => esc_html__( 'Please waiting for a few minutes, do not close the window or refresh the page until the data is imported.', 'bsflorita' ),
 ),
 );
 }
@@ -496,7 +496,7 @@ function sampledata_after_import($selected_import) {
            foreach($slider_array as $filepath){
              $slider->importSliderFromPost(true,true,$filepath);  
            }
-           echo esc_html__( 'Slider processed', 'firezy' );
+           echo esc_html__( 'Slider processed', 'bsflorita' );
       }
 }
 add_action( 'pt-ocdi/after_import', 'sampledata_after_import' );

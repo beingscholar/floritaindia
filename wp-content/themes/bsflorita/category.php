@@ -18,7 +18,7 @@ get_header(); ?>
 <?php endif; ?>
 <div class="page-title">
 			<div class="page-title-inner">
-				<h1 class="entry-title-main"><?php printf( esc_html__( 'Category Archives: %s', 'firezy' ), single_cat_title( '', false ) ); ?></h1>
+				<h1 class="entry-title-main"><?php printf( esc_html__( 'Category Archives: %s', 'bsflorita' ), single_cat_title( '', false ) ); ?></h1>
 				<?php tmpmela_breadcrumbs(); ?>
 				<?php
 				// Show an optional term description.

@@ -38,13 +38,13 @@ function tmpmela_paging_nav() {
 		'current'  => $paged,
 		'mid_size' => 1,
 		'add_args' => array_map( 'urlencode', $query_args ),
-		'prev_text' => wp_kses( __( '<i class="fa fa-angle-left"></i>', 'firezy' ),tmpmela_allowed_html()),
-		'next_text' =>  wp_kses( __( '<i class="fa fa-angle-right"></i>', 'firezy' ),tmpmela_allowed_html()),
+		'prev_text' => wp_kses( __( '<i class="fa fa-angle-left"></i>', 'bsflorita' ),tmpmela_allowed_html()),
+		'next_text' =>  wp_kses( __( '<i class="fa fa-angle-right"></i>', 'bsflorita' ),tmpmela_allowed_html()),
 	) );
 	if ( $links ) :
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h3 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'firezy' ); ?></h3>
+		<h3 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'bsflorita' ); ?></h3>
 		<div class="pagination loop-pagination">
 			<?php echo wp_kses_post($links); ?>
 		</div><!-- .pagination -->
@@ -70,14 +70,14 @@ function tmpmela_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation">
-		<h3 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'firezy' ); ?></h3>
+		<h3 class="screen-reader-text"><?php esc_html_e( 'Post navigation', 'bsflorita' ); ?></h3>
 		<div class="nav-links">
 			<?php
 			if ( is_attachment() ) :
-				previous_post_link( '%link',  wp_kses( __( '<span class="meta-nav">Published In</span>%title', 'firezy' ),tmpmela_allowed_html()) );
+				previous_post_link( '%link',  wp_kses( __( '<span class="meta-nav">Published In</span>%title', 'bsflorita' ),tmpmela_allowed_html()) );
 			else :
-				previous_post_link( '%link', wp_kses( __( '<i class="fa fa-chevron-left"></i>%title', 'firezy' ),tmpmela_allowed_html()) );
-				next_post_link( '%link', wp_kses( __( '%title<i class="fa fa-chevron-right"></i>', 'firezy' ),tmpmela_allowed_html()) );
+				previous_post_link( '%link', wp_kses( __( '<i class="fa fa-chevron-left"></i>%title', 'bsflorita' ),tmpmela_allowed_html()) );
+				next_post_link( '%link', wp_kses( __( '%title<i class="fa fa-chevron-right"></i>', 'bsflorita' ),tmpmela_allowed_html()) );
 			endif;
 			?>
 		</div><!-- .nav-links -->
@@ -95,7 +95,7 @@ if ( ! function_exists( 'tmpmela_posted_on' ) ) :
  */
 function tmpmela_posted_on() {
 	if ( is_sticky() && is_home() && ! is_paged() ) {
-		echo '<span class="featured-post">' . esc_html__( 'Sticky', 'firezy' ) . '</span>';
+		echo '<span class="featured-post">' . esc_html__( 'Sticky', 'bsflorita' ) . '</span>';
 	}
 	// Set up and print post meta information.
 	printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',

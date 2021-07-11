@@ -49,7 +49,7 @@ if ( !class_exists( 'RWMB_Post_Field' ) )
 		 */
 		static function normalize_field( $field )
 		{
-			$default_post_type = esc_html__( 'Post', 'firezy' );
+			$default_post_type = esc_html__( 'Post', 'bsflorita' );
 			if ( is_string( $field['post_type'] ) )
 			{
 				$post_type_object = get_post_type_object( $field['post_type'] );
@@ -63,7 +63,7 @@ if ( !class_exists( 'RWMB_Post_Field' ) )
 				'query_args' => array()
 			) );
 
-			$field['std'] = empty( $field['std'] ) ? sprintf( esc_html__( 'Select a %s', 'firezy' ), $default_post_type ) : $field['std'];
+			$field['std'] = empty( $field['std'] ) ? sprintf( esc_html__( 'Select a %s', 'bsflorita' ), $default_post_type ) : $field['std'];
 
 			if ( $field['parent'] )
 			{

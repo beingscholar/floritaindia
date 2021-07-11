@@ -30,9 +30,9 @@ get_header(); ?>
 	<h1 class="entry-title-main">
 	<?php	    
 			if(tmpmela_is_blog()){  
-				 esc_html_e( 'All Blog', 'firezy' ); 
+				 esc_html_e( 'All Blog', 'bsflorita' ); 
 			}else if(is_search()) { 
-				printf( esc_html__( 'Search Results for: "%s"', 'firezy' ), get_search_query() ); 
+				printf( esc_html__( 'Search Results for: "%s"', 'bsflorita' ), get_search_query() ); 
 			}else {
 				    the_title();
 			}

@@ -124,7 +124,7 @@ function tmpmela_admin_header_image() {
 ?>
 	<div id="headimg">
 		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="<?php echo esc_attr_e('headerimage','firezy'); ?>">
+		<img src="<?php header_image(); ?>" alt="<?php echo esc_attr_e('headerimage','bsflorita'); ?>">
 		<?php endif; 
 		$css =' style="color:#%s;"'; ?>
 		<h3 class="displaying-header-text"><a id="name"<?php echo sprintf( $css , get_header_textcolor() ); ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h3>

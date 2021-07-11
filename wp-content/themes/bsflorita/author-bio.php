@@ -23,9 +23,9 @@
   </div>
   <!-- .author-avatar -->
   <div class="author-description">
-    <h2 class="author-title"><?php printf( esc_html__( 'About %s', 'firezy' ), get_the_author() ); ?></h2>
+    <h2 class="author-title"><?php printf( esc_html__( 'About %s', 'bsflorita' ), get_the_author() ); ?></h2>
     <p class="author-bio">
       <?php the_author_meta( 'description' ); ?>
-      <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"> <?php printf(wp_kses( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'firezy' ),tmpmela_allowed_html()), get_the_author() ); ?> </a> </p>
+      <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"> <?php printf(wp_kses( __( 'View all posts by %s <span class="meta-nav">&rarr;</span>', 'bsflorita' ),tmpmela_allowed_html()), get_the_author() ); ?> </a> </p>
   </div><!-- .author-description -->
 </div><!-- .author-info -->

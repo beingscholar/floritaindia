@@ -12,9 +12,9 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $woocommerce;	
 	ob_start();	
 	?>
-	<a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'firezy'); ?>">
-														<span class="cart-qty"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'firezy'), $woocommerce->cart->cart_contents_count);?></span>
-														<div class="cart-label"><?php echo esc_html_e('My Cart','firezy'); ?></div>
+	<a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'bsflorita'); ?>">
+														<span class="cart-qty"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'bsflorita'), $woocommerce->cart->cart_contents_count);?></span>
+														<div class="cart-label"><?php echo esc_html_e('My Cart','bsflorita'); ?></div>
 														<div class="item-total"><?php echo translate($woocommerce->cart->get_cart_total()); ?> </div>
 													</a>
 <?php	

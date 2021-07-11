@@ -13,9 +13,9 @@ function tmpmela_set_default_options_child()
 	add_option("tmpmela_show_site_loader","yes"); // Show Loader
 	add_option("tmpmela_loader_background_color","C70A0A"); //Loader Background color
 	add_option("tmpmela_logo_image",get_stylesheet_directory_uri()."/images/megnor/logo.png"); // set logo image	
-	add_option("tmpmela_logo_image_alt",'firezy_layout7'); // set logo image alt
+	add_option("tmpmela_logo_image_alt",'bsflorita_layout7'); // set logo image alt
 	add_option("tmpmela_mob_logo_image", get_stylesheet_directory_uri()."/images/megnor/mob-logo.png"); // set logo image	
-	add_option("tmpmela_mob_logo_image_alt",'firezy_layout7'); // set logo image alt
+	add_option("tmpmela_mob_logo_image_alt",'bsflorita_layout7'); // set logo image alt
 	add_option("tmpmela_bkg_color","FFFFFF"); // background color
 	add_option("tmpmela_bodyfont_color","838383"); // body font color
 	
@@ -85,9 +85,9 @@ function tmpmela_child_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tmpmela_child_scripts' );
 register_sidebar( array(
-        'name' => esc_html__( 'Home Sidebar', 'firezy' ),
+        'name' => esc_html__( 'Home Sidebar', 'bsflorita' ),
         'id' => 'home-sidebar',
-        'description' => esc_html__( 'The Home Sidebar', 'firezy' ),
+        'description' => esc_html__( 'The Home Sidebar', 'bsflorita' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => "</aside>",
         'before_title' => '<h3 class="widget-title">',
@@ -101,11 +101,11 @@ if ( ! function_exists( 'sampledata_import_files' ) ) :
 function sampledata_import_files() {
     return array(
 		 array(
-        'import_file_name'             => 'firezy_layout7',
-        'local_import_file'            => trailingslashit( get_stylesheet_directory() ) . 'demo-content/demo7/firezy_layout7.wordpress.xml',
-        'local_import_customizer_file' => trailingslashit( get_stylesheet_directory() ) . 'demo-content/demo7/firezy_layout7_customizer_export.dat',
-		'local_import_widget_file'     => trailingslashit( get_stylesheet_directory() ) . 'demo-content/demo7/firezy_layout7_widgets_settings.wie',
-        'import_notice'                => esc_html__( 'Please waiting for a few minutes, do not close the window or refresh the page until the data is imported.', 'firezy' ),
+        'import_file_name'             => 'bsflorita_layout7',
+        'local_import_file'            => trailingslashit( get_stylesheet_directory() ) . 'demo-content/demo7/bsflorita_layout7.wordpress.xml',
+        'local_import_customizer_file' => trailingslashit( get_stylesheet_directory() ) . 'demo-content/demo7/bsflorita_layout7_customizer_export.dat',
+		'local_import_widget_file'     => trailingslashit( get_stylesheet_directory() ) . 'demo-content/demo7/bsflorita_layout7_widgets_settings.wie',
+        'import_notice'                => esc_html__( 'Please waiting for a few minutes, do not close the window or refresh the page until the data is imported.', 'bsflorita' ),
         ),
 		);
 }
@@ -140,7 +140,7 @@ function sampledata_after_import($selected_import) {
 	   //Import Revolution Slider
        if ( class_exists( 'RevSlider' ) ) {
            $slider_array = array(
-              get_stylesheet_directory()."/demo-content/demo7/tmpmela_homeslider_firezy_layout7.zip",
+              get_stylesheet_directory()."/demo-content/demo7/tmpmela_homeslider_bsflorita_layout7.zip",
               );
  
            $slider = new RevSlider();
@@ -148,7 +148,7 @@ function sampledata_after_import($selected_import) {
            foreach($slider_array as $filepath){
              $slider->importSliderFromPost(true,true,$filepath);  
            }
-           echo esc_html__( 'Slider processed', 'firezy' );
+           echo esc_html__( 'Slider processed', 'bsflorita' );
       }
 }
 add_action( 'pt-ocdi/after_import', 'sampledata_after_import' );

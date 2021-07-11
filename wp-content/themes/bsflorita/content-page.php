@@ -17,12 +17,12 @@
     <div class="inner-container">
 	<?php 
 		wp_link_pages( array(
-		'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'firezy' ) . '</span>',
+		'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'bsflorita' ) . '</span>',
 		'after'       => '</div>',
 		'link_before' => '<span>',
 		'link_after'  => '</span>',
 		) );		
-		edit_post_link( esc_html__( 'Edit', 'firezy' ), '<span class="edit-link">', '</span>' );
+		edit_post_link( esc_html__( 'Edit', 'bsflorita' ), '<span class="edit-link">', '</span>' );
 	?>
     </div>
     <!-- .inner-container -->

@@ -40,18 +40,18 @@ $i++;
 	   
 	
 		<?php the_content(); ?>
-        <?php wp_link_pages( array( 'before' => '<div class="page-link">' . esc_html__( 'Pages:', 'firezy' ), 'after' => '</div>' ) ); ?>
+        <?php wp_link_pages( array( 'before' => '<div class="page-link">' . esc_html__( 'Pages:', 'bsflorita' ), 'after' => '</div>' ) ); ?>
       </div>
 
          <div class="entry-meta">
             <?php tmpmela_entry_date(); ?>
             <div class="meta-inner"><span class="parent-post-link"><a href="<?php echo esc_url(get_permalink( $post->post_parent )); ?>" rel="gallery"><?php echo esc_attr(get_the_title( $post->post_parent )); ?></a></span></div>
-            <?php edit_post_link( esc_html__( 'Edit', 'firezy' ), '<span class="edit-link"><i class="fa fa-pencil"></i>', '</span>' ); ?>
+            <?php edit_post_link( esc_html__( 'Edit', 'bsflorita' ), '<span class="edit-link"><i class="fa fa-pencil"></i>', '</span>' ); ?>
          </div>
          
       <!-- .entry-content -->
       <div class="entry-utility-port">
-        <?php edit_post_link( esc_html__( 'Edit', 'firezy' ), '<span class="edit-link">', '</span>' ); ?>
+        <?php edit_post_link( esc_html__( 'Edit', 'bsflorita' ), '<span class="edit-link">', '</span>' ); ?>
       </div>
       <!-- .entry-utility -->
       <?php if ( comments_open() ) : ?>

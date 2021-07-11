@@ -355,9 +355,9 @@ class tmpmela_Featured_Content {
 	 */
 	public static function customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'tmpmela_Featured_Content', array(
-			'title'          => esc_html__( 'Featured Content', 'firezy' ),
-			'description'    => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'firezy' ),
-				esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'firezy' ), admin_url( 'edit.php' ) ) ),
+			'title'          => esc_html__( 'Featured Content', 'bsflorita' ),
+			'description'    => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'bsflorita' ),
+				esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'bsflorita' ), admin_url( 'edit.php' ) ) ),
 				admin_url( 'edit.php?show_sticky=1' )
 			),
 			'priority'       => 130,
@@ -376,12 +376,12 @@ class tmpmela_Featured_Content {
 		) );
 		// Add Featured Content controls.
 		$wp_customize->add_control( 'featured-content[tag-name]', array(
-			'label'    => esc_html__( 'Tag Name', 'firezy' ),
+			'label'    => esc_html__( 'Tag Name', 'bsflorita' ),
 			'section'  => 'tmpmela_Featured_Content',
 			'priority' => 20,
 		) );
 		$wp_customize->add_control( 'featured-content[hide-tag]', array(
-			'label'    => esc_html__( 'Don&rsquo;t display tag on front end.', 'firezy' ),
+			'label'    => esc_html__( 'Don&rsquo;t display tag on front end.', 'bsflorita' ),
 			'section'  => 'tmpmela_Featured_Content',
 			'type'     => 'checkbox',
 			'priority' => 30,

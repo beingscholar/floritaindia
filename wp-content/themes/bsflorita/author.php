@@ -24,7 +24,7 @@ get_header(); ?>
 						 * with a call to rewind_posts().
 						 */
 						the_post();
-						printf( esc_html__( 'All posts by %s', 'firezy' ), get_the_author() );
+						printf( esc_html__( 'All posts by %s', 'bsflorita' ), get_the_author() );
 					?></h3>
 	<?php tmpmela_breadcrumbs(); ?></div>
 	</div>

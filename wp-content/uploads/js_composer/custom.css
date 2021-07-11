@@ -4845,7 +4845,7 @@ a.pswp__share--download:hover {
   }
 
   .topbar-link .topbar-link-toggle {
-    background-image: url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/firezy/images/megnor/user.svg);
+    background-image: url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/bsflorita/images/megnor/user.svg);
     background-size: 22px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4856,7 +4856,7 @@ a.pswp__share--download:hover {
     vertical-align: top;
   }
   .topbar-link .topbar-link-toggle:hover {
-    background-image: url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/firezy/images/megnor/user_hover.svg);
+    background-image: url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/bsflorita/images/megnor/user_hover.svg);
   }
   .header-cart .shopping_cart .cart-icon {
     background-position: 10px 6px;
@@ -5375,7 +5375,7 @@ a.pswp__share--download:hover {
   }
   .header-search .header-toggle {
     background: rgba(0, 0, 0, 0)
-      url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/firezy/images/megnor/header-search-icon.png)
+      url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/bsflorita/images/megnor/header-search-icon.png)
       no-repeat scroll right 10px;
     bottom: auto;
     cursor: pointer;
@@ -5426,7 +5426,7 @@ a.pswp__share--download:hover {
   .header-search .woocommerce-product-search input[type="submit"],
   .header-search .search-form #searchsubmit {
     background: #ffd200
-      url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/firezy/images/megnor/header-search-icon.png)
+      url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/bsflorita/images/megnor/header-search-icon.png)
       no-repeat scroll -68px 7px;
     height: 40px;
     width: 40px;
@@ -5912,10 +5912,10 @@ a.pswp__share--download:hover {
     text-align: left;
   }
   .topbar-link .topbar-link-toggle {
-    background-image: url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/firezy_layout7/images/megnor/user.svg);
+    background-image: url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/bsflorita_layout7/images/megnor/user.svg);
   }
   .topbar-link .topbar-link-toggle:hover {
-    background-image: url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/firezy_layout7/images/megnor/user_hover.svg);
+    background-image: url(//wordpress.templatemela.com/woo/WCM04/WCM040092/WP7/wp-content/themes/bsflorita_layout7/images/megnor/user_hover.svg);
   }
 }
 @media only screen and (max-width: 479px) {

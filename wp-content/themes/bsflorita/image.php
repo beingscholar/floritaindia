@@ -45,7 +45,7 @@ get_header();
           <?php
 				the_content();
 				wp_link_pages( array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'firezy' ) . '</span>',
+					'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'bsflorita' ) . '</span>',
 					'after'       => '</div>',
 					'link_before' => '<span>',
 					'link_after'  => '</span>',
@@ -55,14 +55,14 @@ get_header();
           <div class="entry-meta">
   <?php tmpmela_entry_date(); ?>
   <div class="meta-inner"><span class="full-size-link"><i class="fa fa-square"></i><a href="<?php echo esc_url(wp_get_attachment_url()); ?>"><?php echo esc_attr($metadata['width']); ?> &times; <?php echo esc_attr($metadata['height']); ?></a></span></div>          <div class="meta-inner"><span class="parent-post-link"><i class="fa fa-comment-o" ></i><a href="<?php echo esc_url(get_permalink( $post->post_parent )); ?>" rel="gallery"><?php echo esc_attr(get_the_title( $post->post_parent )); ?></a></span></div>
-  <?php edit_post_link( esc_html__( 'Edit', 'firezy' ), '<span class="edit-link"><i class="fa fa-pencil"></i>', '</span>' ); ?>
+  <?php edit_post_link( esc_html__( 'Edit', 'bsflorita' ), '<span class="edit-link"><i class="fa fa-pencil"></i>', '</span>' ); ?>
          </div>
       </article>
       <!-- #post-## -->
       <nav id="image-navigation" class="navigation image-navigation">
         <div class="nav-links">
-          <?php previous_image_link( false, '<div class="previous-image">' . esc_html__( 'Previous Image', 'firezy' ) . '</div>' ); ?>
-          <?php next_image_link( false, '<div class="next-image">' . esc_html__( 'Next Image', 'firezy' ) . '</div>' ); ?>
+          <?php previous_image_link( false, '<div class="previous-image">' . esc_html__( 'Previous Image', 'bsflorita' ) . '</div>' ); ?>
+          <?php next_image_link( false, '<div class="next-image">' . esc_html__( 'Next Image', 'bsflorita' ) . '</div>' ); ?>
         </div><!-- .nav-links -->
       </nav>
       <!-- #image-navigation -->

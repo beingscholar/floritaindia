@@ -22,9 +22,9 @@
 function tmpmela_register_sidebars() {
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Header Shopping Cart Widget Area', 'firezy' ),
+		'name' => esc_html__( 'Header Shopping Cart Widget Area', 'bsflorita' ),
 		'id' => 'header-widget',
-		'description' => esc_html__( 'The Cart on header', 'firezy' ),
+		'description' => esc_html__( 'The Cart on header', 'bsflorita' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s tab_content">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
@@ -32,45 +32,45 @@ function tmpmela_register_sidebars() {
 	) );
 	
 	register_sidebar( array(
-		'name' => esc_html__( 'Header Search Widget Area', 'firezy' ),
+		'name' => esc_html__( 'Header Search Widget Area', 'bsflorita' ),
 		'id' => 'header-search',
-		'description' => esc_html__( 'The header search widget area', 'firezy' ),
+		'description' => esc_html__( 'The header search widget area', 'bsflorita' ),
 		'before_widget' => '',
 		'after_widget' => " ",
 		'before_title' => ' ',
 		'after_title' => ' ',
 	) );
 	register_sidebar( array(
-		'name' => esc_html__( 'Product Category Widget Area', 'firezy' ),
+		'name' => esc_html__( 'Product Category Widget Area', 'bsflorita' ),
 		'id' => 'header-category',
-		'description' => esc_html__( 'The Product category widget area', 'firezy' ),
+		'description' => esc_html__( 'The Product category widget area', 'bsflorita' ),
 		'before_widget' => '',
 		'after_widget' => " ",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 	 register_sidebar(array(
-        'name' => esc_html__(' Single Product Page Sidebar Area', 'firezy'),
+        'name' => esc_html__(' Single Product Page Sidebar Area', 'bsflorita'),
         'id' => 'single-product-side-widget-area',
-        'description' => esc_html__('The Single Product Side widget area', 'firezy'),
+        'description' => esc_html__('The Single Product Side widget area', 'bsflorita'),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => "</aside>",
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ));
 	 register_sidebar( array(
-		'name' => esc_html__( 'Single Product CMS Tab', 'firezy' ),
+		'name' => esc_html__( 'Single Product CMS Tab', 'bsflorita' ),
 		'id' => 'single-product-cms-tab',
-		'description' => esc_html__( 'Single Product Cms Tab', 'firezy' ),
+		'description' => esc_html__( 'Single Product Cms Tab', 'bsflorita' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 	register_sidebar( array(
-		'name' => esc_html__( 'First Footer Widget Area', 'firezy' ),
+		'name' => esc_html__( 'First Footer Widget Area', 'bsflorita' ),
 		'id' => 'first-footer-widget-area',
-		'description' => esc_html__( 'The first footer widget area', 'firezy' ),
+		'description' => esc_html__( 'The first footer widget area', 'bsflorita' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
@@ -78,9 +78,9 @@ function tmpmela_register_sidebars() {
 	) );
 	
 	register_sidebar( array(
-		'name' => esc_html__( 'Second Footer Widget Area', 'firezy' ),
+		'name' => esc_html__( 'Second Footer Widget Area', 'bsflorita' ),
 		'id' => 'second-footer-widget-area',
-		'description' => esc_html__( 'The second footer widget area', 'firezy' ),
+		'description' => esc_html__( 'The second footer widget area', 'bsflorita' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
@@ -88,9 +88,9 @@ function tmpmela_register_sidebars() {
 	) );
 	
 	register_sidebar( array(
-		'name' => esc_html__( 'Third Footer Widget Area', 'firezy' ),
+		'name' => esc_html__( 'Third Footer Widget Area', 'bsflorita' ),
 		'id' => 'third-footer-widget-area',
-		'description' => esc_html__( 'The third footer widget area', 'firezy' ),
+		'description' => esc_html__( 'The third footer widget area', 'bsflorita' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
@@ -98,27 +98,27 @@ function tmpmela_register_sidebars() {
 	) );
 	
 	register_sidebar( array(
-		'name' => esc_html__( 'Fourth Footer Widget Area', 'firezy' ),
+		'name' => esc_html__( 'Fourth Footer Widget Area', 'bsflorita' ),
 		'id' => 'fourth-footer-widget-area',
-		'description' => esc_html__( 'The fourth footer widget area', 'firezy' ),
+		'description' => esc_html__( 'The fourth footer widget area', 'bsflorita' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
     register_sidebar( array(
-        'name' => esc_html__( 'Fifth Footer Widget Area', 'firezy' ),
+        'name' => esc_html__( 'Fifth Footer Widget Area', 'bsflorita' ),
         'id' => 'fifth-footer-widget-area',
-        'description' => esc_html__( 'The Fifth footer widget area', 'firezy' ),
+        'description' => esc_html__( 'The Fifth footer widget area', 'bsflorita' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget' => "</aside>",
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ) );
 		register_sidebar( array(
-		'name' => esc_html__( 'Footer Bottom Widget Area', 'firezy' ),
+		'name' => esc_html__( 'Footer Bottom Widget Area', 'bsflorita' ),
 		'id' => 'footer-bottom-widget-area',
-		'description' => esc_html__( 'The Footer Bottom widget area', 'firezy' ),
+		'description' => esc_html__( 'The Footer Bottom widget area', 'bsflorita' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
 		'before_title' => '<h3 class="widget-title">',

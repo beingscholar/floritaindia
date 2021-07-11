@@ -16,10 +16,10 @@ function tmpmela_set_default_options()
 	add_option("tmpmela_show_site_loader","yes"); // Show Loader
 	add_option("tmpmela_loader_background_color","2457AA"); //Loader Background color
 	add_option("tmpmela_logo_image", get_stylesheet_directory_uri() . "/images/megnor/logo.png"); // set logo image
-	add_option("tmpmela_logo_image_alt",'firezy'); // set logo image alt
+	add_option("tmpmela_logo_image_alt",'bsflorita'); // set logo image alt
     add_option("tmpmela_showsite_description", 'no'); // yes/no, control panel
 	add_option("tmpmela_mob_logo_image", get_stylesheet_directory_uri() . "/images/megnor/mob-logo.png"); // set logo image
-	add_option("tmpmela_mob_logo_image_alt",'firezy'); // set logo image alt
+	add_option("tmpmela_mob_logo_image_alt",'bsflorita'); // set logo image alt
 	add_option("tmpmela_contact_email",'support@example.com'); // yes/no, control panel
 	add_option("tmpmela_background_upload",""); // Default, background image
 	add_option("tmpmela_back_repeat","repeat"); // background repeate
@@ -410,7 +410,7 @@ function tmpmela_excerpt($limit)
       $excerpt = explode(' ', tmpmela_strip_images(strip_tags(get_the_content())), $limit);
       if (count($excerpt)>=$limit) {
         array_pop($excerpt);
-        $excerpt = implode(" ",$excerpt).'.<div class="read-more"><a class="read-more-link" href="'.esc_url(get_permalink()).'">'.esc_html__( 'Read More' , 'firezy' ) .'</a></div>';
+        $excerpt = implode(" ",$excerpt).'.<div class="read-more"><a class="read-more-link" href="'.esc_url(get_permalink()).'">'.esc_html__( 'Read More' , 'bsflorita' ) .'</a></div>';
       } else {
         $excerpt = implode(" ",$excerpt);
       }
@@ -469,7 +469,7 @@ function tmpmela_load_fonts() {
     * into your own language.
     */
 
-	$Poppins = _x( 'on', 'Poppins font: on or off', 'firezy' );
+	$Poppins = _x( 'on', 'Poppins font: on or off', 'bsflorita' );
 
 
 	  if (  'off' !== $Poppins ) {
@@ -563,9 +563,9 @@ function tmpmela_breadcrumbs() { ?>
 endif;
 function tmpmela_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" class="search-form" action="' . esc_url( home_url( '/' ) ) . '" >
-    <div><label class="screen-reader-text" for="s">' . esc_attr_x( 'Search for:','label','firezy' ) . '</label>
-    <input class="search-field" type="text" placeholder="'. esc_attr__( 'Search', 'firezy' ) .'" value="' . get_search_query() . '" name="s" id="s" />
-    <input class="search-submit" type="submit" id="searchsubmit" value="'. esc_attr_x( 'Go','label','firezy' ) .'" />
+    <div><label class="screen-reader-text" for="s">' . esc_attr_x( 'Search for:','label','bsflorita' ) . '</label>
+    <input class="search-field" type="text" placeholder="'. esc_attr__( 'Search', 'bsflorita' ) .'" value="' . get_search_query() . '" name="s" id="s" />
+    <input class="search-submit" type="submit" id="searchsubmit" value="'. esc_attr_x( 'Go','label','bsflorita' ) .'" />
     </div>
     </form>';
     return $form;
@@ -589,9 +589,9 @@ function tmpmela_comment( $comment, $args, $depth ) {
 	?>
 <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
   <p>
-    <?php esc_html_e( 'Pingback:', 'firezy' ); ?>
+    <?php esc_html_e( 'Pingback:', 'bsflorita' ); ?>
     <?php comment_author_link(); ?>
-    <?php edit_comment_link( esc_html__( '(Edit)', 'firezy' ), '<span class="edit-link">', '</span>' ); ?>
+    <?php edit_comment_link( esc_html__( '(Edit)', 'bsflorita' ), '<span class="edit-link">', '</span>' ); ?>
   </p>
 </li>
 <?php
@@ -605,9 +605,9 @@ function tmpmela_comment( $comment, $args, $depth ) {
     <div class="alignleft"> <?php echo get_avatar( $comment, 48 ); ?> </div>
     <div class="author-content">
       <h6><?php echo esc_html($comment->comment_author); ?></h6>
-      <?php edit_comment_link( esc_html__( 'Edit', 'firezy' ), ' ' ); ?>
+      <?php edit_comment_link( esc_html__( 'Edit', 'bsflorita' ), ' ' ); ?>
       <div class="clearfix"></div>
-      <abbr class="published" title="<?php echo get_the_title() ?>"><?php printf( esc_html__( '%1$s at %2$s', 'firezy' ), get_comment_date(),  get_comment_time() ); ?></abbr> </div>
+      <abbr class="published" title="<?php echo get_the_title() ?>"><?php printf( esc_html__( '%1$s at %2$s', 'bsflorita' ), get_comment_date(),  get_comment_time() ); ?></abbr> </div>
     <div class="comment-content">
       <?php comment_text(); ?>
       <div class="reply">
@@ -616,7 +616,7 @@ function tmpmela_comment( $comment, $args, $depth ) {
     </div>
     <?php if ( $comment->comment_approved == '0' ) : ?>
     <em class="comment-awaiting-moderation">
-    <?php esc_html_e( 'Your comment is awaiting moderation.', 'firezy' ); ?>
+    <?php esc_html_e( 'Your comment is awaiting moderation.', 'bsflorita' ); ?>
     </em> <br />
     <?php endif; ?>
   </div>
@@ -630,13 +630,13 @@ endif;
 if ( ! function_exists( 'tmpmela_sticky_post' ) ) :
 function tmpmela_sticky_post() {
 	if ( is_sticky() && is_home() && ! is_paged() )
-		echo '<div class="meta-inner"><span class="sticky-post">' . esc_html__( 'Sticky', 'firezy' ) . '</span></div>';
+		echo '<div class="meta-inner"><span class="sticky-post">' . esc_html__( 'Sticky', 'bsflorita' ) . '</span></div>';
 }
 endif;
 if ( ! function_exists( 'tmpmela_categories_links' ) ) :
 function tmpmela_categories_links() {
 	// Translators: used between list items, there is a space after the comma.
-	$categories_list = get_the_category_list( esc_html__( ', ', 'firezy' ) );
+	$categories_list = get_the_category_list( esc_html__( ', ', 'bsflorita' ) );
 	if ( $categories_list ) {
 		echo '<div class="meta-inner"><span class="categories-links"><i class="fa fa-folder-o"></i>' . $categories_list . '</span></div>';
 	}
@@ -645,7 +645,7 @@ endif;
 if ( ! function_exists( 'tmpmela_tags_links' ) ) :
 function tmpmela_tags_links() {
 	// Translators: used between list items, there is a space after the comma.
-	$tag_list = get_the_tag_list( '', esc_html__( ', ', 'firezy' ) );
+	$tag_list = get_the_tag_list( '', esc_html__( ', ', 'bsflorita' ) );
 	if ( $tag_list ) {
 		echo '<div class="meta-inner"><span class="tags-links"><i class="fa fa-tags"></i>' . $tag_list . '</span></div>';
 	}
@@ -655,9 +655,9 @@ if ( ! function_exists( 'tmpmela_author_link' ) ) :
 function tmpmela_author_link() {
 	// Post author
 	if ( 'post' == get_post_type() ) {
-		printf( '<div class="meta-inner"><span class="author vcard"><i class="fa fa-pencil-square-o"></i><a class="url fn n" href="%1$s" title="%2$s" rel="author">'.esc_html__("by ",'firezy').'%3$s</a></span></div>',
+		printf( '<div class="meta-inner"><span class="author vcard"><i class="fa fa-pencil-square-o"></i><a class="url fn n" href="%1$s" title="%2$s" rel="author">'.esc_html__("by ",'bsflorita').'%3$s</a></span></div>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'firezy' ), get_the_author() ) ),
+			esc_attr( sprintf( esc_html__( 'View all posts by %s', 'bsflorita' ), get_the_author() ) ),
 			get_the_author()
 		);
 	}
@@ -668,7 +668,7 @@ function tmpmela_comments_link() {
 	//comments open
 	if ( comments_open() && ! is_single() ) :
 	echo '<div class="meta-inner"><span class="comments-link"><i class="fa fa-comment"></i>';
-	comments_popup_link( esc_html__( 'Leave a Comment', 'firezy' ), esc_html__( '1 Comment', 'firezy' ), esc_html__( '% Comments', 'firezy' ) );
+	comments_popup_link( esc_html__( 'Leave a Comment', 'bsflorita' ), esc_html__( '1 Comment', 'bsflorita' ), esc_html__( '% Comments', 'bsflorita' ) );
 	echo '</span></div>';
 	endif;
 }
@@ -686,13 +686,13 @@ if ( ! function_exists( 'tmpmela_entry_date' ) ) :
  */
 function tmpmela_entry_date( $echo = true ) {
 	if ( has_post_format( array( 'chat', 'status' ) ) )
-		$format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', 'firezy' );
+		$format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', 'bsflorita' );
 	else
 		$format_prefix = '%2$s';
 	$date = sprintf( '<div class="meta-inner"><span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><i class="fa fa-calendar-o" aria-hidden="true"></i>
 <time class="entry-date" datetime="%3$s">%4$s</time></a></span></div>',
 		esc_url( get_permalink() ),
-		esc_attr( sprintf( esc_html__( 'Permalink to %s', 'firezy' ), the_title_attribute( 'echo=0' ) ) ),
+		esc_attr( sprintf( esc_html__( 'Permalink to %s', 'bsflorita' ), the_title_attribute( 'echo=0' ) ) ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( sprintf( $format_prefix, get_post_format_string( get_post_format() ), get_the_date() ) )
 	);
@@ -1020,8 +1020,8 @@ function tmpmela_shortcode_paging_nav() {
 		'current'  => $paged,
 		'mid_size' => 1,
 		'add_args' => array_map( 'urlencode', $query_args ),
-		'prev_text' =>  wp_kses( __( '<i class="fa fa-angle-left"></i>', 'firezy' ),tmpmela_allowed_html()),
-		'next_text' =>  wp_kses( __( '<i class="fa fa-angle-right"></i>', 'firezy' ),tmpmela_allowed_html()),
+		'prev_text' =>  wp_kses( __( '<i class="fa fa-angle-left"></i>', 'bsflorita' ),tmpmela_allowed_html()),
+		'next_text' =>  wp_kses( __( '<i class="fa fa-angle-right"></i>', 'bsflorita' ),tmpmela_allowed_html()),
 	) );
 	if ( $links ) :
 	$output .= '<nav class="navigation paging-navigation" role="navigation">';
@@ -1295,7 +1295,7 @@ if ( ! function_exists( 'tmpmela_out_of_stock' ) ) :
 function tmpmela_out_of_stock() {
  global $product;
  	if ( !$product->is_in_stock() ) {
-        echo '<div class="soldout_wrapper"><span class="soldout">'.esc_html__('SOLD OUT','firezy').'</span></div>';
+        echo '<div class="soldout_wrapper"><span class="soldout">'.esc_html__('SOLD OUT','bsflorita').'</span></div>';
     }
 }
 endif;
@@ -1359,13 +1359,13 @@ function tmpmela_custom_hide_sales_flash()
 function tmpmela_get_rating_html($rating_html, $rating)
 {
   	if ( $rating > 0 ) {
-    	$title = sprintf( __( 'Rated %s out of 5', 'firezy' ), $rating );
+    	$title = sprintf( __( 'Rated %s out of 5', 'bsflorita' ), $rating );
   	} else {
     	$title = 'Not yet rated';
     	$rating = 0;
   	}
   	$rating_html  = '<div class="rating-wrap"><div class="star-rating" title="' . $title . '">';
-    $rating_html .= '<span style="width:' . (($rating / 5) * 100) . '%">' . esc_attr__('out of 5', 'firezy') . '</span>';
+    $rating_html .= '<span style="width:' . (($rating / 5) * 100) . '%">' . esc_attr__('out of 5', 'bsflorita') . '</span>';
   	$rating_html .= '</div> <strong class="rating">(' . (int)$rating . ')</strong> </div>';
   	return $rating_html;
 	}
@@ -1382,21 +1382,21 @@ add_filter( 'comment_form_fields', 'tmpmela_move_comment_field_to_bottom' );
 function tmpmela_update_comment_fields( $fields ) {
 $commenter = wp_get_current_commenter();
 $req       = get_option( 'require_name_email' );
-$label     = $req ? '*' : ' ' . __( '(optional)', 'firezy' );
+$label     = $req ? '*' : ' ' . __( '(optional)', 'bsflorita' );
 $aria_req  = $req ? "aria-required='true'" : '';
 $fields['author'] =
 '<p class="comment-form-author comment-block">
-<input id="author" name="author" type="text" placeholder="' . esc_attr__( "Name*", "firezy" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
+<input id="author" name="author" type="text" placeholder="' . esc_attr__( "Name*", "bsflorita" ) . '" value="' . esc_attr( $commenter['comment_author'] ) .
 '" size="30" ' . $aria_req . ' />
 </p>';
 $fields['email'] =
 '<p class="comment-form-email comment-block">
-<input id="email" name="email" type="email" placeholder="' . esc_attr__( "E-mail*", "firezy" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
+<input id="email" name="email" type="email" placeholder="' . esc_attr__( "E-mail*", "bsflorita" ) . '" value="' . esc_attr( $commenter['comment_author_email'] ) .
 '" size="30" ' . $aria_req . ' />
 </p>';
 $fields['url'] =
 '<p class="comment-form-url comment-block">
-<input id="url" name="url" type="url"  placeholder="' . esc_attr__( "Website", "firezy" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
+<input id="url" name="url" type="url"  placeholder="' . esc_attr__( "Website", "bsflorita" ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) .
 '" size="30" />
 </p>';
 return $fields;

@@ -64,7 +64,7 @@ Tell us your requirement
 					<div class="footer-menu-links">
 					<?php
 								$tmpmela_footer_menu=array(
-								'menu' => esc_html__('TM Footer Navigation','firezy'),
+								'menu' => esc_html__('TM Footer Navigation','bsflorita'),
 								'depth'=> 1,
 								'echo' => false,
 								'menu_class'      => 'footer-menu',
@@ -76,7 +76,7 @@ Tell us your requirement
 								?>
 					</div><!-- #footer-menu-links -->
 					<?php } ?>
-				   	<div class="site-info">  <?php echo esc_html__( 'Copyright', 'firezy' ); ?> &copy; <?php echo esc_attr(date('Y')); ?> <?php echo esc_attr(stripslashes(get_option('tmpmela_footer_slog')));?>
+				   	<div class="site-info">  <?php echo esc_html__( 'Copyright', 'bsflorita' ); ?> &copy; <?php echo esc_attr(date('Y')); ?> <?php echo esc_attr(stripslashes(get_option('tmpmela_footer_slog')));?>
 							<?php do_action( 'tmpmela_credits' ); ?>
 					</div>
 

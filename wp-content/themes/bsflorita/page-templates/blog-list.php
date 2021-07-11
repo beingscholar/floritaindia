@@ -34,7 +34,7 @@ $tmpmela_content_position = tmpmela_content_position();
         <?php endwhile; ?>
         <?php else: ?>
         <p>
-          <?php  esc_html__( 'Sorry, no posts matched your criteria.', 'firezy' ); ?>
+          <?php  esc_html__( 'Sorry, no posts matched your criteria.', 'bsflorita' ); ?>
         </p>
         <?php endif;
 				 ?>

@@ -27,7 +27,7 @@ if ( $max_value && $min_value === $max_value ) {
 } else {
 	?>
 	<div class="quantity">
-		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'firezy' ); ?></label>
+		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'bsflorita' ); ?></label>
         <input class="quantity-btn minus" type="button" value="-">
         <input type="number" 
 		step="<?php echo esc_attr( $step ); ?>" 
@@ -35,7 +35,7 @@ if ( $max_value && $min_value === $max_value ) {
 		max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>" 
 		name="<?php echo esc_attr( $input_name ); ?>" 
       	value="<?php echo esc_attr( $input_value ); ?>" 
-		title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'firezy' ) ?>" 
+		title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'bsflorita' ) ?>" 
 		class="input-text qty text" 
 		size="4" 
 		pattern="<?php echo esc_attr( $pattern ); ?>" 

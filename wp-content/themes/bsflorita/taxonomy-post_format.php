@@ -27,21 +27,21 @@ get_header(); ?>
 				<h3 class="entry-title-main">
 					<?php
 						if ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							esc_html_e( 'Asides', 'firezy' );
+							esc_html_e( 'Asides', 'bsflorita' );
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							esc_html_e( 'Images', 'firezy' );
+							esc_html_e( 'Images', 'bsflorita' );
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							esc_html_e( 'Videos', 'firezy' );
+							esc_html_e( 'Videos', 'bsflorita' );
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							esc_html_e( 'Audio', 'firezy' );
+							esc_html_e( 'Audio', 'bsflorita' );
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							esc_html_e( 'Quotes', 'firezy' );
+							esc_html_e( 'Quotes', 'bsflorita' );
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							esc_html_e( 'Links', 'firezy' );
+							esc_html_e( 'Links', 'bsflorita' );
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							esc_html_e( 'Galleries', 'firezy' );
+							esc_html_e( 'Galleries', 'bsflorita' );
 						else :
-							esc_html_e( 'Archives', 'firezy' );
+							esc_html_e( 'Archives', 'bsflorita' );
 						endif;
 					?>
 				</h3>

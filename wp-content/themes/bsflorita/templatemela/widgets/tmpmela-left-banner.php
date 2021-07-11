@@ -37,7 +37,7 @@ class LeftBannerWidget extends WP_Widget
 			<div class="left-banner">
 				<a href="<?php if($linkURL == ""): echo esc_url(home_url( '/' )); else:?><?php echo esc_url($linkURL); endif;?>" 
 					<?php if($window_target == true) echo 'target="_Self"'; ?>> 
-					<img src="<?php echo esc_url($imageSrc1); ?>" alt="<?php echo esc_attr_e('leftbanner','firezy'); ?>" class="vv" />
+					<img src="<?php echo esc_url($imageSrc1); ?>" alt="<?php echo esc_attr_e('leftbanner','bsflorita'); ?>" class="vv" />
 				 </a> 
 			</div>
 	<?php		
@@ -65,7 +65,7 @@ class LeftBannerWidget extends WP_Widget
 		$window_target =  esc_attr($instance['window_target']);
 		$is_template_path1 =  esc_attr($instance['is_template_path1']); 
 		?>
-        <p><label for="<?php echo esc_attr($this->get_field_id('title'));?>"><?php esc_html_e('Title:', 'firezy'); ?></label><input class="widefat" id="<?php echo esc_attr($this->get_field_id('title'));?>" name="<?php echo esc_attr($this->get_field_name('title'));?>" type="text" value="<?php echo esc_attr($title);?>" /></p>
+        <p><label for="<?php echo esc_attr($this->get_field_id('title'));?>"><?php esc_html_e('Title:', 'bsflorita'); ?></label><input class="widefat" id="<?php echo esc_attr($this->get_field_id('title'));?>" name="<?php echo esc_attr($this->get_field_name('title'));?>" type="text" value="<?php echo esc_attr($title);?>" /></p>
 		<p><label for="<?php echo esc_attr($this->get_field_id('imageSrc1'));?>">Image URL:<br /></label>
 			<input class="widefat" id="<?php echo esc_attr($this->get_field_id('imageSrc1'));?>" name="<?php echo esc_attr($this->get_field_name('imageSrc1'));?>" type="text" value="<?php echo esc_attr($imageSrc1);?>" /><br />
 			<input class="checkbox" type="checkbox" <?php checked($instance['is_template_path1'], true) ?> id="<?php echo esc_attr($this->get_field_id('is_template_path1')); ?>" name="<?php echo esc_attr($this->get_field_name('is_template_path1')); ?>" /><label for="<?php echo esc_attr($this->get_field_id('is_template_path1')); ?>">Use Template Path for Image</label>

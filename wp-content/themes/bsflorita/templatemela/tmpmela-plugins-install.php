@@ -43,7 +43,7 @@ function tmpmela_register_required_plugins() {
 	$plugins = array(
 		// This is an example of how to include a plugin bundled with a theme.		
 		array(
-			'name'               => esc_html__( 'Templatemela Metabox', 'firezy' ), // The plugin name.			
+			'name'               => esc_html__( 'Templatemela Metabox', 'bsflorita' ), // The plugin name.			
 			'slug'               => 'TemplatemelaMetaBox', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory().'/templatemela/plugins/TemplatemelaMetaBox.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
@@ -52,7 +52,7 @@ function tmpmela_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'               => esc_html__( 'Templatemela Shortcodes', 'firezy' ), // The plugin name.
+			'name'               => esc_html__( 'Templatemela Shortcodes', 'bsflorita' ), // The plugin name.
 			'slug'               => 'templatemela-shortcodes', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory().'/templatemela/plugins/templatemela-shortcodes.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
@@ -61,7 +61,7 @@ function tmpmela_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'               => esc_html__( 'Templatemela Custom Post', 'firezy' ), // The plugin name.
+			'name'               => esc_html__( 'Templatemela Custom Post', 'bsflorita' ), // The plugin name.
 			'slug'               => 'TemplatemelaCustomPost', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory().'/templatemela/plugins/TemplatemelaCustomPost.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
@@ -70,7 +70,7 @@ function tmpmela_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),	
 		array(
-			'name'     		 => esc_html__( 'Revolution Slider', 'firezy' ), // The plugin name.
+			'name'     		 => esc_html__( 'Revolution Slider', 'bsflorita' ), // The plugin name.
 			'slug'      			 => 'revslider', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory().'/templatemela/plugins/revslider.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
@@ -79,7 +79,7 @@ function tmpmela_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'      		 => esc_html__( 'WPBakery Visual Composer', 'firezy' ), // The plugin name.
+			'name'      		 => esc_html__( 'WPBakery Visual Composer', 'bsflorita' ), // The plugin name.
 			'slug'     			 => 'js_composer', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory().'/templatemela/plugins/js_composer.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
@@ -88,77 +88,77 @@ function tmpmela_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		array(
-			'name'      => esc_html__( 'Black Studio Tinymce Widget', 'firezy' ),
+			'name'      => esc_html__( 'Black Studio Tinymce Widget', 'bsflorita' ),
 			'slug'      => 'black-studio-tinymce-widget',			
 			'required'  => false			
 		),
 		array(
-			'name'      => esc_html__( 'Customizer Export/Import', 'firezy' ),
+			'name'      => esc_html__( 'Customizer Export/Import', 'bsflorita' ),
 			'slug'      => 'customizer-export-import',			
 			'required'  => false			
 		),
 		array(
-			'name'      => esc_html__( 'Contact Form 7', 'firezy' ),
+			'name'      => esc_html__( 'Contact Form 7', 'bsflorita' ),
 			'slug'      => 'contact-form-7',
 			'required'  => false,
 		),		
 		array(
-			'name'      => esc_html__( 'Newsletter', 'firezy' ),
+			'name'      => esc_html__( 'Newsletter', 'bsflorita' ),
 			'slug'      => 'newsletter',
 			'required'  => false,
 		),
 		array(
-			'name'      => esc_html__( 'One Click Demo Import', 'firezy' ),
+			'name'      => esc_html__( 'One Click Demo Import', 'bsflorita' ),
 			'slug'      => 'one-click-demo-import',			
 			'required'  => false			
 		),
 		array(
-			'name'      => esc_html__( 'Woocommerce', 'firezy' ),
+			'name'      => esc_html__( 'Woocommerce', 'bsflorita' ),
 			'slug'      => 'woocommerce',
 			'required'  => false,
 		),
 		array(
-			'name'      => esc_html__( 'Woocommerce Accepted Payment Methods', 'firezy' ),
+			'name'      => esc_html__( 'Woocommerce Accepted Payment Methods', 'bsflorita' ),
 			'slug'      => 'woocommerce-accepted-payment-methods',
 			'required'  => false,
 		),
 		array(
-			'name'      => esc_html__( 'Woocommerce Grid List Toggle', 'firezy' ),
+			'name'      => esc_html__( 'Woocommerce Grid List Toggle', 'bsflorita' ),
 			'slug'      => 'woocommerce-grid-list-toggle',
 			'required'  => false,
 		),
 		array(
-			'name'      => esc_html__( 'Woosidebars', 'firezy' ),
+			'name'      => esc_html__( 'Woosidebars', 'bsflorita' ),
 			'slug'      => 'woosidebars',
 			'required'  => false,
 		),		
 		array(
-			'name'      => esc_html__( 'WordPress Seo', 'firezy' ),
+			'name'      => esc_html__( 'WordPress Seo', 'bsflorita' ),
 			'slug'      => 'wordpress-seo',
 			'required'  => false,
 		),	
 		array(
-			'name'      => esc_html__('Yith Woocommerce Quick View','firezy'),
+			'name'      => esc_html__('Yith Woocommerce Quick View','bsflorita'),
 			'slug'      => 'yith-woocommerce-quick-view',
 			'required'  => false,
 		),		
 		array(
-			'name'      => esc_html__( 'Yith Woocommerce Wishlist', 'firezy' ),
+			'name'      => esc_html__( 'Yith Woocommerce Wishlist', 'bsflorita' ),
 			'slug'      => 'yith-woocommerce-wishlist',
 			'required'  => false,
 		),
 		array(
-			'name'      => esc_html__( 'Yith-Woocommerce-Compare', 'firezy' ),
+			'name'      => esc_html__( 'Yith-Woocommerce-Compare', 'bsflorita' ),
 			'slug'      => 'yith-woocommerce-compare',
 			'required'  => false,
 		),
 		array(
-			'name'      => esc_html__( 'Widget Importer Exporter', 'firezy' ),
+			'name'      => esc_html__( 'Widget Importer Exporter', 'bsflorita' ),
 			'slug'      => 'widget-importer-exporter',
 			'required'  => true,
 		),
 		array(
-			'name'      => esc_html__( 'WordPress Importer', 'firezy' ),
+			'name'      => esc_html__( 'WordPress Importer', 'bsflorita' ),
 			'slug'      => 'wordpress-importer',
 			'required'  => true,
 		)
@@ -173,7 +173,7 @@ function tmpmela_register_required_plugins() {
 	 * Only uncomment the strings in the config array if you want to customize the strings.
 	 */
 	$config = array(
-		'id'           => 'firezy',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'id'           => 'bsflorita',                 // Unique ID for hashing notices for multiple instances of TGMPA.
 		'default_path' => '',                      // Default absolute path to bundled plugins.
 		'menu'         => 'tmpmela-install-plugins', // Menu slug.
 		'has_notices'  => true,                    // Show admin notices or not.

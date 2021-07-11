@@ -48,15 +48,15 @@ class TmAdvanceSearch extends WP_Widget
 								 'hide_empty'   => $empty
 						  );
 							$all_categories = get_categories( $args ); ?>
-								<option value="<?php echo esc_html_e( '', 'firezy' );?>" selected="selected"><?php echo esc_html_e( 'All Categories', 'firezy' ); ?></option>
+								<option value="<?php echo esc_html_e( '', 'bsflorita' );?>" selected="selected"><?php echo esc_html_e( 'All Categories', 'bsflorita' ); ?></option>
 						<?php foreach ($all_categories as $cat) {   ?>
 								<option value="<?php echo esc_attr($cat->slug); ?>" <?php if(isset($_GET['product_cat']) && $_GET['product_cat'] == $cat->slug){ echo esc_attr("selected='selected'");  } ?>><?php echo esc_attr($cat->name);?></option>
 						<?php } ?>
 				</select>    
-				<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search Products&hellip;', 'placeholder', 'firezy' ); ?>" value="<?php echo esc_attr(get_search_query()); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'firezy' ); ?>" />
+				<input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search Products&hellip;', 'placeholder', 'bsflorita' ); ?>" value="<?php echo esc_attr(get_search_query()); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'bsflorita' ); ?>" />
 				<input type="hidden" name="post_type" value="product" />
 				</div>
-				<input type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'firezy' ); ?>" />
+				<input type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'bsflorita' ); ?>" />
 			</form>
 	<?php echo wp_kses_post($after_widget);
 	}
@@ -71,7 +71,7 @@ class TmAdvanceSearch extends WP_Widget
 		 ) );			
 		$title = esc_attr($instance['title']);
 		?>
-			<p><label for="<?php echo esc_attr($this->get_field_id('title'));?>"><?php esc_html_e('Title:', 'firezy'); ?></label><input class="widefat" id="<?php echo esc_attr($this->get_field_id('title'));?>" name="<?php echo esc_attr($this->get_field_name('title'));?>" type="text" value="<?php echo esc_attr($title);?>" /></p>
+			<p><label for="<?php echo esc_attr($this->get_field_id('title'));?>"><?php esc_html_e('Title:', 'bsflorita'); ?></label><input class="widefat" id="<?php echo esc_attr($this->get_field_id('title'));?>" name="<?php echo esc_attr($this->get_field_name('title'));?>" type="text" value="<?php echo esc_attr($title);?>" /></p>
 	<?php }
 }
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) :

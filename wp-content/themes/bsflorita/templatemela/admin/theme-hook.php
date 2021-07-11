@@ -94,7 +94,7 @@ $options1[] = array("id" => "tmpmela_custom_css",
       <div class="form-table">
       <div class="main_title">
         <h3>
-          <?php esc_html_e('Hook Manager','firezy');?>
+          <?php esc_html_e('Hook Manager','bsflorita');?>
         </h3>
       </div>
       <?php

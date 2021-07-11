@@ -533,7 +533,7 @@ endif;
             <div class="tmpmela_contents">
                 <div class="entry-content">
                     <p>
-                        <a target="_Self" href="#" title="<?php esc_attr_e('Templatemela', 'firezy'); ?>">TemplateMela</a> <br/>
+                        <a target="_Self" href="#" title="<?php esc_attr_e('Templatemela', 'bsflorita'); ?>">TemplateMela</a> <br/>
                     <h3>Extremely Customizable, Responsive and fluid theme framework </h3>
                     Make your site shine in few minutes by choosing from any of our high-quality premium WordPress
                     themes.<br/>
@@ -555,43 +555,43 @@ endif;
     <div id="tab-container" class='tab-container'>
         <ul class='etabs'>
             <li class="tab first">
-                <a href="#General" title="<?php esc_html_e('General Settings', 'firezy'); ?>">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/general_setting.png" alt="<?php echo esc_attr_e('general', 'firezy'); ?>"/>
+                <a href="#General" title="<?php esc_html_e('General Settings', 'bsflorita'); ?>">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/general_setting.png" alt="<?php echo esc_attr_e('general', 'bsflorita'); ?>"/>
                     <span class="title">
-                        <?php echo esc_attr_e('General', 'firezy'); ?>
+                        <?php echo esc_attr_e('General', 'bsflorita'); ?>
                     </span>
                 </a>
             </li>
             <li class="tab header">
                 <a href="#Header">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/header_setting.png" alt="<?php echo esc_attr_e('header', 'firezy'); ?>"/>
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/header_setting.png" alt="<?php echo esc_attr_e('header', 'bsflorita'); ?>"/>
                     <span class="title">
-                        <?php echo esc_attr_e('Header', 'firezy'); ?>
+                        <?php echo esc_attr_e('Header', 'bsflorita'); ?>
                     </span>
                 </a>
             </li>
             <li class="tab">
                 <a href="#Content">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/content_settings.png" alt="<?php echo esc_attr_e('content', 'firezy'); ?>"/>
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/content_settings.png" alt="<?php echo esc_attr_e('content', 'bsflorita'); ?>"/>
                     <span class="title">
-                        <?php echo esc_attr_e('Content', 'firezy'); ?>
+                        <?php echo esc_attr_e('Content', 'bsflorita'); ?>
                     </span>
                 </a>
             </li>
             <li class="tab">
                 <a href="#Footer">
-                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/footer_settings.png" alt="<?php echo esc_attr_e('footer', 'firezy'); ?>"/>
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/footer_settings.png" alt="<?php echo esc_attr_e('footer', 'bsflorita'); ?>"/>
                     <span class="title">
-                        <?php echo esc_attr_e('Footer', 'firezy'); ?>
+                        <?php echo esc_attr_e('Footer', 'bsflorita'); ?>
                     </span>
                 </a>
             </li>
             <?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) : ?>
                 <li class="tab">
                     <a href="#product">
-                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/product_setting.png"  alt="<?php echo esc_attr_e('product', 'firezy'); ?>"/>
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/megnor/admin/product_setting.png"  alt="<?php echo esc_attr_e('product', 'bsflorita'); ?>"/>
                         <span class="title">
-                            <?php echo esc_attr_e('Product', 'firezy'); ?>
+                            <?php echo esc_attr_e('Product', 'bsflorita'); ?>
                         </span>
                     </a>
                 </li>
@@ -1043,19 +1043,19 @@ endif;
                                                         <br/>
                                                         <?php if ($key == '1') { ?>
                                                             <img src="<?php echo esc_url(get_template_directory_uri()) . '/images/megnor/admin/header1.png' ?>"
-                                                                 alt="<?php echo esc_attr_e('header1', 'firezy'); ?>"/>
+                                                                 alt="<?php echo esc_attr_e('header1', 'bsflorita'); ?>"/>
                                                         <?php } ?>
                                                         <?php if ($key == '2') { ?>
                                                             <img src="<?php echo esc_url(get_template_directory_uri()) . '/images/megnor/admin/header2.png' ?>"
-                                                                 alt="<?php echo esc_attr_e('header2', 'firezy'); ?>"/>
+                                                                 alt="<?php echo esc_attr_e('header2', 'bsflorita'); ?>"/>
                                                         <?php } ?>
                                                         <?php if ($key == '3') { ?>
                                                             <img src="<?php echo esc_url(get_template_directory_uri()) . '/images/megnor/admin/header3.png' ?>"
-                                                                 alt="<?php echo esc_attr_e('header3', 'firezy'); ?>"/>
+                                                                 alt="<?php echo esc_attr_e('header3', 'bsflorita'); ?>"/>
                                                         <?php } ?>
                                                         <?php if ($key == '4') { ?>
                                                             <img src="<?php echo esc_attr(get_template_directory_uri()) . '/images/megnor/admin/header4.png' ?>"
-                                                                 alt="<?php echo esc_attr_e('header4', 'firezy'); ?>"/>
+                                                                 alt="<?php echo esc_attr_e('header4', 'bsflorita'); ?>"/>
                                                         <?php } ?>
                                                         <br/>
                                                     </div>
@@ -1118,7 +1118,7 @@ endif;
                         <div class="form-table">
                             <div class="background-title">
                                 <label>
-                                    <?php echo esc_html__('Header Settings', 'firezy'); ?>
+                                    <?php echo esc_html__('Header Settings', 'bsflorita'); ?>
                                 </label>
                             </div>
                             <?php
@@ -1385,19 +1385,19 @@ endif;
                                                                         <br/>
                                                                         <?php if ($key == '1') { ?>
                                                                             <img src="<?php echo esc_url(get_template_directory_uri()) . '/images/megnor/admin/header1.png' ?>"
-                                                                                 alt="<?php echo esc_attr_e('header1', 'firezy'); ?>"/>
+                                                                                 alt="<?php echo esc_attr_e('header1', 'bsflorita'); ?>"/>
                                                                         <?php } ?>
                                                                         <?php if ($key == '2') { ?>
                                                                             <img src="<?php echo esc_url(get_template_directory_uri()) . '/images/megnor/admin/header2.png' ?>"
-                                                                                 alt="<?php echo esc_attr_e('header2', 'firezy'); ?>"/>
+                                                                                 alt="<?php echo esc_attr_e('header2', 'bsflorita'); ?>"/>
                                                                         <?php } ?>
                                                                         <?php if ($key == '3') { ?>
                                                                             <img src="<?php echo esc_url(get_template_directory_uri()) . '/images/megnor/admin/header3.png' ?>"
-                                                                                 alt="<?php echo esc_attr_e('header3', 'firezy'); ?>"/>
+                                                                                 alt="<?php echo esc_attr_e('header3', 'bsflorita'); ?>"/>
                                                                         <?php } ?>
                                                                         <?php if ($key == '4') { ?>
                                                                             <img src="<?php echo esc_attr(get_template_directory_uri()) . '/images/megnor/admin/header4.png' ?>"
-                                                                                 alt="<?php echo esc_attr_e('header4', 'firezy'); ?>"/>
+                                                                                 alt="<?php echo esc_attr_e('header4', 'bsflorita'); ?>"/>
                                                                         <?php } ?>
                                                                         <br/>
                                                                     </div>
@@ -1488,7 +1488,7 @@ endif;
                         <div class="form-table">
                             <div class="background-title">
                                 <label>
-                                    <?php echo esc_attr_e('Content Settings', 'firezy'); ?>
+                                    <?php echo esc_attr_e('Content Settings', 'bsflorita'); ?>
                                 </label>
                             </div>
                             <?php
@@ -1662,7 +1662,7 @@ endif;
                         <div class="form-table">
                             <div class="background-title">
                                 <label>
-                                    <?php echo esc_html__('Footer Settings', 'firezy'); ?>
+                                    <?php echo esc_html__('Footer Settings', 'bsflorita'); ?>
                                 </label>
                             </div>
                             <?php

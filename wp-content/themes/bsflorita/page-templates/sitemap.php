@@ -17,7 +17,7 @@
 			<div class="sitemap-item">
 			  <div class="sitemap-pages">
 				<h2>
-				  <?php esc_html_e('Pages','firezy');?>
+				  <?php esc_html_e('Pages','bsflorita');?>
 				</h2>
 				<ul>
 				  <?php wp_list_pages('depth=0&sort_column=post_title&title_li=' ); ?>
@@ -27,16 +27,16 @@
        <div class="sitemap-item">
 			  <div class="sitemap-category">
 				<h2>
-				  <?php esc_html_e( 'Category Archives','firezy'); ?>
+				  <?php esc_html_e( 'Category Archives','bsflorita'); ?>
 				</h2>
 				<ul>
-				  <?php wp_list_categories( array( 'feed' => esc_html__( 'RSS', 'firezy' ), 'show_count' => true, 'use_desc_for_title' => false, 'title_li' => false ) ); ?>
+				  <?php wp_list_categories( array( 'feed' => esc_html__( 'RSS', 'bsflorita' ), 'show_count' => true, 'use_desc_for_title' => false, 'title_li' => false ) ); ?>
 				</ul>
 			  </div>
 			  <div class="clear"></div>
 			  <div class="sitemap-month-archieves">
 				<h2>
-				  <?php esc_html_e( 'Monthly Archives','firezy'); ?>
+				  <?php esc_html_e( 'Monthly Archives','bsflorita'); ?>
 				</h2>
 				<ul>
 				  <?php wp_get_archives('type=monthly'); ?>
@@ -45,7 +45,7 @@
 			  <div class="clear"></div>
 			  <div class="sitemap-authors">
 				<h2>
-				  <?php esc_html_e( 'Author Archives','firezy'); ?>
+				  <?php esc_html_e( 'Author Archives','bsflorita'); ?>
 				</h2>
 				<ul>
 				  <?php wp_list_authors('show_fullname=1&optioncount=1&exclude_admin=0'); ?>
@@ -55,7 +55,7 @@
       <div class="sitemap-item">
           <div class="sitemap-posts">
             <h2>
-              <?php esc_html_e( 'Blog Posts','firezy'); ?>
+              <?php esc_html_e( 'Blog Posts','bsflorita'); ?>
             </h2>
             <ul>
               <?php 

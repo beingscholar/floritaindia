@@ -13,7 +13,7 @@ get_header(); ?>
 <section id="primary" class="main-content-inner-full">
 <?php endif; ?>
 <div class="page-title"><div class="page-title-inner">
-<h1 class="entry-title-main"><?php  printf( esc_html__( 'Search Results for: "%s"', 'firezy' ), get_search_query() ); ?></h1></div>
+<h1 class="entry-title-main"><?php  printf( esc_html__( 'Search Results for: "%s"', 'bsflorita' ), get_search_query() ); ?></h1></div>
 	<?php tmpmela_breadcrumbs(); ?>
 	</div>
    <div id="content" class="site-content" role="main">

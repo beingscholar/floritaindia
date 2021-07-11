@@ -26,7 +26,7 @@
 >
 
 <channel>
-	<title>Firezy</title>
+	<title>Bsflorita</title>
 	<link>http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1</link>
 	<description>Just another WordPress site</description>
 	<pubDate>Fri, 07 Feb 2020 03:59:27 +0000</pubDate>
@@ -2225,7 +2225,7 @@
 
 <image>
 	<url>http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1/wp-content/uploads/2019/03/favicon.png</url>
-	<title>Firezy</title>
+	<title>Bsflorita</title>
 	<link>http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1</link>
 	<width>32</width>
 	<height>32</height>
@@ -34972,8 +34972,8 @@ In cursus faucibus tortor eu vestibulum. Ut eget turpis ac justo porta varius. D
 
 [submit "Send"]
 1
-Firezy "[your-subject]"
-Firezy <wordpress@wordpress.templatemela.com>
+Bsflorita "[your-subject]"
+Bsflorita <wordpress@wordpress.templatemela.com>
 admin@localhost.com
 From: [your-name] <[your-email]>
 Subject: [your-subject]
@@ -34982,20 +34982,20 @@ Message Body:
 [your-message]
 
 -- 
-This e-mail was sent from a contact form on Firezy (http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1)
+This e-mail was sent from a contact form on Bsflorita (http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1)
 Reply-To: [your-email]
 
 
 
 
-Firezy "[your-subject]"
-Firezy <wordpress@wordpress.templatemela.com>
+Bsflorita "[your-subject]"
+Bsflorita <wordpress@wordpress.templatemela.com>
 [your-email]
 Message Body:
 [your-message]
 
 -- 
-This e-mail was sent from a contact form on Firezy (http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1)
+This e-mail was sent from a contact form on Bsflorita (http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1)
 Reply-To: admin@localhost.com
 
 
@@ -35053,22 +35053,22 @@ The telephone number is invalid.]]></content:encoded>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_mail]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:9:{s:6:"active";b:1;s:7:"subject";s:23:"Firezy "[your-subject]"";s:6:"sender";s:45:"Firezy <wordpress@wordpress.templatemela.com>";s:9:"recipient";s:19:"admin@localhost.com";s:4:"body";s:202:"From: [your-name] <[your-email]>
+		<wp:meta_value><![CDATA[a:9:{s:6:"active";b:1;s:7:"subject";s:23:"Bsflorita "[your-subject]"";s:6:"sender";s:45:"Bsflorita <wordpress@wordpress.templatemela.com>";s:9:"recipient";s:19:"admin@localhost.com";s:4:"body";s:202:"From: [your-name] <[your-email]>
 Subject: [your-subject]
 
 Message Body:
 [your-message]
 
 -- 
-This e-mail was sent from a contact form on Firezy (http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1)";s:18:"additional_headers";s:22:"Reply-To: [your-email]";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
+This e-mail was sent from a contact form on Bsflorita (http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1)";s:18:"additional_headers";s:22:"Reply-To: [your-email]";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_mail_2]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:9:{s:6:"active";b:0;s:7:"subject";s:23:"Firezy "[your-subject]"";s:6:"sender";s:45:"Firezy <wordpress@wordpress.templatemela.com>";s:9:"recipient";s:12:"[your-email]";s:4:"body";s:144:"Message Body:
+		<wp:meta_value><![CDATA[a:9:{s:6:"active";b:0;s:7:"subject";s:23:"Bsflorita "[your-subject]"";s:6:"sender";s:45:"Bsflorita <wordpress@wordpress.templatemela.com>";s:9:"recipient";s:12:"[your-email]";s:4:"body";s:144:"Message Body:
 [your-message]
 
 -- 
-This e-mail was sent from a contact form on Firezy (http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1)";s:18:"additional_headers";s:29:"Reply-To: admin@localhost.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
+This e-mail was sent from a contact form on Bsflorita (http://wordpress.templatemela.com/woo/WCM04/WCM040092/WP1)";s:18:"additional_headers";s:29:"Reply-To: admin@localhost.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_messages]]></wp:meta_key>

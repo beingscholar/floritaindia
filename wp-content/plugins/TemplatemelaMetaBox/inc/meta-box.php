@@ -212,7 +212,7 @@ if ( ! class_exists( 'RW_Meta_Box' ) )
 
 
 
-			wp_enqueue_style( 'firezy', RWMB_CSS_URL . 'style.css', array(), RWMB_VER );
+			wp_enqueue_style( 'bsflorita', RWMB_CSS_URL . 'style.css', array(), RWMB_VER );
 
 
 
@@ -478,7 +478,7 @@ if ( ! class_exists( 'RW_Meta_Box' ) )
 
 							validationOptions : jQuery.parseJSON( \'' . json_encode( $this->validation ) . '\' ),
 
-							summaryMessage : "' . esc_html__( 'Please correct the errors highlighted below and try again.', 'firezy' ) . '"
+							summaryMessage : "' . esc_html__( 'Please correct the errors highlighted below and try again.', 'bsflorita' ) . '"
 
 						};
 

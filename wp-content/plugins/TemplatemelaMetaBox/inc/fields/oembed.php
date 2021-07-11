@@ -51,7 +51,7 @@ if ( ! class_exists( 'RWMB_OEmbed_Field' ) )
 		static function get_embed( $url )
 		{
 			$embed = @wp_oembed_get( $url );
-			return $embed ? $embed : esc_html__( 'Embed HTML not available.', 'firezy' );
+			return $embed ? $embed : esc_html__( 'Embed HTML not available.', 'bsflorita' );
 		}
 
 		/**
@@ -73,7 +73,7 @@ if ( ! class_exists( 'RWMB_OEmbed_Field' ) )
 				$field['id'],
 				$meta,
 				$field['size'],
-				esc_html__( 'Preview', 'firezy' ),
+				esc_html__( 'Preview', 'bsflorita' ),
 				$meta ? self::get_embed( $meta ) : ''
 			);
 		}

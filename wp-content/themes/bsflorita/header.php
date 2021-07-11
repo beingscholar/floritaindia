@@ -36,7 +36,7 @@
 <?php endif; ?>
 <div id="page" class="hfeed site">
 <?php if ( get_header_image() ) : ?>
-<div id="site-header"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <img src="<?php header_image(); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>" alt="<?php echo esc_attr_e('Siteheader','firezy'); ?>"> </a> </div>
+<div id="site-header"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> <img src="<?php header_image(); ?>" width="<?php echo esc_attr(get_custom_header()->width); ?>" height="<?php echo esc_attr(get_custom_header()->height); ?>" alt="<?php echo esc_attr_e('Siteheader','bsflorita'); ?>"> </a> </div>
 <?php endif; ?>
 <!-- Header -->
 <?php tmpmela_header_before(); ?>
@@ -123,12 +123,12 @@
 							<div class="cart togg">
 										<?php global $woocommerce;
 										ob_start();?>
-										<div class="shopping_cart tog" title="<?php esc_attr_e('View your shopping cart', 'firezy'); ?>">
+										<div class="shopping_cart tog" title="<?php esc_attr_e('View your shopping cart', 'bsflorita'); ?>">
 											<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 											<div class="cart-price">
-												<a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'firezy'); ?>">
-													<span class="cart-qty"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'firezy'), $woocommerce->cart->cart_contents_count);?></span>
-													<div class="cart-label"><?php echo esc_html_e('My Cart','firezy'); ?></div>
+												<a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'bsflorita'); ?>">
+													<span class="cart-qty"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'bsflorita'), $woocommerce->cart->cart_contents_count);?></span>
+													<div class="cart-label"><?php echo esc_html_e('My Cart','bsflorita'); ?></div>
 													<div class="item-total"><?php echo translate($woocommerce->cart->get_cart_total()); ?> </div>
 												</a>
 											</div>
@@ -162,9 +162,9 @@
 											}
 										}
 									?>
-										<a href="<?php echo esc_url($logout_url); ?>" ><?php echo esc_html_e('Sign Out','firezy'); ?></a>
+										<a href="<?php echo esc_url($logout_url); ?>" ><?php echo esc_html_e('Sign Out','bsflorita'); ?></a>
 									<?php } else { ?>
-										<a href="<?php echo  get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php echo esc_html_e('Login / Signup','firezy'); ?></a>
+										<a href="<?php echo  get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php echo esc_html_e('Login / Signup','bsflorita'); ?></a>
 									<?php } ?>
 								</span>
 							</div>
@@ -219,13 +219,13 @@
 								<?php endif; ?>
 							<!-- #site-navigation -->
 								<nav id="site-navigation" class="navigation-bar main-navigation">
-								<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'firezy' ); ?>"><?php esc_html_e( 'Skip to content', 'firezy' ); ?></a>
+								<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'bsflorita' ); ?>"><?php esc_html_e( 'Skip to content', 'bsflorita' ); ?></a>
 									<div class="mega-menu">
 										<?php wp_nav_menu( array( 'theme_location' => 'primary','menu_class' => 'mega' ) ); ?>
 									</div>
 								</nav>
 								<nav class="mobile-navigation">
-								<h3 class="menu-toggle"><?php esc_html_e( 'Menu', 'firezy' ); ?></h3>
+								<h3 class="menu-toggle"><?php esc_html_e( 'Menu', 'bsflorita' ); ?></h3>
 									<div class="mobile-menu">
 										<span class="close-menu"></span>
 											<?php wp_nav_menu( array( 'theme_location' => 'primary','menu_class' => 'mobile-menu-inner') ); ?>
@@ -249,14 +249,14 @@
                                         } ?>
                                         <?php if ($myaccount_page_id): ?>
                                             <a class="logout" href="<?php echo esc_url($logout_url); ?>">
-                                                <?php echo esc_html_e('Logout', 'firezy'); ?>
+                                                <?php echo esc_html_e('Logout', 'bsflorita'); ?>
                                             </a>
                                         <?php endif; ?>
                                     <?php } else {
                                         $myaccount_page_id = get_option('woocommerce_myaccount_page_id'); ?>
                                         <?php if ($myaccount_page_id): ?>
                                             <a class="login" href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>">
-                                                <?php echo esc_html_e('Login', 'firezy'); ?>
+                                                <?php echo esc_html_e('Login', 'bsflorita'); ?>
                                             </a>
                                         <?php endif; ?>
                                     <?php } ?>
@@ -276,15 +276,15 @@
 												<span class="account-label">
 													<?php
 													if ( is_user_logged_in() ) {
-													  echo esc_html_e('Sign Out','firezy');
+													  echo esc_html_e('Sign Out','bsflorita');
 													}
 													else {
-													echo esc_html_e('Sign In','firezy');
+													echo esc_html_e('Sign In','bsflorita');
 													 } ?>
 													</span>
 
 													<span class="account-contents">
-														<?php echo esc_html_e('My Account','firezy'); ?></span>
+														<?php echo esc_html_e('My Account','bsflorita'); ?></span>
 											</div>
 
 												<div class="topbar-link-wrapper">
@@ -293,7 +293,7 @@
 															<?php
 															// Woo commerce Header Cart
 															$tmpmela_header_menu =array(
-															'menu' => esc_html__('TM Header Top Links','firezy'),
+															'menu' => esc_html__('TM Header Top Links','bsflorita'),
 															'depth'=> 1,
 															'echo' => false,
 															'menu_class'      => 'header-menu',
@@ -317,10 +317,10 @@
 																$logout_url = str_replace( 'http:', 'https:', $logout_url );
 																}
 																} ?>
-																<a href="<?php echo esc_url($logout_url); ?>" ><?php echo esc_html_e('Logout','firezy'); ?></a>
+																<a href="<?php echo esc_url($logout_url); ?>" ><?php echo esc_html_e('Logout','bsflorita'); ?></a>
 																<?php }
 																else { ?>
-																<a href="<?php echo  get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php echo esc_html_e('User Login','firezy'); ?></a>
+																<a href="<?php echo  get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php echo esc_html_e('User Login','bsflorita'); ?></a>
 															<?php } ?>
 
 													</div>
@@ -338,12 +338,12 @@
 											<div class="cart togg">
 														<?php global $woocommerce;
 														ob_start();?>
-														<div class="shopping_cart tog" title="<?php esc_attr_e('View your shopping cart', 'firezy'); ?>">
+														<div class="shopping_cart tog" title="<?php esc_attr_e('View your shopping cart', 'bsflorita'); ?>">
 															<div class="cart-icon"></div>
 															<div class="cart-price">
-																<a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'firezy'); ?>">
-																	<span class="cart-qty"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'firezy'), $woocommerce->cart->cart_contents_count);?></span>
-																	<div class="cart-label"><?php echo esc_html_e('My Cart','firezy'); ?></div>
+																<a class="cart-contents" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'bsflorita'); ?>">
+																	<span class="cart-qty"><?php echo sprintf(_n('%d', '%d', $woocommerce->cart->cart_contents_count, 'bsflorita'), $woocommerce->cart->cart_contents_count);?></span>
+																	<div class="cart-label"><?php echo esc_html_e('My Cart','bsflorita'); ?></div>
 																	<div class="item-total"><?php echo translate($woocommerce->cart->get_cart_total()); ?> </div>
 																</a>
 															</div>

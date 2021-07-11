@@ -39,7 +39,7 @@ if ( ! class_exists( 'RWMB_Image_Advanced_Field' ) )
 
 			wp_localize_script( 'rwmb-image-advanced', 'rwmbImageAdvanced', array(
 
-				'frameTitle' => esc_html__( 'Select Images', 'firezy' ),
+				'frameTitle' => esc_html__( 'Select Images', 'bsflorita' ),
 
 			) );
 
@@ -135,7 +135,7 @@ if ( ! class_exists( 'RWMB_Image_Advanced_Field' ) )
 
 		{
 
-			$i18n_title = apply_filters( 'rwmb_image_advanced_select_string', _x( 'Select or Upload Images', 'image upload', 'firezy' ), $field );
+			$i18n_title = apply_filters( 'rwmb_image_advanced_select_string', _x( 'Select or Upload Images', 'image upload', 'bsflorita' ), $field );
 
 			$attach_nonce = wp_create_nonce( "rwmb-attach-media_{$field['id']}" );
 
@@ -207,9 +207,9 @@ if ( ! class_exists( 'RWMB_Image_Advanced_Field' ) )
 
 		{
 
-			$i18n_delete = apply_filters( 'rwmb_image_delete_string', _x( 'Delete', 'image upload', 'firezy' ) );
+			$i18n_delete = apply_filters( 'rwmb_image_delete_string', _x( 'Delete', 'image upload', 'bsflorita' ) );
 
-			$i18n_edit   = apply_filters( 'rwmb_image_edit_string', _x( 'Edit', 'image upload', 'firezy' ) );
+			$i18n_edit   = apply_filters( 'rwmb_image_edit_string', _x( 'Edit', 'image upload', 'bsflorita' ) );
 			?>
             <script id="tmpl-rwmb-image-advanced" type="text/html">
 

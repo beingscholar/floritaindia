@@ -140,37 +140,37 @@ class StaticLinksWidget extends WP_Widget
 		$linkURL7 	= esc_attr($instance['linkURL7']);
 		$linkURL8 	= esc_attr($instance['linkURL8']);
 		?>
-		<p><label for="<?php echo esc_attr($this->get_field_id('title'));?>"><?php esc_html_e('Title:', 'firezy'); ?></label><input class="widefat" id="<?php echo esc_attr($this->get_field_id('title'));?>" name="<?php echo esc_attr($this->get_field_name('title'));?>" type="text" value="<?php echo esc_attr($title);?>" /></p>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linktext1'));?>"><?php esc_html_e('Link Text1:', 'firezy'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext1'));?>" name="<?php echo esc_attr($this->get_field_name('linktext1'));?>" ><?php echo esc_attr($linktext1);?></textarea></p>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL1'));?>"><?php esc_html_e('Link URL1:', 'firezy'); ?><br /></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id('title'));?>"><?php esc_html_e('Title:', 'bsflorita'); ?></label><input class="widefat" id="<?php echo esc_attr($this->get_field_id('title'));?>" name="<?php echo esc_attr($this->get_field_name('title'));?>" type="text" value="<?php echo esc_attr($title);?>" /></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linktext1'));?>"><?php esc_html_e('Link Text1:', 'bsflorita'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext1'));?>" name="<?php echo esc_attr($this->get_field_name('linktext1'));?>" ><?php echo esc_attr($linktext1);?></textarea></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL1'));?>"><?php esc_html_e('Link URL1:', 'bsflorita'); ?><br /></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkURL1'));?>" name="<?php echo esc_attr($this->get_field_name('linkURL1'));?>" type="text" value="<?php echo esc_attr($linkURL1);?>" />
 		<label>(e.g. http://www.Google.com/...)</label><br />
-		<p><label for="<?php echo esc_attr($this->get_field_id('linktext2'));?>"><?php esc_html_e('Link Text2:', 'firezy'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext2'));?>" name="<?php echo esc_attr($this->get_field_name('linktext2'));?>" ><?php echo esc_attr($linktext2);?></textarea></p>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL2'));?>"><?php esc_html_e('Link URL2:', 'firezy'); ?><br /></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linktext2'));?>"><?php esc_html_e('Link Text2:', 'bsflorita'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext2'));?>" name="<?php echo esc_attr($this->get_field_name('linktext2'));?>" ><?php echo esc_attr($linktext2);?></textarea></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL2'));?>"><?php esc_html_e('Link URL2:', 'bsflorita'); ?><br /></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkURL2'));?>" name="<?php echo esc_attr($this->get_field_name('linkURL2'));?>" type="text" value="<?php echo esc_attr($linkURL2);?>" />
 		<label>(e.g. http://www.Google.com/...)</label><br />
-		<p><label for="<?php echo esc_attr($this->get_field_id('linktext3'));?>"><?php esc_html_e('Link Text3:', 'firezy'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext3'));?>" name="<?php echo esc_attr($this->get_field_name('linktext3'));?>" ><?php echo esc_attr($linktext3);?></textarea></p>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL3'));?>"><?php esc_html_e('Link URL3:', 'firezy'); ?><br /></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linktext3'));?>"><?php esc_html_e('Link Text3:', 'bsflorita'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext3'));?>" name="<?php echo esc_attr($this->get_field_name('linktext3'));?>" ><?php echo esc_attr($linktext3);?></textarea></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL3'));?>"><?php esc_html_e('Link URL3:', 'bsflorita'); ?><br /></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkURL3'));?>" name="<?php echo esc_attr($this->get_field_name('linkURL3'));?>" type="text" value="<?php echo esc_attr($linkURL3);?>" />
 		<label>(e.g. http://www.Google.com/...)</label><br />
-		<p><label for="<?php echo esc_attr($this->get_field_id('linktext4'));?>"><?php esc_html_e('Link Text4:', 'firezy'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext4'));?>" name="<?php echo esc_attr($this->get_field_name('linktext4'));?>" ><?php echo esc_attr($linktext4);?></textarea></p>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL4'));?>"><?php esc_html_e('Link URL4:', 'firezy'); ?><br /></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linktext4'));?>"><?php esc_html_e('Link Text4:', 'bsflorita'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext4'));?>" name="<?php echo esc_attr($this->get_field_name('linktext4'));?>" ><?php echo esc_attr($linktext4);?></textarea></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL4'));?>"><?php esc_html_e('Link URL4:', 'bsflorita'); ?><br /></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkURL4'));?>" name="<?php echo esc_attr($this->get_field_name('linkURL4'));?>" type="text" value="<?php echo esc_attr($linkURL4);?>" />
 		<label>(e.g. http://www.Google.com/...)</label>	
-		<p><label for="<?php echo esc_attr($this->get_field_id('linktext5'));?>"><?php esc_html_e('Link Text5:', 'firezy'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext5'));?>" name="<?php echo esc_attr($this->get_field_name('linktext5'));?>" ><?php echo esc_attr($linktext5);?></textarea></p>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL5'));?>"><?php esc_html_e('Link URL5:', 'firezy'); ?><br /></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linktext5'));?>"><?php esc_html_e('Link Text5:', 'bsflorita'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext5'));?>" name="<?php echo esc_attr($this->get_field_name('linktext5'));?>" ><?php echo esc_attr($linktext5);?></textarea></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL5'));?>"><?php esc_html_e('Link URL5:', 'bsflorita'); ?><br /></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkURL5'));?>" name="<?php echo esc_attr($this->get_field_name('linkURL5'));?>" type="text" value="<?php echo esc_attr($linkURL5);?>" />
 		<label>(e.g. http://www.Google.com/...)</label>	
-		<p><label for="<?php echo esc_attr($this->get_field_id('linktext6'));?>"><?php esc_html_e('Link Text6:', 'firezy'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext6'));?>" name="<?php echo esc_attr($this->get_field_name('linktext6'));?>" ><?php echo esc_attr($linktext6);?></textarea></p>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL6'));?>"><?php esc_html_e('Link URL6:', 'firezy'); ?><br /></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linktext6'));?>"><?php esc_html_e('Link Text6:', 'bsflorita'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext6'));?>" name="<?php echo esc_attr($this->get_field_name('linktext6'));?>" ><?php echo esc_attr($linktext6);?></textarea></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL6'));?>"><?php esc_html_e('Link URL6:', 'bsflorita'); ?><br /></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkURL6'));?>" name="<?php echo esc_attr($this->get_field_name('linkURL6'));?>" type="text" value="<?php echo esc_attr($linkURL6);?>" />
 		<label>(e.g. http://www.Google.com/...)</label>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linktext7'));?>"><?php esc_html_e('Link Text7:', 'firezy'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext7'));?>" name="<?php echo esc_attr($this->get_field_name('linktext7'));?>" ><?php echo esc_attr($linktext7);?></textarea></p>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL7'));?>"><?php esc_html_e('Link URL7:', 'firezy'); ?><br /></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linktext7'));?>"><?php esc_html_e('Link Text7:', 'bsflorita'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext7'));?>" name="<?php echo esc_attr($this->get_field_name('linktext7'));?>" ><?php echo esc_attr($linktext7);?></textarea></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL7'));?>"><?php esc_html_e('Link URL7:', 'bsflorita'); ?><br /></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkURL7'));?>" name="<?php echo esc_attr($this->get_field_name('linkURL7'));?>" type="text" value="<?php echo esc_attr($linkURL7);?>" />
 		<label>(e.g. http://www.Google.com/...)</label>	
-		<p><label for="<?php echo esc_attr($this->get_field_id('linktext8'));?>"><?php esc_html_e('Link Text8:', 'firezy'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext8'));?>" name="<?php echo esc_attr($this->get_field_name('linktext8'));?>" ><?php echo esc_attr($linktext8);?></textarea></p>
-		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL8'));?>"><?php esc_html_e('Link URL8:', 'firezy'); ?><br /></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linktext8'));?>"><?php esc_html_e('Link Text8:', 'bsflorita'); ?></label><textarea cols="18" rows="3" class="widefat" id="<?php echo esc_attr($this->get_field_id('linktext8'));?>" name="<?php echo esc_attr($this->get_field_name('linktext8'));?>" ><?php echo esc_attr($linktext8);?></textarea></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id('linkURL8'));?>"><?php esc_html_e('Link URL8:', 'bsflorita'); ?><br /></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id('linkURL8'));?>" name="<?php echo esc_attr($this->get_field_name('linkURL8'));?>" type="text" value="<?php echo esc_attr($linkURL8);?>" />
 		<label>(e.g. http://www.Google.com/...)</label>		
 		<?php
