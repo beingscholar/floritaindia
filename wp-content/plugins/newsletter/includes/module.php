@@ -11,16 +11,25 @@ require_once __DIR__ . '/themes.php';
 
 class TNP_Media {
 
+    var $id;
     var $url;
     var $width;
     var $height;
     var $alt;
     var $link;
+    var $align = 'center';
 
     /** Sets the width recalculating the height */
     public function set_width($width) {
-        $this->height = floor($width / $this->width * $this->height);
+        $this->height = floor(($width / $this->width) * $this->height);
         $this->width = $width;
+    }
+
+    /** Sets the height recalculating the width */
+    public function set_height($height) {
+        $height = (int) $height;
+        $this->width = floor(($height / $this->height) * $this->width);
+        $this->height = $height;
     }
 
 }
@@ -250,6 +259,21 @@ class TNP_Subscription_Data {
         }
     }
 
+    /** Sets to active a set of lists. Accepts incorrect data (and ignores it).
+     * 
+     * @param array $list_ids Array of list IDs
+     */
+    function add_lists($list_ids) {
+        if (empty($list_ids) || !is_array($list_ids))
+            return;
+        foreach ($list_ids as $list_id) {
+            $list_id = (int) $list_id;
+            if ($list_id < 0 || $list_id > NEWSLETTER_LIST_MAX)
+                continue;
+            $this->lists[$list_id] = 1;
+        }
+    }
+
 }
 
 /**
@@ -302,6 +326,19 @@ class TNP_User {
     const STATUS_UNSUBSCRIBED = 'U';
     const STATUS_BOUNCED = 'B';
 
+    public static function get_status_label($status) {
+        switch ($status) {
+            case self::STATUS_NOT_CONFIRMED: return __('NOT CONFIRMED', 'newsletter');
+                break;
+            case self::STATUS_CONFIRMED: return __('CONFIRMED', 'newsletter');
+                break;
+            case self::STATUS_UNSUBSCRIBED: return __('UNSUBSCRIBED', 'newsletter');
+                break;
+            case self::STATUS_BOUNCED: return __('BOUNCED', 'newsletter');
+                break;
+        }
+    }
+
 }
 
 /**
@@ -321,6 +358,7 @@ class TNP_Email {
     const STATUS_SENT = 'sent';
     const STATUS_SENDING = 'sending';
     const STATUS_PAUSED = 'paused';
+    const STATUS_ERROR = 'error';
 
 }
 
@@ -330,6 +368,11 @@ class NewsletterModule {
      * @var NewsletterLogger
      */
     var $logger;
+    
+    /**
+     * @var NewsletterLogger
+     */
+    var $admin_logger;
 
     /**
      * @var NewsletterStore
@@ -374,14 +417,16 @@ class NewsletterModule {
         array_unshift($components, '');
         $this->components = $components;
 
-
         $this->logger = new NewsletterLogger($module);
+        
+        
         $this->options = $this->get_options();
         $this->store = NewsletterStore::singleton();
 
         //$this->logger->debug($module . ' constructed');
         // Version check
         if (is_admin()) {
+            $this->admin_logger = new NewsletterLogger($module . '-admin');
             $this->old_version = get_option($this->prefix . '_version', '0.0.0');
 
             if ($this->old_version == '0.0.0') {
@@ -848,7 +893,7 @@ class NewsletterModule {
     }
 
     function admin_menu() {
-
+        
     }
 
     function add_menu_page($page, $title, $capability = '') {
@@ -914,6 +959,37 @@ class NewsletterModule {
     }
 
     /**
+     * @param string $key
+     * @param mixed $value
+     * @return TNP_Email[]
+     */
+    function get_emails_by_field($key, $value) {
+        global $wpdb;
+
+        $value_placeholder = is_int($value) ? '%d' : '%s';
+
+        $query = $wpdb->prepare("SELECT * FROM " . NEWSLETTER_EMAILS_TABLE . " WHERE %1s=$value_placeholder ORDER BY id DESC", $key, $value);
+
+        $email_list = $wpdb->get_results($query);
+
+        if ($wpdb->last_error) {
+            $this->logger->error($wpdb->last_error);
+
+            return [];
+        }
+
+        //Unserialize options
+        array_walk($email_list, function ($email) {
+            $email->options = maybe_unserialize($email->options);
+            if (!is_array($email->options)) {
+                $email->options = [];
+            }
+        });
+
+        return $email_list;
+    }
+
+    /**
      * Retrieves an email from DB and unserialize the options.
      *
      * @param mixed $id
@@ -965,12 +1041,14 @@ class NewsletterModule {
         $email = $this->store->save(NEWSLETTER_EMAILS_TABLE, $email, $return_format);
         if ($return_format == OBJECT) {
             $email->options = maybe_unserialize($email->options);
-            if (!is_array($email->options))
-                $email->options = array();
+            if (!is_array($email->options)) {
+                $email->options = [];
+            }
         } else if ($return_format == ARRAY_A) {
             $email['options'] = maybe_unserialize($email['options']);
-            if (!is_array($email['options']))
-                $email['options'] = array();
+            if (!is_array($email['options'])) {
+                $email['options'] = [];
+            }
         }
         return $email;
     }
@@ -1045,7 +1123,7 @@ class NewsletterModule {
     }
 
     function show_email_status_label($email) {
-        echo '<span class="tnp-email-status-', $this->get_email_status_slug($email), '">', esc_html($this->get_email_status_label($email)), '</span>';
+        echo '<span class="tnp-email-status tnp-email-status--', $this->get_email_status_slug($email), '">', esc_html($this->get_email_status_label($email)), '</span>';
     }
 
     function get_email_progress($email, $format = 'percent') {
@@ -1072,7 +1150,7 @@ class NewsletterModule {
             $percent = $this->get_email_progress($email);
         }
 
-        echo '<div class="tnp-progress ', $email->status, '">';
+        echo '<div class="tnp-progress tnp-progress--' . $email->status . '">';
         echo '<div class="tnp-progress-bar" role="progressbar" style="width: ', $percent, '%;">&nbsp;', $percent, '%&nbsp;</div>';
         echo '</div>';
         if ($attrs['numbers']) {
@@ -1319,6 +1397,10 @@ class NewsletterModule {
             set_transient('newsletter_user_count', $user_count, DAY_IN_SECONDS);
         }
         return $user_count;
+    }
+
+    function get_profile($id, $language = '') {
+        return TNP_Profile_Service::get_profile_by_id($id, $language);
     }
 
     /**
@@ -2025,7 +2107,6 @@ class NewsletterModule {
         $text = str_replace('{company_address}', $options['footer_contact'], $text);
         $text = str_replace('{company_name}', $options['footer_title'], $text);
         $text = str_replace('{company_legal}', $options['footer_legal'], $text);
-
 
         $this->switch_language($initial_language);
 //$this->logger->debug('Replace end');

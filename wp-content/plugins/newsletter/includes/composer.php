@@ -81,16 +81,45 @@ class TNP_Composer {
         return preg_match($pattern, $block);
     }
 
+    /**
+     * Sources:
+     * - https://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+     * 
+     * @param type $email
+     * @return type
+     */
     static function get_html_open($email) {
         $open = "<!DOCTYPE html>\n";
-        $open .= "<html>\n<head>\n<title>{email_subject}</title>\n";
+        $open .= "<html xmlns=\"https://www.w3.org/1999/xhtml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\n<head>\n<title>{email_subject}</title>\n";
         $open .= "<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
-        $open .= "<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n";
+
+        $open .= '<!--[if !mso]><!-->' . "\n";
+        $open .= '<meta http-equiv="X-UA-Compatible" content="IE=edge" />' . "\n";
+        $open .= '<!--<![endif]-->' . "\n";
+
+        $open .= '<!--[if mso]>' . "\n";
+        ;
+        $open .= '<style type="text/css">';
+        $open .= 'table {border-collapse:collapse;border-spacing:0;margin:0;}';
+        $open .= 'div, td {padding:0;}';
+        $open .= 'div {margin:0 !important;}';
+        $open .= '</style>';
+        $open .= "\n";
+        $open .= '<noscript>';
+        $open .= '<xml>';
+        $open .= '<o:OfficeDocumentSettings>';
+        $open .= '<o:PixelsPerInch>96</o:PixelsPerInch>';
+        $open .= '</o:OfficeDocumentSettings>';
+        $open .= '</xml>';
+        $open .= '</noscript>';
+        $open .= "\n";
+        $open .= '<![endif]-->';
+        $open .= "\n";
         $open .= "<style type=\"text/css\">\n";
         $open .= NewsletterEmails::instance()->get_composer_css();
         $open .= "\n</style>\n";
         $open .= "</head>\n";
-        $open .= '<body style="margin: 0; padding: 0;" dir="' . (is_rtl() ? 'rtl' : 'ltr') . '">';
+        $open .= '<body style="margin: 0; padding: 0; line-height: normal; word-spacing: normal;" dir="' . (is_rtl() ? 'rtl' : 'ltr') . '">';
         $open .= "\n";
         $open .= self::get_html_preheader($email);
 
@@ -213,24 +242,40 @@ class TNP_Composer {
 
     /**
      * Prepares a controls object injecting the relevant fields from an email
-     * which cannot be directly used by controls.
+     * which cannot be directly used by controls. If $email is null or missing,
+     * $controls is prepared with default values.
      *
-     * @param Newsletter $controls
+     * @param NewsletterControls $controls
      * @param TNP_Email $email
      */
-    static function prepare_controls($controls, $email) {
+    static function prepare_controls($controls, $email = null) {
 
-        foreach ($email->options as $name => $value) {
-            //if (strpos($name, 'composer_') === 0) {
-            $controls->data['options_' . $name] = $value;
-            //}
+        // Controls for a new email (which actually does not exist yet
+        if (!empty($email)) {
+
+            foreach ($email->options as $name => $value) {
+                //if (strpos($name, 'composer_') === 0) {
+                $controls->data['options_' . $name] = $value;
+                //}
+            }
+
+            $controls->data['message'] = TNP_Composer::unwrap_email($email->message);
+            $controls->data['subject'] = $email->subject;
         }
 
-        $controls->data['message'] = TNP_Composer::unwrap_email($email->message);
-        $controls->data['subject'] = $email->subject;
+        if (!empty($email->options['sender_email'])) {
+            $controls->data['sender_email'] = $email->options['sender_email'];
+        } else {
+            $controls->data['sender_email'] = Newsletter::instance()->options['sender_email'];
+        }
 
-	    $controls->data = array_merge( TNP_Composer::get_global_style_defaults(), $controls->data );
+        if (!empty($email->options['sender_name'])) {
+            $controls->data['sender_name'] = $email->options['sender_name'];
+        } else {
+            $controls->data['sender_name'] = Newsletter::instance()->options['sender_name'];
+        }
 
+        $controls->data = array_merge(TNP_Composer::get_global_style_defaults(), $controls->data);
     }
 
     /**
@@ -263,8 +308,9 @@ class TNP_Composer {
      * @return bool
      */
     static function is_post_field_edited_inline($inline_edit_list, $field_type, $post_id) {
-        if (empty($inline_edit_list))
+        if (empty($inline_edit_list) || !is_array($inline_edit_list)) {
             return false;
+        }
         foreach ($inline_edit_list as $edit) {
             if ($edit['type'] == $field_type && $edit['post_id'] == $post_id) {
                 return true;
@@ -306,7 +352,7 @@ class TNP_Composer {
 
         $options = array_merge($defaults, array_filter($options));
 
-        $b = '<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;"';
+        $b = '<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 auto"';
         if (!empty($options[$prefix . '_align'])) {
             $b .= ' align="' . esc_attr($options[$prefix . '_align']) . '"';
         }
@@ -334,45 +380,47 @@ class TNP_Composer {
      */
     static function image($media, $attr = []) {
 
-	    $default_attrs = [
-		    'style'      => 'max-width: 100%; height: auto;',
-		    'class'      => null,
-		    'link-style' => 'text-decoration: none;',
-		    'link-class' => null,
-	    ];
+        $default_attrs = [
+            'style' => 'max-width: 100%; height: auto; display: inline-block',
+            'class' => null,
+            'link-style' => 'text-decoration: none; display: inline-block',
+            'link-class' => null,
+        ];
 
-    	$attr = array_merge($default_attrs, $attr);
+        $attr = array_merge($default_attrs, $attr);
 
-    	//Class and style attribute are mutually exclusive.
-	    //Class take priority to style because classes will transform to inline style inside block rendering operation
-	    if ( ! empty( $attr['class'] ) ) {
-		    $styling = ' inline-class="' . $attr['class'] . '" ';
-	    } else {
-		    $styling = ' style="' . $attr['style'] . '" ';
-	    }
+        //Class and style attribute are mutually exclusive.
+        //Class take priority to style because classes will transform to inline style inside block rendering operation
+        if (!empty($attr['class'])) {
+            $styling = ' inline-class="' . esc_attr($attr['class']) . '" ';
+        } else {
+            $styling = ' style="' . esc_attr($attr['style']) . '" ';
+        }
 
-	    //Class and style attribute are mutually exclusive.
-	    //Class take priority to style because classes will transform to inline style inside block rendering operation
-	    if ( ! empty( $attr['link-class'] ) ) {
-		    $link_styling = ' inline-class="' . $attr['link-class'] . '" ';
-	    } else {
-		    $link_styling = ' style="' . $attr['link-style'] . '" ';
-	    }
+        //Class and style attribute are mutually exclusive.
+        //Class take priority to style because classes will transform to inline style inside block rendering operation
+        if (!empty($attr['link-class'])) {
+            $link_styling = ' inline-class="' . esc_attr($attr['link-class']) . '" ';
+        } else {
+            $link_styling = ' style="' . esc_attr($attr['link-style']) . '" ';
+        }
 
         $b = '';
-	    if ( $media->link ) {
-		    $b .= '<a href="' . $media->link . '" target="_blank" rel="noopener nofollow" ' . $link_styling . '>';
-	    }
+        if ($media->link) {
+            $b .= '<a href="' . esc_attr($media->link) . '" target="_blank" rel="noopener nofollow" style="display: inline-block; font-size: 0; text-decoration: none; line-height: normal!important">';
+        }
 
-	    if ( $media ) {
-		    $b .= '<img src="' . $media->url . '" width="' . $media->width . '"'
-		          . ' height="auto"'
-		          . ' alt="' . esc_attr( $media->alt ) . '"'
-		          . ' border="0" '
-		          . $styling
-		          . ' class="responsive" '
-		          . '>';
-	    }
+        if ($media) {
+            $b .= '<img src="' . esc_attr($media->url) . '" width="' . esc_attr($media->width) . '"';
+            if ($media->height) {
+                $b .= ' height="' . esc_attr($media->height) . '"';
+            }
+            $b .= ' alt="' . esc_attr($media->alt) . '"'
+                    . ' border="0"'
+                    . ' style="display: inline-block; max-width: 100%!important; padding: 0; border: 0;"'
+                    . ' class="" '
+                    . '>';
+        }
 
         if ($media->link) {
             $b .= '</a>';
@@ -385,6 +433,8 @@ class TNP_Composer {
      * Returns a WP media ID for the specified post (or false if nothing can be found)
      * looking for the featured image or, if missing, taking the first media in the gallery and
      * if again missing, searching the first reference to a media in the post content.
+     * 
+     * The media ID is not checked for real existance of the associated attachment.
      *
      * @param int $post_id
      * @return int
@@ -417,58 +467,138 @@ class TNP_Composer {
         return false;
     }
 
-    static function post_content($post) {
-	    $content = $post->post_content;
-	    $content = wpautop( $content );
-	    if ( true || $options['enable shortcodes'] ) {
-		    remove_shortcode( 'gallery' );
-		    add_shortcode( 'gallery', 'tnp_gallery_shortcode' );
-		    $content = do_shortcode( $content );
-	    }
-	    $content = str_replace( '<p>', '<p class="paragraph">', $content );
-
-	    $selected_images = array();
-	    if ( preg_match_all( '/<img [^>]+>/', $content, $matches ) ) {
-		    foreach ( $matches[0] as $image ) {
-			    if ( preg_match( '/wp-image-([0-9]+)/i', $image, $class_id ) && ( $attachment_id = absint( $class_id[1] ) ) ) {
-				    $selected_images[ $image ] = $attachment_id;
-			    }
-		    }
-	    }
-
-	    foreach ( $selected_images as $image => $attachment_id ) {
-		    $src = tnp_media_resize( $attachment_id, array( 600, 0 ) );
-		    if ( is_wp_error( $src ) ) {
-			    continue;
-		    }
-		    $content = str_replace( $image, '<img src="' . $src . '" width="600" style="max-width: 100%">', $content );
-	    }
-
-	    return $content;
+    /**
+     * Builds a TNP_Media object to be used in newsletters from a WP media/attachement ID. The returned 
+     * media has a size which best match the one requested (this is the standard WP behavior, plugins
+     * could change it).
+     * 
+     * @param int $media_id
+     * @param array $size
+     * @return \TNP_Media
+     */
+    function get_media($media_id, $size) {
+        $src = wp_get_attachment_image_src($media_id, $size);
+        if (!$src) {
+            return null;
+        }
+        $media = new TNP_Media();
+        $media->id = $media_id;
+        $media->url = $src[0];
+        $media->width = $src[1];
+        $media->height = $src[2];
+        return $media;
     }
 
-	static function get_global_style_defaults() {
-		return [
-			'options_composer_title_font_family' => 'Verdana, Geneva, sans-serif',
-			'options_composer_title_font_size'   => 36,
-			'options_composer_title_font_weight' => 'bold',
-			'options_composer_title_font_color'  => '#222222',
+    static function post_content($post) {
+        $content = $post->post_content;
+        $content = wpautop($content);
+        if (true || $options['enable shortcodes']) {
+            remove_shortcode('gallery');
+            add_shortcode('gallery', 'tnp_gallery_shortcode');
+            $content = do_shortcode($content);
+        }
+        $content = str_replace('<p>', '<p class="paragraph">', $content);
 
-			'options_composer_text_font_family' => 'Verdana, Geneva, sans-serif',
-			'options_composer_text_font_size'   => 16,
-			'options_composer_text_font_weight' => 'normal',
-			'options_composer_text_font_color'  => '#222222',
+        $selected_images = array();
+        if (preg_match_all('/<img [^>]+>/', $content, $matches)) {
+            foreach ($matches[0] as $image) {
+                if (preg_match('/wp-image-([0-9]+)/i', $image, $class_id) && ( $attachment_id = absint($class_id[1]) )) {
+                    $selected_images[$image] = $attachment_id;
+                }
+            }
+        }
 
-			'options_composer_button_font_family'      => 'Verdana, Geneva, sans-serif',
-			'options_composer_button_font_size'        => 16,
-			'options_composer_button_font_weight'      => 'bold',
-			'options_composer_button_font_color'       => '#FFFFFF',
-			'options_composer_button_background_color' => '#256F9C',
+        foreach ($selected_images as $image => $attachment_id) {
+            $src = tnp_media_resize($attachment_id, array(600, 0));
+            if (is_wp_error($src)) {
+                continue;
+            }
+            $content = str_replace($image, '<img src="' . $src . '" width="600" style="max-width: 100%">', $content);
+        }
 
-			'options_composer_background' => '#FFFFFF',
-			'options_composer_block_background' => '#FFFFFF',
-		];
-	}
+        return $content;
+    }
+
+    static function get_global_style_defaults() {
+        return [
+            'options_composer_title_font_family' => 'Verdana, Geneva, sans-serif',
+            'options_composer_title_font_size' => 32,
+            'options_composer_title_font_weight' => 'normal',
+            'options_composer_title_font_color' => '#222222',
+            'options_composer_text_font_family' => 'Verdana, Geneva, sans-serif',
+            'options_composer_text_font_size' => 16,
+            'options_composer_text_font_weight' => 'normal',
+            'options_composer_text_font_color' => '#222222',
+            'options_composer_button_font_family' => 'Verdana, Geneva, sans-serif',
+            'options_composer_button_font_size' => 16,
+            'options_composer_button_font_weight' => 'normal',
+            'options_composer_button_font_color' => '#FFFFFF',
+            'options_composer_button_background_color' => '#256F9C',
+            'options_composer_background' => '#FFFFFF',
+            'options_composer_block_background' => '#FFFFFF',
+        ];
+    }
+
+    /**
+     * Inspired by: https://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+     * @param string[] $items
+     * @param array $attrs
+     * @return string
+     */
+    static function grid($items = [], $attrs = []) {
+        $attrs = wp_parse_args($attrs, ['width' => 600, 'columns' => 2, 'padding' => 10]);
+        $width = (int) $attrs['width'];
+        $columns = (int) $attrs['columns'];
+        $padding = (int) $attrs['padding'];
+        $column_width = $width / $columns;
+        $td_width = 100 / $columns;
+        $chunks = array_chunk($items, $columns);
+
+        $e = '<div style="text-align:center;font-size:0;">';
+        foreach ($chunks as &$chunk) {
+
+            $e .= '<!--[if mso]><table role="presentation" width="100%"><tr><![endif]-->';
+            foreach ($chunk as &$item) {
+                $e .= '<!--[if mso]><td style="width:' . $td_width . '%;padding:' . $padding . 'px" valign="top"><![endif]-->';
+
+                $e .= '<div class="tnp-grid-column" style="width:100%;max-width:' . $column_width . 'px;display:inline-block;vertical-align: top;box-sizing: border-box;">';
+
+                // This element to add padding without deal with border-box not well supported
+                $e .= '<div style="padding:' . $padding . 'px;">';
+                $e .= $item;
+                $e .= '</div>';
+                $e .= '</div>';
+
+                $e .= '<!--[if mso]></td><![endif]-->';
+            }
+            $e .= '<!--[if mso]></tr></table><![endif]-->';
+            $e .= '</div>';
+        }
+        return $e;
+    }
+    
+    static function get_style($options, $prefix, $composer, $type = 'text') {
+        $style = new TNP_Style();
+        if (!empty($prefix)) $prefix .= '_';
+        
+        $style->font_family = empty($options[$prefix . 'font_family']) ? $composer[$type . '_font_family'] : $options[$prefix . 'font_family'];
+        $style->font_size = empty($options[$prefix . 'font_size']) ? $composer[$type . '_font_size'] : $options[$prefix . 'font_size'];
+        $style->font_color = empty($options[$prefix . 'font_color']) ? $composer[$type . '_font_color'] : $options[$prefix . 'font_color'];
+        $style->font_weight = empty($options[$prefix . 'font_weight']) ? $composer[$type . '_font_weight'] : $options[$prefix . 'font_weight'];
+        if ($type === 'button') {
+            $style->background = empty($options[$prefix . 'background']) ? $composer[$type . '_background_color'] : $options[$prefix . 'background'];
+        }
+        return $style;
+    }
+
+}
+
+class TNP_Style {
+    var $font_family;
+    var $font_size;
+    var $font_weight;
+    var $font_color;
+    var $background;
 }
 
 /**
@@ -581,18 +711,7 @@ class TNP_Composer_Grid_Row {
     }
 
     private function get_template() {
-        return "<table border='0'
-				       cellpadding='0'
-				       cellspacing='0'
-				       width='100%'>
-				    <tbody>
-				    <tr>
-				        <td>
-				            TNP_ROW_CONTENT_PH
-				        </td>
-				    </tr>
-				    </tbody>
-				</table>";
+        return "<table border='0' cellpadding='0' cellspacing='0' width='100%'><tbody><tr><td>TNP_ROW_CONTENT_PH</td></tr></tbody></table>";
     }
 
 }
@@ -652,57 +771,50 @@ class TNP_Composer_Grid_Cell {
     }
 
     private function get_template() {
-        return "<table border='0'
-				       cellpadding='0'
-				       cellspacing='0'
-				       width='TNP_WIDTH_PH'
-				       align='left'
-				       style='table-layout: fixed;'
-				       class='responsive-table'>
-				    <tbody>
-					    <tr>
-					        <td border='0'
-					            style='padding: 20px 10px 40px;'
-					            align='TNP_ALIGN_PH'
-					            valign='TNP_VALIGN_PH'
-					            class='TNP_CLASS_PH'>
-					            TNP_COLUMN_CONTENT_PH
-					        </td>
-					    </tr>
-				    </tbody>
-				</table>";
+        return "<table border='0' cellpadding='0' cellspacing='0' width='TNP_WIDTH_PH' align='left' style='table-layout: fixed;' class='responsive'>
+                    <tbody>
+                            <tr>
+                                <td border='0' style='padding: 20px 10px 40px;' align='TNP_ALIGN_PH' valign='TNP_VALIGN_PH' class='TNP_CLASS_PH'>
+                                    TNP_COLUMN_CONTENT_PH
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>";
     }
 
 }
 
 class TNP_Composer_Component_Factory {
 
-	private $options;
+    private $options;
 
-	/**
-	 * TNP_Composer_Component_Factory constructor.
-	 *
-	 * @param Controller$controller
-	 */
-	public function __construct($controller) {
-	}
+    /**
+     * TNP_Composer_Component_Factory constructor.
+     *
+     * @param Controller$controller
+     */
+    public function __construct($controller) {
+        
+    }
 
-	function heading() {
-	}
+    function heading() {
+        
+    }
 
-	function paragraph() {
+    function paragraph() {
+        
+    }
 
-	}
+    function link() {
+        
+    }
 
-	function link() {
+    function button() {
+        
+    }
 
-	}
-
-	function button() {
-	}
-
-	function image() {
-
-	}
+    function image() {
+        
+    }
 
 }

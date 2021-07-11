@@ -18,7 +18,7 @@ class NewsletterMailer {
     private $delta;
     protected $batch_size = 1;
 
-    public function __construct($name, $options = array()) {
+    public function __construct($name, $options = []) {
         $this->name = $name;
         $this->options = $options;
     }
@@ -123,44 +123,6 @@ class NewsletterMailer {
     }
 
     /**
-     *
-     * @param TNP_Mailer_Message $message
-     * @return bool|WP_Error
-     */
-    public function enqueue(TNP_Mailer_Message $message) {
-        // Optimization when there is no queue
-        if ($this->queue_max == 0) {
-            $r = $this->send($message);
-            return $r;
-        }
-
-        $this->queue[] = $message;
-        if (count($this->queue) >= $this->queue_max) {
-            return $this->flush();
-        }
-        return true;
-    }
-
-    public function flush() {
-        $undelivered = array();
-        foreach ($this->queue as $message) {
-            $r = $this->deliver($message);
-            if (is_wp_error($r)) {
-                $message->error = $r;
-                $undelivered[] = $message;
-            }
-        }
-
-        $this->queue = array();
-
-        if ($undelivered) {
-            return new WP_Error(self::ERROR_GENERAL, 'Error while flushing messages', $undelivered);
-        }
-
-        return true;
-    }
-
-    /**
      * Original mail function simulation for compatibility.
      * @deprecated
      *
@@ -180,9 +142,6 @@ class NewsletterMailer {
         $mailer_message->body = $message['html'];
         $mailer_message->body_text = $message['text'];
 
-        if ($enqueue) {
-            return !is_wp_error($this->enqueue($mailer_message));
-        }
         return !is_wp_error($this->send($mailer_message));
     }
 
@@ -198,6 +157,7 @@ class NewsletterMailer {
 
 /**
  * @property string $to
+ * @property string $to_name
  * @property string $subject
  * @property string $body
  * @property array $headers
@@ -214,6 +174,8 @@ class TNP_Mailer_Message {
     var $subject = '';
     var $body = '';
     var $body_text = '';
+    var $from = '';
+    var $from_name = '';
 
 }
 
@@ -334,7 +296,8 @@ class NewsletterDefaultMailer extends NewsletterMailer {
             if (!empty($newsletter->options['content_transfer_encoding'])) {
                 $mailer->Encoding = $newsletter->options['content_transfer_encoding'];
             } else {
-                $mailer->Encoding = 'base64';
+                // Setting and encoding sometimes conflict with SMTP plugins
+                //$mailer->Encoding = 'base64';
             }
         }
 
@@ -347,6 +310,11 @@ class NewsletterDefaultMailer extends NewsletterMailer {
         }
     }
 
+    /**
+     * 
+     * @param TNP_Mailer_Message $message
+     * @return \WP_Error|boolean
+     */
     function send($message) {
 
         if (!$this->filter_active) {
@@ -355,9 +323,16 @@ class NewsletterDefaultMailer extends NewsletterMailer {
         }
 
         $newsletter = Newsletter::instance();
-        $wp_mail_headers = array();
-        // TODO: Manage the from address
-        $wp_mail_headers[] = 'From: "' . $newsletter->options['sender_name'] . '" <' . $newsletter->options['sender_email'] . '>';
+        $wp_mail_headers = [];
+        if (empty($message->from)) {
+            $message->from = $newsletter->options['sender_email'];
+        } 
+        
+        if (empty($message->from_name)) {
+            $message->from_name = $newsletter->options['sender_name'];
+        }
+        
+        $wp_mail_headers[] = 'From: "' . $message->from_name . '" <' . $message->from . '>';
 
         if (!empty($newsletter->options['reply_to'])) {
             $wp_mail_headers[] = 'Reply-To: ' . $newsletter->options['reply_to'];
@@ -492,7 +467,7 @@ class NewsletterDefaultSMTPMailer extends NewsletterMailer {
 
         require_once 'PHPMailerLoader.php';
         $this->mailer = PHPMailerLoader::make_instance();
-        
+
         $this->mailer->XMailer = ' '; // A space!
 
         $this->mailer->IsSMTP();
@@ -506,7 +481,7 @@ class NewsletterDefaultSMTPMailer extends NewsletterMailer {
             $this->mailer->Username = $this->options['user'];
             $this->mailer->Password = $this->options['pass'];
         }
-        $this->mailer->SMTPKeepAlive = true;
+
         $this->mailer->SMTPSecure = $this->options['secure'];
         $this->mailer->SMTPAutoTLS = false;
 

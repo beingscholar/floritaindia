@@ -151,13 +151,13 @@ Yes, of course you can. To avoid Wishlist page to show product prices, you can h
 
 ## Changelog
 
-### 3.0.20 - Released on 22 February 2021
+### 3.0.23 - Released on 18 June 2021
 
-* New: support for WordPress 5.7
-* New: support for WooCommerce 5.1
+* New: support for WooCommerce 5.4
 * Update: YITH plugin framework
-* Fix: wrong data type for item insert query (thanks to jonatanmenendez)
-* Dev: added new yith_wcwl_get_wishlist_on_remove filter
+* Fix: filters to alter resources dependencies not actually affecting assets loaded in the page (thanks to deothemes)
+* Fix: better support for wishlist page with non-standard characters in slug
+* Dev: added new yith_wcwl_after_add_wishlist action, triggered after wishlist creation
 
 ## Support
 

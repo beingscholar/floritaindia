@@ -134,6 +134,12 @@ if ( ! class_exists( 'Mega_Menu_Themes' ) ) :
 		public function ajax_save_theme() {
 			check_ajax_referer( 'megamenu_save_theme' );
 
+			$capability = apply_filters( 'megamenu_options_capability', 'edit_theme_options' );
+
+			if ( ! current_user_can( $capability ) ) {
+				return;
+			}
+
 			$style_manager = new Mega_Menu_Style_Manager();
 
 			$test = $style_manager->test_theme_compilation( $this->get_prepared_theme_for_saving() );
@@ -2906,9 +2912,11 @@ if ( ! class_exists( 'Mega_Menu_Themes' ) ) :
 		 * @since 2.1
 		 */
 		private function compare_elems( $elem1, $elem2 ) {
+			if ( $elem1['priority'] > $elem2['priority'] ) {
+				return 1;
+			}
 
-			return $elem1['priority'] > $elem2['priority'];
-
+			return 0;
 		}
 
 

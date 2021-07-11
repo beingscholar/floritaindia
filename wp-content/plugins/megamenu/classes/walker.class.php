@@ -98,10 +98,17 @@ if ( ! class_exists( 'Mega_Menu_Walker' ) ) :
 			$output .= "<li class='{$class}' id='{$id}'>";
 
 			// output the widgets
-			if ( $item->type == 'widget' && $item->content ) {
+			if ( $item->type == 'widget' ) {
 
-				$item_output = $item->content;
+				if ( $item->content ) {
+					$item_output = $item->content;
+				} else {
+					$item_output = "<!-- widget is empty -->";
+				}
 
+			//} else if ( 'block' === $item->type ) {
+			//	/** This filter is documented in wp-includes/post-template.php */
+			//	$item_output = apply_filters( 'the_content', $item->content );
 			} else {
 
 				$atts = array();

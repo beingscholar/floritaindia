@@ -125,12 +125,12 @@ $show_date   = ! empty( $options['show_date'] );
 $show_author = ! empty( $options['show_author'] );
 
 $title_font_family = empty( $options['title_font_family'] ) ? $global_title_font_family : $options['title_font_family'];
-$title_font_size   = empty( $options['title_font_size'] ) ? $global_title_font_size : $options['title_font_size'];
+$title_font_size   = empty( $options['title_font_size'] ) ? round($global_title_font_size*0.8) : $options['title_font_size'];
 $title_font_color  = empty( $options['title_font_color'] ) ? $global_title_font_color : $options['title_font_color'];
 $title_font_weight = empty( $options['title_font_weight'] ) ? $global_title_font_weight : $options['title_font_weight'];
 
 $text_font_family = empty( $options['font_family'] ) ? $global_text_font_family : $options['font_family'];
-$text_font_size   = empty( $options['font_size'] ) ? $global_text_font_size : $options['font_size'];
+$text_font_size   = empty( $options['font_size'] ) ? round($global_text_font_size*0.9) : $options['font_size'];
 $text_font_color  = empty( $options['font_color'] ) ? $global_text_font_color : $options['font_color'];
 $text_font_weight = empty( $options['font_weight'] ) ? $global_text_font_weight : $options['font_weight'];
 
@@ -142,6 +142,8 @@ $button_options['button_font_weight'] = empty( $options['button_font_weight'] ) 
 $button_options['button_background']  = empty( $options['button_background'] ) ? $global_button_background_color : $options['button_background'];
 
 $show_read_more_button = (bool) $options['show_read_more_button'];
+
+Newsletter::instance()->switch_language( $options['language'] );
 
 if ( $options['layout'] == 'one' ) {
 	include __DIR__ . '/layout-one.php';
@@ -155,4 +157,4 @@ if ( $options['layout'] == 'one' ) {
 	include __DIR__ . '/layout-big-image.php';
 }
 
-Newsletter::instance()->switch_language( $options['language'] );
+

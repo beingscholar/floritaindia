@@ -1,7 +1,4 @@
-/* DEBUG - Disable when done */
-/*.tnp-field {*/
-   /*border: 1px dashed #999;*/
-/*}*/
+
 
 /* STRUCTURE */
 .tnp-field-row {
@@ -52,6 +49,12 @@
     float: left;
 }
 
+.tnp-field-box {
+    padding: 10px;
+    background-color: #eee !important;
+    border: 1px solid #bbb;
+}
+
 .tnp-section {
 
 }
@@ -68,12 +71,16 @@
     margin-bottom: 10px;
 }
 
+.tnp-field select.tnp-small {
+    font-size: .9em;
+}
+
 .tnp-field label.tnp-label, .tnp-field-row label.tnp-row-label {
     display: block;
     font-size: 12px;
     font-weight: 300;
     border-bottom: 1px solid #fff;
-    margin: 25px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
     font-family: soleil, sans-serif;
     font-weight: 300;
     padding-bottom: 5px;
@@ -140,15 +147,15 @@ tnp-field.tnp-font {
     width: auto;
 }
 
-.tnp-field.tnp-button .tnpf-font-family {
+.tnp-field.tnpf-button .tnpf-font-family {
     font-size: 13px;
 }
 
-.tnp-field.tnp-button .tnpf-font-size {
+.tnp-field.tnpf-button .tnpf-font-size {
     font-size: 13px;
 }
 
-.tnp-field.tnp-button .tnpf-font-weight {
+.tnp-field.tnpf-button .tnpf-font-weight {
     font-size: 13px;
 }
 
@@ -166,9 +173,4 @@ tnp-field.tnp-font {
     font-style: italic;
     font-weight: normal;
     color: #999999;
-}
-
-.tnpf-color {
-    width: 40px;
-    font-size: 12px;
 }

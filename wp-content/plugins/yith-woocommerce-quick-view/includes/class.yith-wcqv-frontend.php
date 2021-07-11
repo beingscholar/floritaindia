@@ -283,6 +283,7 @@ if ( ! class_exists( 'YITH_WCQV_Frontend' ) ) {
 			global $sitepress;
 
 			$product_id = intval( $_REQUEST['product_id'] );
+			$attributes = array();
 
 			/**
 			 * WPML Suppot:  Localize Ajax Call
@@ -297,16 +298,24 @@ if ( ! class_exists( 'YITH_WCQV_Frontend' ) ) {
 
 			// Remove product thumbnails gallery.
 			remove_action( 'woocommerce_product_thumbnails', 'woocommerce_show_product_thumbnails', 20 );
-
 			// Change template for variable products.
 			if ( isset( $GLOBALS['yith_wccl'] ) ) {
 				$GLOBALS['yith_wccl']->obj = new YITH_WCCL_Frontend();
 				$GLOBALS['yith_wccl']->obj->override();
+			} elseif ( defined( 'YITH_WCCL_PREMIUM' ) && YITH_WCCL_PREMIUM && class_exists( 'YITH_WCCL_Frontend' ) ) {
+				$attributes = YITH_WCCL_Frontend()->create_attributes_json( $product_id, true );
 			}
-
-			ob_start();
+						ob_start();
 			wc_get_template( 'yith-quick-view-content.php', array(), '', YITH_WCQV_DIR . 'templates/' );
-			echo ob_get_clean();  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			$html = ob_get_contents();  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			ob_end_clean();
+
+			wp_send_json(
+				array(
+					'html'      => $html,
+					'prod_attr' => $attributes,
+				)
+			);
 
 			die();
 			// phpcs:enable WordPress.Security.NonceVerification.Recommended

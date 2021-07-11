@@ -4,12 +4,12 @@ Contributors: yithemes
 Tags: wishlist, woocommerce, products, yit, e-commerce, shop, ecommerce wishlist, yith, woocommerce wishlist, shop wishlist
 Requires at least: 5.3
 Tested up to: 5.7
-Stable tag: 3.0.20
+Stable tag: 3.0.23
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 YITH WooCommerce Wishlist add all Wishlist features to your website. Needs WooCommerce to work.
-WooCommerce 5.0.x compatible.
+WooCommerce 5.4.x compatible.
 
 == Description ==
 
@@ -112,6 +112,33 @@ Yes, of course you can. To avoid Wishlist page to show product prices, you can h
 
 
 == Changelog ==
+
+= 3.0.23 - Released on 18 June 2021 =
+
+* New: support for WooCommerce 5.4
+* Update: YITH plugin framework
+* Fix: filters to alter resources dependencies not actually affecting assets loaded in the page (thanks to deothemes)
+* Fix: better support for wishlist page with non-standard characters in slug (thanks to TheGreyRabbit)
+
+= 3.0.22 - Released on 17 May 2021 =
+
+* New: support for WooCommerce 5.3
+* Update: YITH plugin framework
+* Tweak: use share link title for WhatsApp sharing link too
+* Tweak: enqueue plugin scripts only when needed
+* Fix: visibility param for wishlist queries not working correctly
+* Fix: generic selectors used at found_variations (thanks to vivik93)
+
+= 3.0.21 - Released on 21 April 2021 =
+
+* New: support for WooCommerce 5.2
+* New: added no-robots headers for add_to_wishlist url (thanks to brix720)
+* Update: YITH plugin framework
+* Tweak: code refactoring according to PHPCS
+* Fix: avoid setting session_id, until guest performs any edit operation over the lists
+* Fix: removed deprecated unbind from scripts
+* Dev: added yith_wcwl_main_style_deps filter to allow devs remove unnecessary deps
+* Dev: added yith_wcwl_custom_icon_alt and yith_wcwl_custom_width filters, to allow dev customize ATW custom icon
 
 = 3.0.20 - Released on 22 February 2021 =
 
